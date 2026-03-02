@@ -1,7 +1,6 @@
 {
   "branches": [
-    "main",
-    "ci_pipeline"
+    "main"
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
