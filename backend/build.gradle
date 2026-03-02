@@ -2,10 +2,17 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '4.0.2'
 	id 'io.spring.dependency-management' version '1.1.7'
+	id "pl.allegro.tech.build.axion-release" version "1.15.3"
+}
+
+scmVersion {
+    tag {
+        prefix = ""
+    }
 }
 
 group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+version = scmVersion.version
 description = 'Repo for the food app GreenGafl'
 
 java {
