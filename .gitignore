@@ -86,4 +86,10 @@ HELP.md
 build/
 !backend/gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
+<<<<<<< chore/downgrade-boot
 !**/src/test/**/build/
+=======
+!**/src/test/**/build/
+
+node_modules/
+>>>>>>> main
