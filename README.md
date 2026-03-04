@@ -1,5 +1,7 @@
 # dat251-project
 
+
+
 Commit meldingene må se slik ut for riktig versjonering:
 
 Patch:
@@ -14,3 +16,4 @@ git commit -m "feat!: redesign authentication flow"
 or:
 
 git commit -m "feat: new auth system BREAKING CHANGE: old tokens no longer valid"
+

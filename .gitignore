@@ -43,6 +43,7 @@ out/
 
 # Package Files #
 *.jar
+!backend/gradle/wrapper/gradle-wrapper.jar
 *.war
 *.nar
 *.ear
@@ -85,6 +86,10 @@ HELP.md
 build/
 !backend/gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
+
 !**/src/test/**/build/
 
 node_modules/
+
+.env
+
