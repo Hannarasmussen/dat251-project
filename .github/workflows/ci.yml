@@ -3,7 +3,10 @@ name: CI
 on:
   push:
     paths:
-      - '.github/'
+      - '.github/**'
+    branches:
+      - main
+      - ci_pipeline
   pull_request:
     branches:
       - main
