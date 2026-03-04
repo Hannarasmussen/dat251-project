@@ -75,5 +75,14 @@ class UserTests {
         userService.deleteById(user1.getId());
         userService.deleteById(user2.getId());
     }
+
+    @Test
+    void testDummyUserCreate(){
+        User u = new User();
+        u.setUsername("Hara");
+        u.setEmail("1@2.no");
+        u.setPassword("123123");
+        userService.register(u);
+    }
 }
 
