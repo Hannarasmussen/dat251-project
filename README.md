@@ -12,6 +12,15 @@ We are running the postgresql database in a docker container, so docker has to b
 ```
 
 
+### API Testing
+
+The API can be tested using the Swagger UI at `http://localhost:8080/swagger-ui/index.html`.
+
+To access protected endpoints:
+1. Create a user via `POST /api/user` (no auth required)
+2. Click the **Authorize** button in Swagger
+3. Enter the username and password you registered with
+
 Commit meldingene må se slik ut for riktig versjonering:
 
 Patch:
