@@ -2,6 +2,8 @@ package com.example.dat251_greengafl.model;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -15,6 +17,12 @@ public class User{
     @Column(unique = true, nullable = false)
     private String email;
     private String password;
+
+    @ElementCollection
+    @CollectionTable(name = "user_dietary_restrictions", joinColumns = @JoinColumn(name = "user_id"))
+    @Column(name = "restriction")
+    @Enumerated(EnumType.STRING)
+    private Set<DietaryRestriction> dietaryRestrictions = new HashSet<>();
 
     public User(){}
 
@@ -44,5 +52,13 @@ public class User{
 
     public String getPassword(){
         return password;
+    }
+
+    public Set<DietaryRestriction> getDietaryRestrictions() {
+        return dietaryRestrictions;
+    }
+
+    public void setDietaryRestrictions(Set<DietaryRestriction> dietaryRestrictions) {
+        this.dietaryRestrictions = dietaryRestrictions;
     }
 }
