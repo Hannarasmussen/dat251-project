@@ -35,6 +35,9 @@ public class UserController {
         u.setUsername(user.username());
         u.setEmail(user.email());
         u.setPassword(user.password());
+        if (user.dietaryRestrictions() != null) {
+            u.setDietaryRestrictions(user.dietaryRestrictions());
+        }
         return userService.register(u);
     }
 
