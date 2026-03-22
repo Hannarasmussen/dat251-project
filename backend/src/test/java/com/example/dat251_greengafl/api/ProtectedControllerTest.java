@@ -19,7 +19,7 @@ class ProtectedControllerTest {
   @Test
   void protected_requires_auth() throws Exception {
     mvc.perform(get("/api/protected"))
-        .andExpect(status().is3xxRedirection()); // redirect til /login
+        .andExpect(status().isUnauthorized()); // 401 with Basic auth enabled
   }
 
   @Test
