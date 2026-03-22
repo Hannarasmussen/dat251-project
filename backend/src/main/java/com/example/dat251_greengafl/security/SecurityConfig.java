@@ -23,6 +23,7 @@ public class SecurityConfig {
             .requestMatchers("/api/**").authenticated()
             .anyRequest().permitAll()
         )
+        .httpBasic(basic -> {})
         .oauth2Login(oauth2 -> oauth2.defaultSuccessUrl("/api/me", true))
         .logout(logout -> logout.logoutSuccessUrl("/api/me"))
         .build();
