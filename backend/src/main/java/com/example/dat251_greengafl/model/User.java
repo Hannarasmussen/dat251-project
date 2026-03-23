@@ -1,5 +1,6 @@
 package com.example.dat251_greengafl.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class User {
@@ -8,7 +9,7 @@ public class User {
     private String username;
     private String email;
     private String password;
-    private Set<DietaryPreference> dietaryPreferences;
+    private Set<DietaryPreference> dietaryPreferences = new HashSet<>();
 
     public User() {}
 

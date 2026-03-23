@@ -34,9 +34,7 @@ public class UserController {
         u.setUsername(user.getUsername());
         u.setEmail(user.getEmail());
         u.setPassword(user.getPassword());
-        if (user.getDietaryPreferences() != null) {
-            u.setDietaryPreferences(user.getDietaryPreferences());
-        }
+        u.setDietaryPreferences(user.getDietaryPreferences());
         return userService.register(u);
     }
 
