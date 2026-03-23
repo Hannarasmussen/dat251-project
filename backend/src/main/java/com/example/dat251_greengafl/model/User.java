@@ -1,25 +1,23 @@
 package com.example.dat251_greengafl.model;
 
-import jakarta.persistence.*;
+import java.util.Set;
 
-import java.util.UUID;
+public class User {
 
-@Entity
-@Table(name = "users")
-public class User{
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
-    @Column(unique = true, nullable = false)
+    private Long id; // match med UserEntity
     private String username;
-    @Column(unique = true, nullable = false)
     private String email;
     private String password;
+    private Set<DietaryPreference> dietaryPreferences;
 
-    public User(){}
+    public User() {}
 
-    public UUID getId() {
+    public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getEmail() {
@@ -44,5 +42,13 @@ public class User{
 
     public String getPassword(){
         return password;
+    }
+
+    public Set<DietaryPreference> getDietaryPreferences() {
+        return dietaryPreferences;
+    }
+
+    public void setDietaryPreferences(Set<DietaryPreference> dietaryPreferences) {
+        this.dietaryPreferences = dietaryPreferences;
     }
 }

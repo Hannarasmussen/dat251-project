@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/user")
@@ -19,34 +18,34 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    public List<User> findAll(){
+    public List<User> findAll() {
         return userService.findAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<User> findById(@PathVariable UUID id){
+    public Optional<User> findById(@PathVariable Long id) {
         return userService.findById(id);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    private User create(@RequestBody UserEntity user){
+    public User create(@RequestBody UserEntity user) {
         User u = new User();
-        u.setUsername(user.username());
-        u.setEmail(user.email());
-        u.setPassword(user.password());
+        u.setUsername(user.getUsername());
+        u.setEmail(user.getEmail());
+        u.setPassword(user.getPassword());
+        u.setDietaryPreferences(user.getDietaryPreferences());
         return userService.register(u);
     }
 
     @PutMapping
-    public User update(@RequestBody User user){
+    public User update(@RequestBody User user) {
         return userService.register(user);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
-    public void deleteById(@PathVariable UUID id) {
+    public void deleteById(@PathVariable Long id) {
         userService.deleteById(id);
     }
-
 }

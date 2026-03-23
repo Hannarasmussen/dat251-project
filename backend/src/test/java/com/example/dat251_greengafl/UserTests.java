@@ -53,11 +53,10 @@ class UserTests {
         user2.setUsername("1");
         user2.setEmail("1@2.no");
         user2.setPassword("123123");
-        userService.register(user1);
+        User saved1 = userService.register(user1);
         assertThatThrownBy(() -> userService.register(user2))
                 .isInstanceOf(DataIntegrityViolationException.class);
-        userService.deleteById(user1.getId());
-        userService.deleteById(user2.getId());
+        userService.deleteById(saved1.getId());
     }
 
     @Test
@@ -70,10 +69,10 @@ class UserTests {
         user2.setUsername("2");
         user2.setEmail("1@1.no");
         user2.setPassword("123123");
-        userService.register(user1);
+        User saved1 = userService.register(user1);
         assertThatThrownBy(() -> userService.register(user2)).isInstanceOf(DataIntegrityViolationException.class);
-        userService.deleteById(user1.getId());
-        userService.deleteById(user2.getId());
+        userService.deleteById(saved1.getId());
+        
     }
 
     @Test
