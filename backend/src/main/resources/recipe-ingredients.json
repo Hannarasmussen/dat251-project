@@ -44,7 +44,7 @@
   { "recipeName": "Potetsuppe", "ingredientName": "Buljongpulver", "quantity": "1", "unit": "ss" },
   { "recipeName": "Potetsuppe", "ingredientName": "Kremfløte, 37 % fett", "quantity": "1.5", "unit": "dl" },
 
-  { "recipeName": "Pasta med spinat og fløte", "ingredientName": "Pasta", "quantity": "200", "unit": "g" },
+  { "recipeName": "Pasta med spinat og fløte", "ingredientName": "Pasta, fullkorn, kokt", "quantity": "200", "unit": "g" },
   { "recipeName": "Pasta med spinat og fløte", "ingredientName": "Babyspinat, rå", "quantity": "100", "unit": "g" },
   { "recipeName": "Pasta med spinat og fløte", "ingredientName": "Hvitløk, rå", "quantity": "2", "unit": "fedd" },
   { "recipeName": "Pasta med spinat og fløte", "ingredientName": "Kremfløte, 37 % fett", "quantity": "2", "unit": "dl" },
