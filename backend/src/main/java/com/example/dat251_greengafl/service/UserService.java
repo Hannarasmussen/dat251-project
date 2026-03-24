@@ -59,18 +59,17 @@ public class UserService {
         user.setId(entity.getId());
         user.setUsername(entity.getUsername());
         user.setEmail(entity.getEmail());
-        user.setPassword(entity.getPassword());
         user.setDietaryPreferences(entity.getDietaryPreferences());
         return user;
     }
 
     private UserEntity mapToEntity(User user) {
-    UserEntity entity = new UserEntity();
-    entity.setId(user.getId());
-    entity.setUsername(user.getUsername());
-    entity.setEmail(user.getEmail());
-    entity.setPassword(user.getPassword());
-    entity.setDietaryPreferences(user.getDietaryPreferences());
-    return entity;
+        UserEntity entity = new UserEntity();
+        entity.setId(user.getId());
+        entity.setUsername(user.getUsername());
+        entity.setEmail(user.getEmail());
+        entity.setPassword(user.getPassword());
+        entity.setDietaryPreferences(user.getDietaryPreferences());
+        return entity;
     }
 }
