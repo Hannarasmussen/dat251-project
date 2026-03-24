@@ -39,6 +39,16 @@ public class UserService {
                 .map(this::mapToUser);
     }
 
+    public boolean authenticate(String username, String raw) {
+        if (username == null || raw == null) {
+            return false;
+        }
+
+        return userRepo.findByUsername(username)
+                .map(userEntity -> passwordEncoder.matches(raw, userEntity.getPassword()))
+                .orElse(false);
+    }
+
     public User register(User user) {
         UserEntity entity = mapToEntity(user);
 

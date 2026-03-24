@@ -14,19 +14,20 @@ import org.springframework.test.web.servlet.MockMvc;
 @AutoConfigureMockMvc
 class ProtectedControllerTest {
 
-  @Autowired MockMvc mvc;
+    @Autowired
+    MockMvc mvc;
 
-  @Test
-  void protected_requires_auth() throws Exception {
-    mvc.perform(get("/api/protected"))
-        .andExpect(status().is3xxRedirection()); // redirect til /login
-  }
+    @Test
+    void protected_requires_auth() throws Exception {
+        mvc.perform(get("/api/protected"))
+                .andExpect(status().isForbidden()); // does not redirect, returns 403 now :)
+    }
 
-  @Test
-  void protected_allows_when_authenticated() throws Exception {
-    mvc.perform(get("/api/protected")
-            .with(SecurityMockMvcRequestPostProcessors.oauth2Login()))
-        .andExpect(status().isOk())
-        .andExpect(jsonPath("$.ok").value(true));
-  }
+    @Test
+    void protected_allows_when_authenticated() throws Exception {
+        mvc.perform(get("/api/protected")
+                        .with(SecurityMockMvcRequestPostProcessors.oauth2Login()))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.ok").value(true));
+    }
 }
