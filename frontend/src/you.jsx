@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuthStatus, logout } from "./auth";
 import logo from "./assets/gg.png";
-import "./you.css";
-import "./App.css";
+import "./styles/you.css";
+import "./styles/App.css";
 
 export default function You() {
   const navigate = useNavigate();

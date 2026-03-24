@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/App.css";
 import { useNavigate } from "react-router-dom";
 
 const featureCards = [
@@ -43,7 +43,11 @@ function App() {
           >
             Log in
           </button>
-          <button type="button" className="primary-button">
+          <button
+            type="button"
+            className="primary-button"
+            onClick={() => navigate("/register")}
+          >
             Register
           </button>
         </nav>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { login } from "./auth";
-import "./login.css";
+import "./styles/login.css";
 
 export default function Login() {
   const [username, setUsername] = useState("");
