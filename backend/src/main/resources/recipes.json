@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Kylling med ris og grønnsaker",
+    "instructions": "Kok ris etter anvisning. Stek kyllingfilet i biter i en panne til gjennomstekt. Tilsett hakket paprika, gulrot og brokkoli. Stek i 5-7 minutter. Krydre med salt og pepper og server med ris.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-ris-gronnsaker.jpg"
+  },
+  {
+    "name": "Laks med poteter og brokkoli",
+    "instructions": "Kok poteter. Damp brokkoli. Stek laks i smør på middels varme i ca 4-5 minutter per side. Server med sitron og salt.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-poteter.jpg"
+  },
+  {
+    "name": "Spaghetti med tomatsaus",
+    "instructions": "Kok spaghetti. Stek løk og hvitløk i olje. Tilsett hakkede tomater og la det småkoke i 10 minutter. Smak til med salt og pepper. Server med spaghetti.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Italiensk",
+    "imageUrl": "/images/recipes/spaghetti-tomat.jpg"
+  },
+  {
+    "name": "Omelett med grønnsaker",
+    "instructions": "Visp egg med litt salt. Stek løk og paprika i en panne. Hell over eggene og stek til omeletten har satt seg. Topp med ost hvis ønskelig.",
+    "cookingTime": 10,
+    "difficulty": "EASY",
+    "cuisine": "Fransk",
+    "imageUrl": "/images/recipes/omelett.jpg"
+  },
+  {
+    "name": "Vegetargryte med kikerter",
+    "instructions": "Stek løk og hvitløk. Tilsett kikerter og hakkede tomater. La det småkoke i 10-15 minutter. Krydre med salt og pepper. Server gjerne med ris.",
+    "cookingTime": 30,
+    "difficulty": "MEDIUM",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kikertgryte.jpg"
+  },
+  {
+    "name": "Stekt ris med egg",
+    "instructions": "Kok ris og avkjøl. Stek egg og sett til side. Stek grønnsaker som gulrot og erter. Tilsett ris og egg, og rør godt sammen. Smak til med salt.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Asiatisk",
+    "imageUrl": "/images/recipes/stekt-ris.jpg"
+  },
+  {
+    "name": "Kyllingsalat",
+    "instructions": "Stek kyllingfilet og skjær i biter. Bland med salat, tomat og agurk. Tilsett litt olje og salt.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kyllingsalat.jpg"
+  },
+  {
+    "name": "Potetsuppe",
+    "instructions": "Kok poteter og løk i buljong til mørt. Mos eller blend suppen. Tilsett fløte og varm opp. Smak til med salt og pepper.",
+    "cookingTime": 30,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/potetsuppe.jpg"
+  },
+  {
+    "name": "Pasta med spinat og fløte",
+    "instructions": "Kok pasta. Stek hvitløk i litt olje. Tilsett spinat og fløte. Bland med pasta og server.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Italiensk",
+    "imageUrl": "/images/recipes/pasta-spinat.jpg"
+  },
+  {
+    "name": "Grønnsakswok",
+    "instructions": "Kutt grønnsaker i biter. Stek i varm panne med litt olje. Rør i 5-7 minutter. Krydre med salt og server med ris.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Asiatisk",
+    "imageUrl": "/images/recipes/gronnsakswok.jpg"
+  }
+]

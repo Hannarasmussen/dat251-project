@@ -1,0 +1,58 @@
+[
+
+  { "recipeName": "Kylling med ris og grønnsaker", "ingredientName": "Kylling, filet, uten skinn, rå", "quantity": "300", "unit": "g" },
+  { "recipeName": "Kylling med ris og grønnsaker", "ingredientName": "Ris", "quantity": "150", "unit": "g" },
+  { "recipeName": "Kylling med ris og grønnsaker", "ingredientName": "Paprika", "quantity": "1", "unit": "stk" },
+  { "recipeName": "Kylling med ris og grønnsaker", "ingredientName": "Gulrot, norsk, rå", "quantity": "2", "unit": "stk" },
+  { "recipeName": "Kylling med ris og grønnsaker", "ingredientName": "Brokkoli, norsk, rå", "quantity": "200", "unit": "g" },
+
+  { "recipeName": "Laks med poteter og brokkoli", "ingredientName": "Laks, oppdrett, rå", "quantity": "300", "unit": "g" },
+  { "recipeName": "Laks med poteter og brokkoli", "ingredientName": "Potet, rå", "quantity": "400", "unit": "g" },
+  { "recipeName": "Laks med poteter og brokkoli", "ingredientName": "Brokkoli, norsk, rå", "quantity": "200", "unit": "g" },
+  { "recipeName": "Laks med poteter og brokkoli", "ingredientName": "Sitron, rå", "quantity": "1", "unit": "stk" },
+  { "recipeName": "Laks med poteter og brokkoli", "ingredientName": "Smør", "quantity": "1", "unit": "ss" },
+
+  { "recipeName": "Pasta med tomatsaus", "ingredientName": "Pasta, tørr", "quantity": "200", "unit": "g" },
+  { "recipeName": "Pasta med tomatsaus", "ingredientName": "Tomat, rød, rå", "quantity": "400", "unit": "g" },
+  { "recipeName": "Pasta med tomatsaus", "ingredientName": "Løk, gul, rå", "quantity": "1", "unit": "stk" },
+  { "recipeName": "Pasta med tomatsaus", "ingredientName": "Hvitløk, rå", "quantity": "2", "unit": "fedd" },
+
+  { "recipeName": "Omelett med grønnsaker", "ingredientName": "Egg, rå", "quantity": "3", "unit": "stk" },
+  { "recipeName": "Omelett med grønnsaker", "ingredientName": "Paprika", "quantity": "1", "unit": "stk" },
+  { "recipeName": "Omelett med grønnsaker", "ingredientName": "Løk, gul, rå", "quantity": "0.5", "unit": "stk" },
+  { "recipeName": "Omelett med grønnsaker", "ingredientName": "Ost", "quantity": "50", "unit": "g" },
+
+  { "recipeName": "Vegetargryte med kikerter", "ingredientName": "Kikerter, hermetisk", "quantity": "1", "unit": "boks" },
+  { "recipeName": "Vegetargryte med kikerter", "ingredientName": "Tomat, rød, rå", "quantity": "400", "unit": "g" },
+  { "recipeName": "Vegetargryte med kikerter", "ingredientName": "Løk, gul, rå", "quantity": "1", "unit": "stk" },
+  { "recipeName": "Vegetargryte med kikerter", "ingredientName": "Hvitløk, rå", "quantity": "2", "unit": "fedd" },
+  { "recipeName": "Vegetargryte med kikerter", "ingredientName": "Ris", "quantity": "150", "unit": "g" },
+
+  { "recipeName": "Stekt ris med egg", "ingredientName": "Ris", "quantity": "300", "unit": "g" },
+  { "recipeName": "Stekt ris med egg", "ingredientName": "Egg, rå", "quantity": "2", "unit": "stk" },
+  { "recipeName": "Stekt ris med egg", "ingredientName": "Gulrot, norsk, rå", "quantity": "1", "unit": "stk" },
+  { "recipeName": "Stekt ris med egg", "ingredientName": "Erter, fryst", "quantity": "100", "unit": "g" },
+
+  { "recipeName": "Kyllingsalat", "ingredientName": "Kylling, filet, uten skinn, rå", "quantity": "300", "unit": "g" },
+  { "recipeName": "Kyllingsalat", "ingredientName": "Isbergsalat, issalat, rå", "quantity": "1", "unit": "stk" },
+  { "recipeName": "Kyllingsalat", "ingredientName": "Tomat", "quantity": "2", "unit": "stk" },
+  { "recipeName": "Kyllingsalat", "ingredientName": "Agurk, norsk, rå", "quantity": "1", "unit": "stk" },
+
+  { "recipeName": "Potetsuppe", "ingredientName": "Potet", "quantity": "500", "unit": "g" },
+  { "recipeName": "Potetsuppe", "ingredientName": "Løk", "quantity": "1", "unit": "stk" },
+  { "recipeName": "Potetsuppe", "ingredientName": "Hvitløk, rå", "quantity": "2", "unit": "fedd" },
+  { "recipeName": "Potetsuppe", "ingredientName": "Buljongpulver", "quantity": "1", "unit": "ss" },
+  { "recipeName": "Potetsuppe", "ingredientName": "Kremfløte, 37 % fett", "quantity": "1.5", "unit": "dl" },
+
+  { "recipeName": "Pasta med spinat og fløte", "ingredientName": "Pasta, fullkorn, kokt", "quantity": "200", "unit": "g" },
+  { "recipeName": "Pasta med spinat og fløte", "ingredientName": "Babyspinat, rå", "quantity": "100", "unit": "g" },
+  { "recipeName": "Pasta med spinat og fløte", "ingredientName": "Hvitløk, rå", "quantity": "2", "unit": "fedd" },
+  { "recipeName": "Pasta med spinat og fløte", "ingredientName": "Kremfløte, 37 % fett", "quantity": "2", "unit": "dl" },
+
+  { "recipeName": "Grønnsakswok", "ingredientName": "Brokkoli, norsk, rå", "quantity": "150", "unit": "g" },
+  { "recipeName": "Grønnsakswok", "ingredientName": "Gulrot, norsk, rå", "quantity": "2", "unit": "stk" },
+  { "recipeName": "Grønnsakswok", "ingredientName": "Paprika", "quantity": "1", "unit": "stk" },
+  { "recipeName": "Grønnsakswok", "ingredientName": "Mais, hermetisk", "quantity": "100", "unit": "g" },
+  { "recipeName": "Grønnsakswok", "ingredientName": "Ris", "quantity": "150", "unit": "g" }
+
+]
