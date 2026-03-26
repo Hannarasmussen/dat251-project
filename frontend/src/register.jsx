@@ -12,9 +12,9 @@ export default function Register() {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
 
-  async function handleSubmit(userInfo) {
+  async function handleSubmit(event) {
     //dont send the form without the fields acutally filled in
-    userInfo.preventDefault();
+    event.preventDefault();
     setError("");
     setMessage("");
     try {
