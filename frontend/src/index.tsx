@@ -4,9 +4,9 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Login from "./Login";
-import You from "./you.jsx";
+import You from "./you";
 import RecipeDetail from "./RecipeDetail";
-import reportWebVitals from "./reportWebVitals.js";
+import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(

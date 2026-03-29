@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuthStatus, logout } from "./auth";
-import logo from "./assets/gg.png";
+import logo from "./assets/greengaflLogo.png";
 import "./you.css";
 import "./App.css";
 
 export default function You() {
   const navigate = useNavigate();
-  const [authData, setAuthData] = useState(null);
+  const [authData, setAuthData] = useState<any>(null);
 
   useEffect(() => {
     let cancelled = false;
 
     async function assertLoggedIn() {
       try {
-        const { ok, data } = await getAuthStatus();
+        const data = await getAuthStatus();
 
-        if (!ok || !data?.authenticated) {
+        if (!data?.authenticated) {
           if (!cancelled) navigate("/login", { replace: true });
           return; // stop here, do not set state after redirect
         }
