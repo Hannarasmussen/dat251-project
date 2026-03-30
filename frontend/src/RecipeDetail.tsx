@@ -17,8 +17,12 @@ export default function RecipeDetail() {
     });
     const recipeController = new RecipeControllerApi(conf);
     async function loadRecipe() {
+      if (!id) {
+        console.log("No recipe id provided, skipping fetch.");
+        return;
+      }
       try {
-        const { data } = await recipeController.findById1(id ?? "");
+        const { data } = await recipeController.findById1(id);
         setRecipe(data);
       } catch {
         console.log("Could not fetch recipe: " + id);
