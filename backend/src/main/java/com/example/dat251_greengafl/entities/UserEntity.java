@@ -2,6 +2,7 @@ package com.example.dat251_greengafl.entities;
 
 import com.example.dat251_greengafl.model.DietaryPreference;
 import com.example.dat251_greengafl.model.Recipe;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -33,6 +34,7 @@ public class UserEntity {
     @Column(name = "preference")
     private Set<DietaryPreference> dietaryPreferences = new HashSet<>();
 
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "user_favorites",
