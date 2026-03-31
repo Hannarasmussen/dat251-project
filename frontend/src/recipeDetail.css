@@ -29,11 +29,50 @@
   transform: scale(1.02);
 }
 
+.recipe-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .recipe-header h1 {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 12px;
   color: #223127;
+}
+
+.favorite-button {
+  background: none;
+  border: 2px solid #c97a7a;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #c97a7a;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite-button:hover {
+  background: #fbeaea;
+  transform: scale(1.1);
+}
+
+.favorite-button--active {
+  background: #c97a7a;
+  color: #fff;
+}
+
+.favorite-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .recipe-meta {
