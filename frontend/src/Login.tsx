@@ -8,7 +8,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: any) {
     e.preventDefault();
     setError("");
     setLoading(true);
