@@ -48,24 +48,45 @@ public class RecipeService {
     /**
      * Adds an ingredient to a recipe.
      *
-     * @return the saved RecipeIngredient, or empty if recipe or ingredient not found
+     * @return the saved RecipeIngredient, or empty if recipe or ingredient not
+     *         found
      */
-    public Optional<RecipeIngredient> addIngredient(UUID recipeId, UUID ingredientId,
-                                                     String quantity, String unit) {
+    public Optional<RecipeIngredient> addIngredient(UUID recipeId,
+            UUID ingredientId,
+            String quantity,
+            String unit) {
+
         Optional<Recipe> recipe = recipeRepo.findById(recipeId);
         Optional<Ingredient> ingredient = ingredientRepo.findById(ingredientId);
 
-        if (recipe.isEmpty() || ingredient.isEmpty()) {
+        if (!entitiesExist(recipe, ingredient)) {
             return Optional.empty();
         }
 
-        RecipeIngredient ri = new RecipeIngredient();
-        ri.setRecipe(recipe.get());
-        ri.setIngredient(ingredient.get());
-        ri.setQuantity(quantity);
-        ri.setUnit(unit);
+        RecipeIngredient recipeIngredient = createRecipeIngredient(recipe.get(), ingredient.get(), quantity, unit);
 
-        return Optional.of(recipeIngredientRepo.save(ri));
+        return Optional.of(recipeIngredientRepo.save(recipeIngredient));
+    }
+
+    private boolean entitiesExist(Optional<?>... optionals) {
+        for (Optional<?> optional : optionals) {
+            if (optional.isEmpty()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private RecipeIngredient createRecipeIngredient(Recipe recipe,
+            Ingredient ingredient,
+            String quantity,
+            String unit) {
+        RecipeIngredient recipeIngredient = new RecipeIngredient();
+        recipeIngredient.setRecipe(recipe);
+        recipeIngredient.setIngredient(ingredient);
+        recipeIngredient.setQuantity(quantity);
+        recipeIngredient.setUnit(unit);
+        return recipeIngredient;
     }
 
     /**
