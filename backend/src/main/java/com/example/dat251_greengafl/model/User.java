@@ -10,6 +10,7 @@ public class User {
     private String email;
     private String password;
     private Set<DietaryPreference> dietaryPreferences = new HashSet<>();
+    private Set<DietaryRestriction> dietaryRestrictions = new HashSet<>();
 
     public User() {}
 
@@ -51,5 +52,13 @@ public class User {
 
     public void setDietaryPreferences(Set<DietaryPreference> dietaryPreferences) {
         this.dietaryPreferences = dietaryPreferences;
+    }
+
+    public Set<DietaryRestriction> getDietaryRestrictions() {
+        return dietaryRestrictions;
+    }
+
+    public void setDietaryRestrictions(Set<DietaryRestriction> dietaryRestrictions) {
+        this.dietaryRestrictions = dietaryRestrictions;
     }
 }

@@ -40,8 +40,8 @@ The API can be tested using the Swagger UI at `http://localhost:8080/swagger-ui/
 
 To access protected endpoints:
 1. Create a user via `POST /api/user` (no auth required)
-2. Click the **Authorize** button in Swagger
-3. Enter the username and password you registered with
+2. Log in via `POST /api/auth/login` with the same username and password to obtain a JWT
+3. Copy the token from the response, click the **Authorize** button in Swagger, and enter `Bearer <your_token>`
 
 Commit meldingene må se slik ut for riktig versjonering:
 

@@ -57,12 +57,41 @@ public class UserService implements UserDetailsService {
     }
 
     public User register(User user){
+        if (user.getPassword() == null || user.getPassword().isBlank()) {
+            throw new IllegalArgumentException("Password is required when creating a user");
+        }
         if (user.getDietaryPreferences() == null) {
             user.setDietaryPreferences(new HashSet<>());
+        }
+        if (user.getDietaryRestrictions() == null) {
+            user.setDietaryRestrictions(new HashSet<>());
         }
         UserEntity entity = toEntity(user);
         entity.setPassword(passwordEncoder.encode(user.getPassword()));
         return toModel(userRepo.save(entity));
+    }
+
+    public User update(Long id, User user) {
+        UserEntity existing = userRepo.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("User not found with id: " + id));
+
+        if (user.getUsername() != null) {
+            existing.setUsername(user.getUsername());
+        }
+        if (user.getEmail() != null) {
+            existing.setEmail(user.getEmail());
+        }
+        if (user.getPassword() != null && !user.getPassword().isBlank()) {
+            existing.setPassword(passwordEncoder.encode(user.getPassword()));
+        }
+        if (user.getDietaryPreferences() != null) {
+            existing.setDietaryPreferences(user.getDietaryPreferences());
+        }
+        if (user.getDietaryRestrictions() != null) {
+            existing.setDietaryRestrictions(user.getDietaryRestrictions());
+        }
+
+        return toModel(userRepo.save(existing));
     }
 
     public void deleteById(Long id){
@@ -74,8 +103,8 @@ public class UserService implements UserDetailsService {
         u.setId(entity.getId());
         u.setUsername(entity.getUsername());
         u.setEmail(entity.getEmail());
-        u.setPassword(entity.getPassword());
         u.setDietaryPreferences(entity.getDietaryPreferences());
+        u.setDietaryRestrictions(entity.getDietaryRestrictions());
         return u;
     }
 
@@ -86,9 +115,11 @@ public class UserService implements UserDetailsService {
         }
         e.setUsername(user.getUsername());
         e.setEmail(user.getEmail());
-        e.setPassword(user.getPassword());
         e.setDietaryPreferences(user.getDietaryPreferences() != null
                 ? user.getDietaryPreferences()
+                : new HashSet<>());
+        e.setDietaryRestrictions(user.getDietaryRestrictions() != null
+                ? user.getDietaryRestrictions()
                 : new HashSet<>());
         return e;
     }

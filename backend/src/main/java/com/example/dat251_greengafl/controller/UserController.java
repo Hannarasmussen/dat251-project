@@ -35,12 +35,13 @@ public class UserController {
         u.setEmail(user.getEmail());
         u.setPassword(user.getPassword());
         u.setDietaryPreferences(user.getDietaryPreferences());
+        u.setDietaryRestrictions(user.getDietaryRestrictions());
         return userService.register(u);
     }
 
-    @PutMapping
-    public User update(@RequestBody User user) {
-        return userService.register(user);
+    @PutMapping("/{id}")
+    public User update(@PathVariable Long id, @RequestBody User user) {
+        return userService.update(id, user);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)

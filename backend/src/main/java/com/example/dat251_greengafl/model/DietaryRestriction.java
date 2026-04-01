@@ -1,12 +1,10 @@
 package com.example.dat251_greengafl.model;
 
+/**
+ * Allergen-based and medical dietary restrictions.
+ * Lifestyle choices belong in {@link DietaryPreference}.
+ */
 public enum DietaryRestriction {
-
-    // Dietary choices
-    VEGETARIAN,
-    VEGAN,
-    HALAL,
-    KOSHER,
 
     // Gluten & wheat
     GLUTEN_FREE,

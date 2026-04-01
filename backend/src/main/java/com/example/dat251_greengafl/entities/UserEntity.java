@@ -1,6 +1,7 @@
 package com.example.dat251_greengafl.entities;
 
 import com.example.dat251_greengafl.model.DietaryPreference;
+import com.example.dat251_greengafl.model.DietaryRestriction;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -31,6 +32,15 @@ public class UserEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "preference")
     private Set<DietaryPreference> dietaryPreferences = new HashSet<>();
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(
+            name = "user_dietary_restrictions",
+            joinColumns = @JoinColumn(name = "user_id")
+    )
+    @Enumerated(EnumType.STRING)
+    @Column(name = "restriction")
+    private Set<DietaryRestriction> dietaryRestrictions = new HashSet<>();
 
     public UserEntity() {}
 
@@ -78,5 +88,13 @@ public class UserEntity {
 
     public void setDietaryPreferences(Set<DietaryPreference> dietaryPreferences) {
         this.dietaryPreferences = dietaryPreferences;
+    }
+
+    public Set<DietaryRestriction> getDietaryRestrictions() {
+        return dietaryRestrictions;
+    }
+
+    public void setDietaryRestrictions(Set<DietaryRestriction> dietaryRestrictions) {
+        this.dietaryRestrictions = dietaryRestrictions;
     }
 }
