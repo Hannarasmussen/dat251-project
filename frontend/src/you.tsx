@@ -61,6 +61,13 @@ export default function You() {
       <main className="you-content">
         <h1>hello, world!</h1>
         <p>Logged in as {authData?.username}</p>
+        <button
+          type="button"
+          className="primary-button"
+          onClick={() => navigate("/recipes")}
+        >
+          Preview recipe page
+        </button>
       </main>
     </div>
   );

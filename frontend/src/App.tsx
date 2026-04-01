@@ -64,6 +64,13 @@ function App() {
           <button
             type="button"
             className="ghost-button"
+            onClick={() => navigate("/recipes-preview")}
+          >
+            Preview recipe page
+          </button>
+          <button
+            type="button"
+            className="ghost-button"
             onClick={() => navigate("/login")}
           >
             Log in

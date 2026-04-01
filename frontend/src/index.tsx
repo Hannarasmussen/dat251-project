@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Login from "./Login";
 import You from "./you";
+import RecipePage from "./RecipePage";
 import RecipeDetail from "./RecipeDetail";
 import reportWebVitals from "./reportWebVitals";
 
@@ -16,6 +17,8 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/you" element={<You />} />
+        <Route path="/recipes" element={<RecipePage />} />
+        <Route path="/recipes-preview" element={<RecipePage requireAuth={false} />} />
         <Route path="/recipes/:id" element={<RecipeDetail />} />
       </Routes>
     </BrowserRouter>
