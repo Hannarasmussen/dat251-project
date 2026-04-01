@@ -5,11 +5,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Login from "./Login";
 import You from "./you";
-import RecipePage from "./RecipePage";
-import RecipeDetail from "./RecipeDetail";
+import Register from "./register";
 import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById("root")!);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -17,9 +16,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/you" element={<You />} />
-        <Route path="/recipes" element={<RecipePage />} />
-        <Route path="/recipes-preview" element={<RecipePage requireAuth={false} />} />
-        <Route path="/recipes/:id" element={<RecipeDetail />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

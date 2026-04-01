@@ -1,8 +1,6 @@
-import { AuthControllerApi, Configuration } from "./api";
-
 const API_BASE = "http://localhost:8080";
 
-export async function login(username: string, password: string) {
+export async function login(username, password) {
   const res = await fetch(`${API_BASE}/api/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -29,14 +27,11 @@ export async function logout() {
 }
 
 export async function getAuthStatus() {
-  const conf = new Configuration({
-    basePath: "http://localhost:8080",
-    baseOptions: {
-      withCredentials: true,
-    },
+  const res = await fetch(`${API_BASE}/api/auth/status`, {
+    method: "GET",
+    credentials: "include",
   });
-  const authController = new AuthControllerApi(conf);
-  const { data } = await authController.status();
 
-  return data;
+  const data = await res.json();
+  return { ok: res.ok, data };
 }

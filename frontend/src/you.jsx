@@ -7,16 +7,16 @@ import "./styles/App.css";
 
 export default function You() {
   const navigate = useNavigate();
-  const [authData, setAuthData] = useState<any>(null);
+  const [authData, setAuthData] = useState(null);
 
   useEffect(() => {
     let cancelled = false;
 
     async function assertLoggedIn() {
       try {
-        const data = await getAuthStatus();
+        const { ok, data } = await getAuthStatus();
 
-        if (!data?.authenticated) {
+        if (!ok || !data?.authenticated) {
           if (!cancelled) navigate("/login", { replace: true });
           return; // stop here, do not set state after redirect
         }
@@ -61,13 +61,6 @@ export default function You() {
       <main className="you-content">
         <h1>hello, world!</h1>
         <p>Logged in as {authData?.username}</p>
-        <button
-          type="button"
-          className="primary-button"
-          onClick={() => navigate("/recipes")}
-        >
-          Preview recipe page
-        </button>
       </main>
     </div>
   );

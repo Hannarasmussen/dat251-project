@@ -1,9 +1,5 @@
 import "./styles/App.css";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-
-import { Configuration } from "./api/configuration";
-import { Recipe, RecipeControllerApi } from "./api";
 
 const featureCards = [
   {
@@ -26,27 +22,6 @@ const featureCards = [
 function App() {
   const navigate = useNavigate();
 
-  const [recipes, setRecipes] = useState<Recipe[]>([]);
-
-  useEffect(() => {
-    const conf = new Configuration({
-      basePath: "http://localhost:8080",
-      baseOptions: {
-        withCredentials: true,
-      },
-    });
-    const recipeController = new RecipeControllerApi(conf);
-    async function load() {
-      try {
-        const { data } = await recipeController.findAll1();
-        setRecipes(data);
-      } catch {
-        console.log("Could not fetch recipes");
-      }
-    }
-    load();
-  }, []);
-
   return (
     <div className="landing-page">
       <div className="page-glow page-glow-left" aria-hidden="true" />
@@ -61,13 +36,6 @@ function App() {
         </div>
 
         <nav className="auth-actions" aria-label="Authentication">
-          <button
-            type="button"
-            className="ghost-button"
-            onClick={() => navigate("/recipes-preview")}
-          >
-            Preview recipe page
-          </button>
           <button
             type="button"
             className="ghost-button"
@@ -101,23 +69,24 @@ function App() {
         </section>
 
         <section className="visual-panel" aria-label="App preview">
-          {recipes.length > 0 ? (
-            recipes.map((recipe) => (
-              <div
-                key={recipe.id}
-                className="visual-card visual-card-main"
-                onClick={() => navigate(`/recipes/${recipe.id}`)}
-                style={{ cursor: "pointer" }}
-              >
-                <h2>{recipe.name}</h2>
-                <p>{recipe.cookingTime} minutes</p>
-              </div>
-            ))
-          ) : (
-            <div className="visual-card visual-card-main">
-              <p>No recipes available yet.</p>
-            </div>
-          )}
+          <div className="visual-card visual-card-main">
+            <p className="visual-label">Featured recipe preview</p>
+            <h2>Creamy tomato rigatoni</h2>
+            <p>
+              A quick example of how Greengafl can present an appealing dinner
+              option before users explore more suggestions inside the app.
+            </p>
+          </div>
+
+          <div className="visual-card visual-card-accent preview-detail">
+            <span>Time</span>
+            <strong>25 minutes</strong>
+          </div>
+
+          <div className="visual-card visual-card-accent soft preview-detail">
+            <span>Good for</span>
+            <strong>Busy evenings and cozy dinners</strong>
+          </div>
         </section>
       </main>
 
