@@ -81,14 +81,15 @@ export default function You() {
           ) : (
             <div className="favorites-grid">
               {favorites.map((recipe) => (
-                <div
+                <button
                   key={recipe.id}
+                  type="button"
                   className="favorite-card"
                   onClick={() => navigate(`/recipes/${recipe.id}`)}
                 >
                   <h3>{recipe.name}</h3>
                   <p>{recipe.cookingTime} min · {recipe.difficulty}</p>
-                </div>
+                </button>
               ))}
             </div>
           )}
