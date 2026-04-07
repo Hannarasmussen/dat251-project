@@ -47,6 +47,11 @@ public class FavoriteService {
         }
 
         UserEntity user = userOpt.get();
+        boolean alreadyFavorited = user.getFavoriteRecipes().stream()
+                .anyMatch(r -> r.getId().equals(recipeId));
+        if (alreadyFavorited) {
+            return true;
+        }
         user.getFavoriteRecipes().add(recipeOpt.get());
         userRepo.save(user);
         return true;
