@@ -1,6 +1,5 @@
 .gitignore
 .npmignore
-.openapi-generator-ignore
 api.ts
 base.ts
 common.ts
@@ -11,11 +10,14 @@ docs/IngredientControllerApi.md
 docs/IngredientEntity.md
 docs/LoginRequest.md
 docs/ProtectedControllerApi.md
+docs/PublicRecipeControllerApi.md
 docs/Recipe.md
+docs/RecipeCatalogItem.md
 docs/RecipeControllerApi.md
 docs/RecipeEntity.md
 docs/RecipeIngredient.md
 docs/RecipeIngredientEntity.md
+docs/RecommendationControllerApi.md
 docs/User.md
 docs/UserControllerApi.md
 docs/UserEntity.md

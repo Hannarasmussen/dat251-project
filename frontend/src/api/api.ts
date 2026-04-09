@@ -95,6 +95,14 @@ export const RecipeDirectCategoriesEnum = {
 
 export type RecipeDirectCategoriesEnum = typeof RecipeDirectCategoriesEnum[keyof typeof RecipeDirectCategoriesEnum];
 
+export interface RecipeCatalogItem {
+    'name'?: string;
+    'instructions'?: string;
+    'cookingTime'?: number;
+    'difficulty'?: string;
+    'cuisine'?: string;
+    'imageUrl'?: string;
+}
 export interface RecipeEntity {
     'name'?: string;
     'instructions'?: string;
@@ -112,6 +120,7 @@ export type RecipeEntityDifficultyEnum = typeof RecipeEntityDifficultyEnum[keyof
 
 export interface RecipeIngredient {
     'id'?: string;
+    'recipe'?: Recipe;
     'ingredient'?: Ingredient;
     'quantity'?: string;
     'unit'?: string;
@@ -519,7 +528,7 @@ export const IngredientControllerApiAxiosParamCreator = function (configuration?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        findAll2: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        findAll3: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/ingredient`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -614,10 +623,10 @@ export const IngredientControllerApiFp = function(configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async findAll2(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Ingredient>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.findAll2(options);
+        async findAll3(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Ingredient>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.findAll3(options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['IngredientControllerApi.findAll2']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['IngredientControllerApi.findAll3']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -664,8 +673,8 @@ export const IngredientControllerApiFactory = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        findAll2(options?: RawAxiosRequestConfig): AxiosPromise<Array<Ingredient>> {
-            return localVarFp.findAll2(options).then((request) => request(axios, basePath));
+        findAll3(options?: RawAxiosRequestConfig): AxiosPromise<Array<Ingredient>> {
+            return localVarFp.findAll3(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -708,8 +717,8 @@ export class IngredientControllerApi extends BaseAPI {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    public findAll2(options?: RawAxiosRequestConfig) {
-        return IngredientControllerApiFp(this.configuration).findAll2(options).then((request) => request(this.axios, this.basePath));
+    public findAll3(options?: RawAxiosRequestConfig) {
+        return IngredientControllerApiFp(this.configuration).findAll3(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -810,6 +819,96 @@ export class ProtectedControllerApi extends BaseAPI {
      */
     public protectedPing(options?: RawAxiosRequestConfig) {
         return ProtectedControllerApiFp(this.configuration).protectedPing(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * PublicRecipeControllerApi - axios parameter creator
+ */
+export const PublicRecipeControllerApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        findAll2: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/public/recipes`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            localVarHeaderParameter['Accept'] = '*/*';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * PublicRecipeControllerApi - functional programming interface
+ */
+export const PublicRecipeControllerApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PublicRecipeControllerApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async findAll2(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RecipeCatalogItem>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.findAll2(options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PublicRecipeControllerApi.findAll2']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+    }
+};
+
+/**
+ * PublicRecipeControllerApi - factory interface
+ */
+export const PublicRecipeControllerApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PublicRecipeControllerApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        findAll2(options?: RawAxiosRequestConfig): AxiosPromise<Array<RecipeCatalogItem>> {
+            return localVarFp.findAll2(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * PublicRecipeControllerApi - object-oriented interface
+ */
+export class PublicRecipeControllerApi extends BaseAPI {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public findAll2(options?: RawAxiosRequestConfig) {
+        return PublicRecipeControllerApiFp(this.configuration).findAll2(options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -1299,6 +1398,188 @@ export class RecipeControllerApi extends BaseAPI {
      */
     public update1(recipe: Recipe, options?: RawAxiosRequestConfig) {
         return RecipeControllerApiFp(this.configuration).update1(recipe, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * RecommendationControllerApi - axios parameter creator
+ */
+export const RecommendationControllerApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {number} userId 
+         * @param {number} [limit] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        recommend: async (userId: number, limit?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'userId' is not null or undefined
+            assertParamExists('recommend', 'userId', userId)
+            const localVarPath = `/api/recommendations`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (userId !== undefined) {
+                localVarQueryParameter['userId'] = userId;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            localVarHeaderParameter['Accept'] = '*/*';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {number} userId 
+         * @param {string} recipeId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        recordSelection: async (userId: number, recipeId: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'userId' is not null or undefined
+            assertParamExists('recordSelection', 'userId', userId)
+            // verify required parameter 'recipeId' is not null or undefined
+            assertParamExists('recordSelection', 'recipeId', recipeId)
+            const localVarPath = `/api/recommendations/select/{recipeId}`
+                .replace(`{${"recipeId"}}`, encodeURIComponent(String(recipeId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (userId !== undefined) {
+                localVarQueryParameter['userId'] = userId;
+            }
+
+            localVarHeaderParameter['Accept'] = '*/*';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * RecommendationControllerApi - functional programming interface
+ */
+export const RecommendationControllerApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = RecommendationControllerApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {number} userId 
+         * @param {number} [limit] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async recommend(userId: number, limit?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.recommend(userId, limit, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['RecommendationControllerApi.recommend']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {number} userId 
+         * @param {string} recipeId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async recordSelection(userId: number, recipeId: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.recordSelection(userId, recipeId, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['RecommendationControllerApi.recordSelection']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+    }
+};
+
+/**
+ * RecommendationControllerApi - factory interface
+ */
+export const RecommendationControllerApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = RecommendationControllerApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {number} userId 
+         * @param {number} [limit] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        recommend(userId: number, limit?: number, options?: RawAxiosRequestConfig): AxiosPromise<object> {
+            return localVarFp.recommend(userId, limit, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {number} userId 
+         * @param {string} recipeId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        recordSelection(userId: number, recipeId: string, options?: RawAxiosRequestConfig): AxiosPromise<{ [key: string]: object; }> {
+            return localVarFp.recordSelection(userId, recipeId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * RecommendationControllerApi - object-oriented interface
+ */
+export class RecommendationControllerApi extends BaseAPI {
+    /**
+     * 
+     * @param {number} userId 
+     * @param {number} [limit] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public recommend(userId: number, limit?: number, options?: RawAxiosRequestConfig) {
+        return RecommendationControllerApiFp(this.configuration).recommend(userId, limit, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {number} userId 
+     * @param {string} recipeId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public recordSelection(userId: number, recipeId: string, options?: RawAxiosRequestConfig) {
+        return RecommendationControllerApiFp(this.configuration).recordSelection(userId, recipeId, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

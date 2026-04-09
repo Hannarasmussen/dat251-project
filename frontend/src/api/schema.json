@@ -123,6 +123,39 @@
         }
       }
     },
+    "/api/recommendations/select/{recipeId}": {
+      "post": {
+        "tags": ["recommendation-controller"],
+        "operationId": "recordSelection",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "integer", "format": "int64" }
+          },
+          {
+            "name": "recipeId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "format": "uuid" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": { "type": "object" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/recipe/{recipeId}/ingredients": {
       "post": {
         "tags": ["recipe-controller"],
@@ -160,7 +193,7 @@
     "/api/ingredient": {
       "get": {
         "tags": ["ingredient-controller"],
-        "operationId": "findAll_2",
+        "operationId": "findAll_3",
         "responses": {
           "200": {
             "description": "OK",
@@ -277,6 +310,32 @@
         "responses": { "204": { "description": "No Content" } }
       }
     },
+    "/api/recommendations": {
+      "get": {
+        "tags": ["recommendation-controller"],
+        "operationId": "recommend",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "integer", "format": "int64" }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": { "type": "integer", "format": "int32", "default": 10 }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": { "*/*": { "schema": { "type": "object" } } }
+          }
+        }
+      }
+    },
     "/api/recipe/{id}": {
       "get": {
         "tags": ["recipe-controller"],
@@ -310,6 +369,25 @@
           }
         ],
         "responses": { "204": { "description": "No Content" } }
+      }
+    },
+    "/api/public/recipes": {
+      "get": {
+        "tags": ["public-recipe-controller"],
+        "operationId": "findAll_2",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/RecipeCatalogItem" }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/api/protected": {
@@ -501,6 +579,7 @@
         "type": "object",
         "properties": {
           "id": { "type": "string", "format": "uuid" },
+          "recipe": { "$ref": "#/components/schemas/Recipe" },
           "ingredient": { "$ref": "#/components/schemas/Ingredient" },
           "quantity": { "type": "string" },
           "unit": { "type": "string" },
@@ -571,6 +650,17 @@
         "properties": {
           "username": { "type": "string" },
           "password": { "type": "string" }
+        }
+      },
+      "RecipeCatalogItem": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "instructions": { "type": "string" },
+          "cookingTime": { "type": "integer", "format": "int32" },
+          "difficulty": { "type": "string" },
+          "cuisine": { "type": "string" },
+          "imageUrl": { "type": "string" }
         }
       }
     }

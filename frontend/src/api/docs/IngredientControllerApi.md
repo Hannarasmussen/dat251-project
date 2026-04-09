@@ -6,7 +6,7 @@ All URIs are relative to *http://localhost:8080*
 |------------- | ------------- | -------------|
 |[**create2**](#create2) | **POST** /api/ingredient | |
 |[**deleteById2**](#deletebyid2) | **DELETE** /api/ingredient/{id} | |
-|[**findAll2**](#findall2) | **GET** /api/ingredient | |
+|[**findAll3**](#findall3) | **GET** /api/ingredient | |
 |[**findById2**](#findbyid2) | **GET** /api/ingredient/{id} | |
 
 # **create2**
@@ -110,8 +110,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **findAll2**
-> Array<Ingredient> findAll2()
+# **findAll3**
+> Array<Ingredient> findAll3()
 
 
 ### Example
@@ -125,7 +125,7 @@ import {
 const configuration = new Configuration();
 const apiInstance = new IngredientControllerApi(configuration);
 
-const { status, data } = await apiInstance.findAll2();
+const { status, data } = await apiInstance.findAll3();
 ```
 
 ### Parameters

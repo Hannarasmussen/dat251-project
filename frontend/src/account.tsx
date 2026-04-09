@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuthStatus, logout } from "./auth";
 import logo from "./assets/greengaflLogo.png";
-import "./you.css";
+import "./account.css";
 import "./App.css";
 
 export default function You() {
@@ -67,6 +67,13 @@ export default function You() {
           onClick={() => navigate("/recipes")}
         >
           Preview recipe page
+        </button>
+        <button
+          type="button"
+          className="primary-button"
+          onClick={() => navigate("/recommendation")}
+        >
+          Preview recommendation page
         </button>
       </main>
     </div>
