@@ -79,7 +79,6 @@
     "cuisine": "Asiatisk",
     "imageUrl": "/images/recipes/gronnsakswok.jpg"
   },
-  [
   {
     "name": "Kylling med bulgur og brokkoli",
     "instructions": "Kok bulgur. Stek kyllingfilet i biter. Tilsett brokkoli og hvitløk, og stek videre til alt er gjennomvarmt. Server sammen.",
@@ -1168,5 +1167,4 @@
     "cuisine": "Internasjonal",
     "imageUrl": "/images/recipes/smoothie-med-jordbar-og-eple.jpg"
   }
-]
 ]
