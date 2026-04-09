@@ -78,5 +78,1095 @@
     "difficulty": "EASY",
     "cuisine": "Asiatisk",
     "imageUrl": "/images/recipes/gronnsakswok.jpg"
+  },
+  [
+  {
+    "name": "Kylling med bulgur og brokkoli",
+    "instructions": "Kok bulgur. Stek kyllingfilet i biter. Tilsett brokkoli og hvitløk, og stek videre til alt er gjennomvarmt. Server sammen.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kylling med bulgur og brokkoli enkel",
+    "instructions": "Kok bulgur. Stek kyllingfilet i biter. Tilsett brokkoli og hvitløk, og stek videre til alt er gjennomvarmt. Server sammen. Dette er en enkel variant.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kylling med bulgur og brokkoli rask",
+    "instructions": "Kok bulgur. Stek kyllingfilet i biter. Tilsett brokkoli og hvitløk, og stek videre til alt er gjennomvarmt. Server sammen. Dette er en rask hverdagsvariant.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kylling med bulgur og brokkoli med ekstra grønnsaker",
+    "instructions": "Kok bulgur. Stek kyllingfilet i biter. Tilsett brokkoli og hvitløk, og stek videre til alt er gjennomvarmt. Server sammen. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kylling med bulgur og brokkoli til middag",
+    "instructions": "Kok bulgur. Stek kyllingfilet i biter. Tilsett brokkoli og hvitløk, og stek videre til alt er gjennomvarmt. Server sammen. Passer godt som middag.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kylling med bulgur og brokkoli til lunsj",
+    "instructions": "Kok bulgur. Stek kyllingfilet i biter. Tilsett brokkoli og hvitløk, og stek videre til alt er gjennomvarmt. Server sammen. Passer også fint som lunsj.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kylling med bulgur og brokkoli hverdagsvariant",
+    "instructions": "Kok bulgur. Stek kyllingfilet i biter. Tilsett brokkoli og hvitløk, og stek videre til alt er gjennomvarmt. Server sammen. En fin rett til hverdags.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kylling med bulgur og brokkoli med mild smak",
+    "instructions": "Kok bulgur. Stek kyllingfilet i biter. Tilsett brokkoli og hvitløk, og stek videre til alt er gjennomvarmt. Server sammen. Retten har en mild og balansert smak.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kylling med couscous og gulrot",
+    "instructions": "Kok couscous. Stek kyllingfilet og gulrot i skiver. Bland sammen og smak til.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med couscous og gulrot enkel",
+    "instructions": "Kok couscous. Stek kyllingfilet og gulrot i skiver. Bland sammen og smak til. Dette er en enkel variant.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med couscous og gulrot rask",
+    "instructions": "Kok couscous. Stek kyllingfilet og gulrot i skiver. Bland sammen og smak til. Dette er en rask hverdagsvariant.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med couscous og gulrot med ekstra grønnsaker",
+    "instructions": "Kok couscous. Stek kyllingfilet og gulrot i skiver. Bland sammen og smak til. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med couscous og gulrot til middag",
+    "instructions": "Kok couscous. Stek kyllingfilet og gulrot i skiver. Bland sammen og smak til. Passer godt som middag.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med couscous og gulrot til lunsj",
+    "instructions": "Kok couscous. Stek kyllingfilet og gulrot i skiver. Bland sammen og smak til. Passer også fint som lunsj.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med couscous og gulrot hverdagsvariant",
+    "instructions": "Kok couscous. Stek kyllingfilet og gulrot i skiver. Bland sammen og smak til. En fin rett til hverdags.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med couscous og gulrot med mild smak",
+    "instructions": "Kok couscous. Stek kyllingfilet og gulrot i skiver. Bland sammen og smak til. Retten har en mild og balansert smak.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/kylling-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Laks med bulgur og brokkoli",
+    "instructions": "Kok bulgur. Stek laks og damp brokkoli. Server sammen.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Laks med bulgur og brokkoli enkel",
+    "instructions": "Kok bulgur. Stek laks og damp brokkoli. Server sammen. Dette er en enkel variant.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Laks med bulgur og brokkoli rask",
+    "instructions": "Kok bulgur. Stek laks og damp brokkoli. Server sammen. Dette er en rask hverdagsvariant.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Laks med bulgur og brokkoli med ekstra grønnsaker",
+    "instructions": "Kok bulgur. Stek laks og damp brokkoli. Server sammen. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Laks med bulgur og brokkoli til middag",
+    "instructions": "Kok bulgur. Stek laks og damp brokkoli. Server sammen. Passer godt som middag.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Laks med bulgur og brokkoli til lunsj",
+    "instructions": "Kok bulgur. Stek laks og damp brokkoli. Server sammen. Passer også fint som lunsj.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Laks med bulgur og brokkoli hverdagsvariant",
+    "instructions": "Kok bulgur. Stek laks og damp brokkoli. Server sammen. En fin rett til hverdags.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Laks med bulgur og brokkoli med mild smak",
+    "instructions": "Kok bulgur. Stek laks og damp brokkoli. Server sammen. Retten har en mild og balansert smak.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-bulgur-og-brokkoli.jpg"
+  },
+  {
+    "name": "Eggnudler med kylling og brokkoli",
+    "instructions": "Kok eggnudler. Stek kylling og brokkoli. Bland sammen.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Asiatisk",
+    "imageUrl": "/images/recipes/eggnudler-med-kylling-og-brokkoli.jpg"
+  },
+  {
+    "name": "Eggnudler med kylling og brokkoli enkel",
+    "instructions": "Kok eggnudler. Stek kylling og brokkoli. Bland sammen. Dette er en enkel variant.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Asiatisk",
+    "imageUrl": "/images/recipes/eggnudler-med-kylling-og-brokkoli.jpg"
+  },
+  {
+    "name": "Eggnudler med kylling og brokkoli rask",
+    "instructions": "Kok eggnudler. Stek kylling og brokkoli. Bland sammen. Dette er en rask hverdagsvariant.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Asiatisk",
+    "imageUrl": "/images/recipes/eggnudler-med-kylling-og-brokkoli.jpg"
+  },
+  {
+    "name": "Eggnudler med kylling og brokkoli med ekstra grønnsaker",
+    "instructions": "Kok eggnudler. Stek kylling og brokkoli. Bland sammen. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Asiatisk",
+    "imageUrl": "/images/recipes/eggnudler-med-kylling-og-brokkoli.jpg"
+  },
+  {
+    "name": "Eggnudler med kylling og brokkoli til middag",
+    "instructions": "Kok eggnudler. Stek kylling og brokkoli. Bland sammen. Passer godt som middag.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Asiatisk",
+    "imageUrl": "/images/recipes/eggnudler-med-kylling-og-brokkoli.jpg"
+  },
+  {
+    "name": "Eggnudler med kylling og brokkoli til lunsj",
+    "instructions": "Kok eggnudler. Stek kylling og brokkoli. Bland sammen. Passer også fint som lunsj.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Asiatisk",
+    "imageUrl": "/images/recipes/eggnudler-med-kylling-og-brokkoli.jpg"
+  },
+  {
+    "name": "Eggnudler med kylling og brokkoli hverdagsvariant",
+    "instructions": "Kok eggnudler. Stek kylling og brokkoli. Bland sammen. En fin rett til hverdags.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Asiatisk",
+    "imageUrl": "/images/recipes/eggnudler-med-kylling-og-brokkoli.jpg"
+  },
+  {
+    "name": "Eggnudler med kylling og brokkoli med mild smak",
+    "instructions": "Kok eggnudler. Stek kylling og brokkoli. Bland sammen. Retten har en mild og balansert smak.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Asiatisk",
+    "imageUrl": "/images/recipes/eggnudler-med-kylling-og-brokkoli.jpg"
+  },
+  {
+    "name": "Couscous med kikerter og agurk",
+    "instructions": "Kok couscous. Bland med kikerter og agurk i terninger.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/couscous-med-kikerter-og-agurk.jpg"
+  },
+  {
+    "name": "Couscous med kikerter og agurk enkel",
+    "instructions": "Kok couscous. Bland med kikerter og agurk i terninger. Dette er en enkel variant.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/couscous-med-kikerter-og-agurk.jpg"
+  },
+  {
+    "name": "Couscous med kikerter og agurk rask",
+    "instructions": "Kok couscous. Bland med kikerter og agurk i terninger. Dette er en rask hverdagsvariant.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/couscous-med-kikerter-og-agurk.jpg"
+  },
+  {
+    "name": "Couscous med kikerter og agurk med ekstra grønnsaker",
+    "instructions": "Kok couscous. Bland med kikerter og agurk i terninger. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/couscous-med-kikerter-og-agurk.jpg"
+  },
+  {
+    "name": "Couscous med kikerter og agurk til middag",
+    "instructions": "Kok couscous. Bland med kikerter og agurk i terninger. Passer godt som middag.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/couscous-med-kikerter-og-agurk.jpg"
+  },
+  {
+    "name": "Couscous med kikerter og agurk til lunsj",
+    "instructions": "Kok couscous. Bland med kikerter og agurk i terninger. Passer også fint som lunsj.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/couscous-med-kikerter-og-agurk.jpg"
+  },
+  {
+    "name": "Couscous med kikerter og agurk hverdagsvariant",
+    "instructions": "Kok couscous. Bland med kikerter og agurk i terninger. En fin rett til hverdags.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/couscous-med-kikerter-og-agurk.jpg"
+  },
+  {
+    "name": "Couscous med kikerter og agurk med mild smak",
+    "instructions": "Kok couscous. Bland med kikerter og agurk i terninger. Retten har en mild og balansert smak.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/couscous-med-kikerter-og-agurk.jpg"
+  },
+  {
+    "name": "Egg og byggryn bowl",
+    "instructions": "Kok byggryn. Kok eller stek egg og server i bowl med grønnsaker.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-og-byggryn-bowl.jpg"
+  },
+  {
+    "name": "Egg og byggryn bowl enkel",
+    "instructions": "Kok byggryn. Kok eller stek egg og server i bowl med grønnsaker. Dette er en enkel variant.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-og-byggryn-bowl.jpg"
+  },
+  {
+    "name": "Egg og byggryn bowl rask",
+    "instructions": "Kok byggryn. Kok eller stek egg og server i bowl med grønnsaker. Dette er en rask hverdagsvariant.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-og-byggryn-bowl.jpg"
+  },
+  {
+    "name": "Egg og byggryn bowl med ekstra grønnsaker",
+    "instructions": "Kok byggryn. Kok eller stek egg og server i bowl med grønnsaker. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-og-byggryn-bowl.jpg"
+  },
+  {
+    "name": "Egg og byggryn bowl til middag",
+    "instructions": "Kok byggryn. Kok eller stek egg og server i bowl med grønnsaker. Passer godt som middag.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-og-byggryn-bowl.jpg"
+  },
+  {
+    "name": "Egg og byggryn bowl til lunsj",
+    "instructions": "Kok byggryn. Kok eller stek egg og server i bowl med grønnsaker. Passer også fint som lunsj.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-og-byggryn-bowl.jpg"
+  },
+  {
+    "name": "Egg og byggryn bowl hverdagsvariant",
+    "instructions": "Kok byggryn. Kok eller stek egg og server i bowl med grønnsaker. En fin rett til hverdags.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-og-byggryn-bowl.jpg"
+  },
+  {
+    "name": "Egg og byggryn bowl med mild smak",
+    "instructions": "Kok byggryn. Kok eller stek egg og server i bowl med grønnsaker. Retten har en mild og balansert smak.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-og-byggryn-bowl.jpg"
+  },
+  {
+    "name": "Havregrøt med banan",
+    "instructions": "Kok havregryn med vann eller melk og topp med banan.",
+    "cookingTime": 10,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/havregrot-med-banan.jpg"
+  },
+  {
+    "name": "Havregrøt med banan enkel",
+    "instructions": "Kok havregryn med vann eller melk og topp med banan. Dette er en enkel variant.",
+    "cookingTime": 10,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/havregrot-med-banan.jpg"
+  },
+  {
+    "name": "Havregrøt med banan rask",
+    "instructions": "Kok havregryn med vann eller melk og topp med banan. Dette er en rask hverdagsvariant.",
+    "cookingTime": 10,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/havregrot-med-banan.jpg"
+  },
+  {
+    "name": "Havregrøt med banan med ekstra grønnsaker",
+    "instructions": "Kok havregryn med vann eller melk og topp med banan. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 10,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/havregrot-med-banan.jpg"
+  },
+  {
+    "name": "Havregrøt med banan til middag",
+    "instructions": "Kok havregryn med vann eller melk og topp med banan. Passer godt som middag.",
+    "cookingTime": 10,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/havregrot-med-banan.jpg"
+  },
+  {
+    "name": "Havregrøt med banan til lunsj",
+    "instructions": "Kok havregryn med vann eller melk og topp med banan. Passer også fint som lunsj.",
+    "cookingTime": 10,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/havregrot-med-banan.jpg"
+  },
+  {
+    "name": "Havregrøt med banan hverdagsvariant",
+    "instructions": "Kok havregryn med vann eller melk og topp med banan. En fin rett til hverdags.",
+    "cookingTime": 10,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/havregrot-med-banan.jpg"
+  },
+  {
+    "name": "Havregrøt med banan med mild smak",
+    "instructions": "Kok havregryn med vann eller melk og topp med banan. Retten har en mild og balansert smak.",
+    "cookingTime": 10,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/havregrot-med-banan.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og banan",
+    "instructions": "Blend jordbær og banan til en jevn smoothie.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-banan.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og banan enkel",
+    "instructions": "Blend jordbær og banan til en jevn smoothie. Dette er en enkel variant.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-banan.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og banan rask",
+    "instructions": "Blend jordbær og banan til en jevn smoothie. Dette er en rask hverdagsvariant.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-banan.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og banan med ekstra grønnsaker",
+    "instructions": "Blend jordbær og banan til en jevn smoothie. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-banan.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og banan til middag",
+    "instructions": "Blend jordbær og banan til en jevn smoothie. Passer godt som middag.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-banan.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og banan til lunsj",
+    "instructions": "Blend jordbær og banan til en jevn smoothie. Passer også fint som lunsj.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-banan.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og banan hverdagsvariant",
+    "instructions": "Blend jordbær og banan til en jevn smoothie. En fin rett til hverdags.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-banan.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og banan med mild smak",
+    "instructions": "Blend jordbær og banan til en jevn smoothie. Retten har en mild og balansert smak.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-banan.jpg"
+  },
+  {
+    "name": "Kylling med byggryn og gulrot",
+    "instructions": "Kok byggryn. Stek kylling og gulrot i panne og server sammen.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/kylling-med-byggryn-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med byggryn og gulrot enkel",
+    "instructions": "Kok byggryn. Stek kylling og gulrot i panne og server sammen. Dette er en enkel variant.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/kylling-med-byggryn-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med byggryn og gulrot rask",
+    "instructions": "Kok byggryn. Stek kylling og gulrot i panne og server sammen. Dette er en rask hverdagsvariant.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/kylling-med-byggryn-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med byggryn og gulrot med ekstra grønnsaker",
+    "instructions": "Kok byggryn. Stek kylling og gulrot i panne og server sammen. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/kylling-med-byggryn-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med byggryn og gulrot til middag",
+    "instructions": "Kok byggryn. Stek kylling og gulrot i panne og server sammen. Passer godt som middag.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/kylling-med-byggryn-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med byggryn og gulrot til lunsj",
+    "instructions": "Kok byggryn. Stek kylling og gulrot i panne og server sammen. Passer også fint som lunsj.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/kylling-med-byggryn-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med byggryn og gulrot hverdagsvariant",
+    "instructions": "Kok byggryn. Stek kylling og gulrot i panne og server sammen. En fin rett til hverdags.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/kylling-med-byggryn-og-gulrot.jpg"
+  },
+  {
+    "name": "Kylling med byggryn og gulrot med mild smak",
+    "instructions": "Kok byggryn. Stek kylling og gulrot i panne og server sammen. Retten har en mild og balansert smak.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/kylling-med-byggryn-og-gulrot.jpg"
+  },
+  {
+    "name": "Laks med couscous og gulrot",
+    "instructions": "Kok couscous. Stek laks og server med gulrot.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Laks med couscous og gulrot enkel",
+    "instructions": "Kok couscous. Stek laks og server med gulrot. Dette er en enkel variant.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Laks med couscous og gulrot rask",
+    "instructions": "Kok couscous. Stek laks og server med gulrot. Dette er en rask hverdagsvariant.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Laks med couscous og gulrot med ekstra grønnsaker",
+    "instructions": "Kok couscous. Stek laks og server med gulrot. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Laks med couscous og gulrot til middag",
+    "instructions": "Kok couscous. Stek laks og server med gulrot. Passer godt som middag.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Laks med couscous og gulrot til lunsj",
+    "instructions": "Kok couscous. Stek laks og server med gulrot. Passer også fint som lunsj.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Laks med couscous og gulrot hverdagsvariant",
+    "instructions": "Kok couscous. Stek laks og server med gulrot. En fin rett til hverdags.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Laks med couscous og gulrot med mild smak",
+    "instructions": "Kok couscous. Stek laks og server med gulrot. Retten har en mild og balansert smak.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-couscous-og-gulrot.jpg"
+  },
+  {
+    "name": "Laks med byggryn og agurk",
+    "instructions": "Kok byggryn. Stek laks og server med agurk i skiver.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-byggryn-og-agurk.jpg"
+  },
+  {
+    "name": "Laks med byggryn og agurk enkel",
+    "instructions": "Kok byggryn. Stek laks og server med agurk i skiver. Dette er en enkel variant.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-byggryn-og-agurk.jpg"
+  },
+  {
+    "name": "Laks med byggryn og agurk rask",
+    "instructions": "Kok byggryn. Stek laks og server med agurk i skiver. Dette er en rask hverdagsvariant.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-byggryn-og-agurk.jpg"
+  },
+  {
+    "name": "Laks med byggryn og agurk med ekstra grønnsaker",
+    "instructions": "Kok byggryn. Stek laks og server med agurk i skiver. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-byggryn-og-agurk.jpg"
+  },
+  {
+    "name": "Laks med byggryn og agurk til middag",
+    "instructions": "Kok byggryn. Stek laks og server med agurk i skiver. Passer godt som middag.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-byggryn-og-agurk.jpg"
+  },
+  {
+    "name": "Laks med byggryn og agurk til lunsj",
+    "instructions": "Kok byggryn. Stek laks og server med agurk i skiver. Passer også fint som lunsj.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-byggryn-og-agurk.jpg"
+  },
+  {
+    "name": "Laks med byggryn og agurk hverdagsvariant",
+    "instructions": "Kok byggryn. Stek laks og server med agurk i skiver. En fin rett til hverdags.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-byggryn-og-agurk.jpg"
+  },
+  {
+    "name": "Laks med byggryn og agurk med mild smak",
+    "instructions": "Kok byggryn. Stek laks og server med agurk i skiver. Retten har en mild og balansert smak.",
+    "cookingTime": 25,
+    "difficulty": "EASY",
+    "cuisine": "Nordisk",
+    "imageUrl": "/images/recipes/laks-med-byggryn-og-agurk.jpg"
+  },
+  {
+    "name": "Egg med couscous og brokkoli",
+    "instructions": "Kok couscous. Kok eller stek egg og server med brokkoli.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-couscous-og-brokkoli.jpg"
+  },
+  {
+    "name": "Egg med couscous og brokkoli enkel",
+    "instructions": "Kok couscous. Kok eller stek egg og server med brokkoli. Dette er en enkel variant.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-couscous-og-brokkoli.jpg"
+  },
+  {
+    "name": "Egg med couscous og brokkoli rask",
+    "instructions": "Kok couscous. Kok eller stek egg og server med brokkoli. Dette er en rask hverdagsvariant.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-couscous-og-brokkoli.jpg"
+  },
+  {
+    "name": "Egg med couscous og brokkoli med ekstra grønnsaker",
+    "instructions": "Kok couscous. Kok eller stek egg og server med brokkoli. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-couscous-og-brokkoli.jpg"
+  },
+  {
+    "name": "Egg med couscous og brokkoli til middag",
+    "instructions": "Kok couscous. Kok eller stek egg og server med brokkoli. Passer godt som middag.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-couscous-og-brokkoli.jpg"
+  },
+  {
+    "name": "Egg med couscous og brokkoli til lunsj",
+    "instructions": "Kok couscous. Kok eller stek egg og server med brokkoli. Passer også fint som lunsj.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-couscous-og-brokkoli.jpg"
+  },
+  {
+    "name": "Egg med couscous og brokkoli hverdagsvariant",
+    "instructions": "Kok couscous. Kok eller stek egg og server med brokkoli. En fin rett til hverdags.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-couscous-og-brokkoli.jpg"
+  },
+  {
+    "name": "Egg med couscous og brokkoli med mild smak",
+    "instructions": "Kok couscous. Kok eller stek egg og server med brokkoli. Retten har en mild og balansert smak.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-couscous-og-brokkoli.jpg"
+  },
+  {
+    "name": "Egg med bulgur og gulrot",
+    "instructions": "Kok bulgur. Stek eller kok egg og server med gulrot.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-bulgur-og-gulrot.jpg"
+  },
+  {
+    "name": "Egg med bulgur og gulrot enkel",
+    "instructions": "Kok bulgur. Stek eller kok egg og server med gulrot. Dette er en enkel variant.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-bulgur-og-gulrot.jpg"
+  },
+  {
+    "name": "Egg med bulgur og gulrot rask",
+    "instructions": "Kok bulgur. Stek eller kok egg og server med gulrot. Dette er en rask hverdagsvariant.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-bulgur-og-gulrot.jpg"
+  },
+  {
+    "name": "Egg med bulgur og gulrot med ekstra grønnsaker",
+    "instructions": "Kok bulgur. Stek eller kok egg og server med gulrot. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-bulgur-og-gulrot.jpg"
+  },
+  {
+    "name": "Egg med bulgur og gulrot til middag",
+    "instructions": "Kok bulgur. Stek eller kok egg og server med gulrot. Passer godt som middag.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-bulgur-og-gulrot.jpg"
+  },
+  {
+    "name": "Egg med bulgur og gulrot til lunsj",
+    "instructions": "Kok bulgur. Stek eller kok egg og server med gulrot. Passer også fint som lunsj.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-bulgur-og-gulrot.jpg"
+  },
+  {
+    "name": "Egg med bulgur og gulrot hverdagsvariant",
+    "instructions": "Kok bulgur. Stek eller kok egg og server med gulrot. En fin rett til hverdags.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-bulgur-og-gulrot.jpg"
+  },
+  {
+    "name": "Egg med bulgur og gulrot med mild smak",
+    "instructions": "Kok bulgur. Stek eller kok egg og server med gulrot. Retten har en mild og balansert smak.",
+    "cookingTime": 15,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/egg-med-bulgur-og-gulrot.jpg"
+  },
+  {
+    "name": "Kikerter med byggryn og brokkoli",
+    "instructions": "Kok byggryn. Varm kikerter og server med brokkoli.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kikerter-med-byggryn-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kikerter med byggryn og brokkoli enkel",
+    "instructions": "Kok byggryn. Varm kikerter og server med brokkoli. Dette er en enkel variant.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kikerter-med-byggryn-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kikerter med byggryn og brokkoli rask",
+    "instructions": "Kok byggryn. Varm kikerter og server med brokkoli. Dette er en rask hverdagsvariant.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kikerter-med-byggryn-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kikerter med byggryn og brokkoli med ekstra grønnsaker",
+    "instructions": "Kok byggryn. Varm kikerter og server med brokkoli. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kikerter-med-byggryn-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kikerter med byggryn og brokkoli til middag",
+    "instructions": "Kok byggryn. Varm kikerter og server med brokkoli. Passer godt som middag.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kikerter-med-byggryn-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kikerter med byggryn og brokkoli til lunsj",
+    "instructions": "Kok byggryn. Varm kikerter og server med brokkoli. Passer også fint som lunsj.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kikerter-med-byggryn-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kikerter med byggryn og brokkoli hverdagsvariant",
+    "instructions": "Kok byggryn. Varm kikerter og server med brokkoli. En fin rett til hverdags.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kikerter-med-byggryn-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kikerter med byggryn og brokkoli med mild smak",
+    "instructions": "Kok byggryn. Varm kikerter og server med brokkoli. Retten har en mild og balansert smak.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kikerter-med-byggryn-og-brokkoli.jpg"
+  },
+  {
+    "name": "Kidneybønner med bulgur og agurk",
+    "instructions": "Kok bulgur. Bland med kidneybønner og agurk.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kidneybonner-med-bulgur-og-agurk.jpg"
+  },
+  {
+    "name": "Kidneybønner med bulgur og agurk enkel",
+    "instructions": "Kok bulgur. Bland med kidneybønner og agurk. Dette er en enkel variant.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kidneybonner-med-bulgur-og-agurk.jpg"
+  },
+  {
+    "name": "Kidneybønner med bulgur og agurk rask",
+    "instructions": "Kok bulgur. Bland med kidneybønner og agurk. Dette er en rask hverdagsvariant.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kidneybonner-med-bulgur-og-agurk.jpg"
+  },
+  {
+    "name": "Kidneybønner med bulgur og agurk med ekstra grønnsaker",
+    "instructions": "Kok bulgur. Bland med kidneybønner og agurk. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kidneybonner-med-bulgur-og-agurk.jpg"
+  },
+  {
+    "name": "Kidneybønner med bulgur og agurk til middag",
+    "instructions": "Kok bulgur. Bland med kidneybønner og agurk. Passer godt som middag.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kidneybonner-med-bulgur-og-agurk.jpg"
+  },
+  {
+    "name": "Kidneybønner med bulgur og agurk til lunsj",
+    "instructions": "Kok bulgur. Bland med kidneybønner og agurk. Passer også fint som lunsj.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kidneybonner-med-bulgur-og-agurk.jpg"
+  },
+  {
+    "name": "Kidneybønner med bulgur og agurk hverdagsvariant",
+    "instructions": "Kok bulgur. Bland med kidneybønner og agurk. En fin rett til hverdags.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kidneybonner-med-bulgur-og-agurk.jpg"
+  },
+  {
+    "name": "Kidneybønner med bulgur og agurk med mild smak",
+    "instructions": "Kok bulgur. Bland med kidneybønner og agurk. Retten har en mild og balansert smak.",
+    "cookingTime": 20,
+    "difficulty": "EASY",
+    "cuisine": "Vegetar",
+    "imageUrl": "/images/recipes/kidneybonner-med-bulgur-og-agurk.jpg"
+  },
+  {
+    "name": "Smoothie med blåbær og eple",
+    "instructions": "Blend blåbær og eple til en jevn smoothie.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-blabar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med blåbær og eple enkel",
+    "instructions": "Blend blåbær og eple til en jevn smoothie. Dette er en enkel variant.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-blabar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med blåbær og eple rask",
+    "instructions": "Blend blåbær og eple til en jevn smoothie. Dette er en rask hverdagsvariant.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-blabar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med blåbær og eple med ekstra grønnsaker",
+    "instructions": "Blend blåbær og eple til en jevn smoothie. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-blabar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med blåbær og eple til middag",
+    "instructions": "Blend blåbær og eple til en jevn smoothie. Passer godt som middag.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-blabar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med blåbær og eple til lunsj",
+    "instructions": "Blend blåbær og eple til en jevn smoothie. Passer også fint som lunsj.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-blabar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med blåbær og eple hverdagsvariant",
+    "instructions": "Blend blåbær og eple til en jevn smoothie. En fin rett til hverdags.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-blabar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med blåbær og eple med mild smak",
+    "instructions": "Blend blåbær og eple til en jevn smoothie. Retten har en mild og balansert smak.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-blabar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og eple",
+    "instructions": "Blend jordbær og eple til en jevn smoothie.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og eple enkel",
+    "instructions": "Blend jordbær og eple til en jevn smoothie. Dette er en enkel variant.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og eple rask",
+    "instructions": "Blend jordbær og eple til en jevn smoothie. Dette er en rask hverdagsvariant.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og eple med ekstra grønnsaker",
+    "instructions": "Blend jordbær og eple til en jevn smoothie. Tilsett litt ekstra grønnsaker før servering.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og eple til middag",
+    "instructions": "Blend jordbær og eple til en jevn smoothie. Passer godt som middag.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og eple til lunsj",
+    "instructions": "Blend jordbær og eple til en jevn smoothie. Passer også fint som lunsj.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og eple hverdagsvariant",
+    "instructions": "Blend jordbær og eple til en jevn smoothie. En fin rett til hverdags.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-eple.jpg"
+  },
+  {
+    "name": "Smoothie med jordbær og eple med mild smak",
+    "instructions": "Blend jordbær og eple til en jevn smoothie. Retten har en mild og balansert smak.",
+    "cookingTime": 5,
+    "difficulty": "EASY",
+    "cuisine": "Internasjonal",
+    "imageUrl": "/images/recipes/smoothie-med-jordbar-og-eple.jpg"
   }
+]
 ]
