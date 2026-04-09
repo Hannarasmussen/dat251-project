@@ -18,6 +18,7 @@ type BackendRecipe = {
   difficulty: "EASY" | "MEDIUM" | "HARD" | string;
   cuisine?: string;
   imageUrl?: string;
+  score?: number;
 };
 
 type IngredientItem = {
@@ -32,6 +33,11 @@ function toDifficultyLabel(difficulty: BackendRecipe["difficulty"]) {
   return difficulty.charAt(0) + difficulty.slice(1).toLowerCase();
 }
 
+function formatScore(score?: number) {
+  if (typeof score !== "number" || Number.isNaN(score)) return "N/A";
+  return score.toFixed(3);
+}
+
 const API_BASE = "http://localhost:8080";
 
 export default function RecommendPage() {
@@ -41,7 +47,6 @@ export default function RecommendPage() {
   const [catalog, setCatalog] = useState<BackendRecipe[]>([]);
   const [results, setResults] = useState<BackendRecipe[]>([]);
 
-  // Center modal state (inactive until user clicks Select)
   const [selectedRecipe, setSelectedRecipe] = useState<BackendRecipe | null>(
     null,
   );
@@ -97,7 +102,7 @@ export default function RecommendPage() {
 
         if (!Number.isFinite(resolvedId) && (auth as any)?.username) {
           const { data: users } = await userApi.findAll();
-          const found = users.find(
+          const found = (users as any[]).find(
             (u: any) => u.username === (auth as any).username,
           );
           if (found?.id != null) resolvedId = Number(found.id);
@@ -110,15 +115,17 @@ export default function RecommendPage() {
 
         if (!cancelled) setUserId(resolvedId);
 
-        // OpenAPI-based catalog load
+        // load public recipe catalog (for cuisine filter options)
         const publicApiAny = publicRecipeApi as any;
-        const catalogResponse =
+        const response =
           typeof publicApiAny.findAll2 === "function"
             ? await publicApiAny.findAll2()
-            : await publicApiAny.findAll_2();
+            : typeof publicApiAny.findAll_2 === "function"
+              ? await publicApiAny.findAll_2()
+              : await publicApiAny.findAll();
 
         if (!cancelled) {
-          setCatalog((catalogResponse?.data as BackendRecipe[]) ?? []);
+          setCatalog((response?.data as BackendRecipe[]) ?? []);
         }
       } catch (e) {
         if (!cancelled) {
@@ -149,28 +156,24 @@ export default function RecommendPage() {
       const matchesCuisine = cuisine === "All" || recipe.cuisine === cuisine;
       const matchesDifficulty =
         difficulty === "All" || recipe.difficulty === difficulty;
-      const matchesTime = recipe.cookingTime <= maxTime;
+      const matchesTime =
+        typeof recipe.cookingTime === "number"
+          ? recipe.cookingTime <= maxTime
+          : true;
+
       return matchesCuisine && matchesDifficulty && matchesTime;
     });
   }
 
-  function normalizeRecommendationResponse(data: any): BackendRecipe[] {
-    if (Array.isArray(data)) return data as BackendRecipe[];
-    if (Array.isArray(data?.recipes)) return data.recipes as BackendRecipe[];
-    if (Array.isArray(data?.items)) return data.items as BackendRecipe[];
-    if (Array.isArray(data?.data)) return data.data as BackendRecipe[];
-    if (Array.isArray(data?.content)) return data.content as BackendRecipe[];
+  async function fetchRecommendations(limit: number): Promise<BackendRecipe[]> {
+    if (!userId) return [];
 
-    if (data && typeof data === "object") {
-      const values = Object.values(data).filter(
-        (v: any) =>
-          v &&
-          typeof v === "object" &&
-          typeof v.name === "string" &&
-          typeof v.instructions === "string",
-      ) as BackendRecipe[];
-      if (values.length > 0) return values;
-    }
+    const { data } = await recommendationApi.recommend(userId, limit);
+
+    // backend returns ordered list DTO
+    if (Array.isArray(data)) return data as BackendRecipe[];
+    if (Array.isArray((data as any)?.recipes))
+      return (data as any).recipes as BackendRecipe[];
 
     return [];
   }
@@ -187,7 +190,9 @@ export default function RecommendPage() {
       const response =
         typeof apiAny.findById1 === "function"
           ? await apiAny.findById1(recipe.id)
-          : await apiAny.findById_1(recipe.id);
+          : typeof apiAny.findById_1 === "function"
+            ? await apiAny.findById_1(recipe.id)
+            : await apiAny.findById(recipe.id);
 
       const fullRecipe = response?.data as any;
       const ingredients: IngredientItem[] =
@@ -217,14 +222,11 @@ export default function RecommendPage() {
     setError("");
 
     try {
-      const { data } = await recommendationApi.recommend(userId, 10);
-      const normalized = normalizeRecommendationResponse(data);
-      const filtered = applyFilters(normalized);
-      const top = filtered.slice(0, 3);
-
+      const recommended = await fetchRecommendations(50);
+      const filtered = applyFilters(recommended);
+      const top = filtered.slice(0, 10);
       setResults(top);
 
-      // Keep center modal inactive until user explicitly clicks Select
       setSelectedRecipe(null);
       setSelectedIngredients([]);
 
@@ -252,9 +254,8 @@ export default function RecommendPage() {
     setError("");
 
     try {
-      const { data } = await recommendationApi.recommend(userId, 20);
-      const normalized = normalizeRecommendationResponse(data);
-      const filtered = applyFilters(normalized);
+      const recommended = await fetchRecommendations(50);
+      const filtered = applyFilters(recommended);
 
       if (filtered.length === 0) {
         setResults([]);
@@ -265,10 +266,7 @@ export default function RecommendPage() {
       }
 
       const randomIndex = Math.floor(Math.random() * filtered.length);
-      const lucky = filtered[randomIndex];
-      setResults([lucky]);
-
-      // Keep center modal inactive until explicit Select
+      setResults([filtered[randomIndex]]);
       setSelectedRecipe(null);
       setSelectedIngredients([]);
     } catch (e) {
@@ -285,11 +283,28 @@ export default function RecommendPage() {
   async function selectRecommendation(recipe?: BackendRecipe) {
     if (!recipe) return;
 
+    // show details immediately
     await loadRecipeDetails(recipe);
 
     if (!userId || !recipe.id) return;
+
     try {
       await recommendationApi.recordSelection(userId, recipe.id);
+
+      // Re-fetch ranked list with updated scores
+      const updated = await fetchRecommendations(50);
+      const filtered = applyFilters(updated);
+      const top = filtered.slice(0, 10);
+      setResults(top);
+
+      // Force selected recipe score to latest backend value
+      const latest = updated.find((r) => r.id === recipe.id);
+      if (latest) {
+        setSelectedRecipe((prev) => ({
+          ...(prev ?? recipe),
+          ...latest, // includes new score
+        }));
+      }
     } catch (e) {
       console.error("Could not record selection", e);
     }
@@ -385,7 +400,6 @@ export default function RecommendPage() {
             </p>
           </div>
 
-          {/* Center modal is only active/visible once user selects a recipe */}
           {selectedRecipe ? (
             <article
               className="recipe-result-card"
@@ -393,7 +407,8 @@ export default function RecommendPage() {
             >
               <p className="recipe-meta">
                 {selectedRecipe.cookingTime} min |{" "}
-                {toDifficultyLabel(selectedRecipe.difficulty)}
+                {toDifficultyLabel(selectedRecipe.difficulty)} | Score:{" "}
+                {formatScore(selectedRecipe.score)}
               </p>
               <h3>{selectedRecipe.name}</h3>
               <p>{selectedRecipe.instructions}</p>
@@ -434,7 +449,8 @@ export default function RecommendPage() {
                 >
                   <p className="recipe-meta">
                     {recipe.cookingTime} min |{" "}
-                    {toDifficultyLabel(recipe.difficulty)}
+                    {toDifficultyLabel(recipe.difficulty)} | Score:{" "}
+                    {formatScore(recipe.score)}
                   </p>
                   <h3>{recipe.name}</h3>
                   <p>{recipe.instructions}</p>
@@ -445,6 +461,9 @@ export default function RecommendPage() {
                     ) : null}
                     <span className="recipe-tag">
                       {toDifficultyLabel(recipe.difficulty)}
+                    </span>
+                    <span className="recipe-tag">
+                      Score: {formatScore(recipe.score)}
                     </span>
                   </div>
 

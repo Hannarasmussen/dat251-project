@@ -71,7 +71,7 @@ export default function You() {
         <button
           type="button"
           className="primary-button"
-          onClick={() => navigate("/recommendation")}
+          onClick={() => navigate("/recommend")}
         >
           Preview recommendation page
         </button>

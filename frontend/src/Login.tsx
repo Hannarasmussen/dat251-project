@@ -21,7 +21,7 @@ export default function Login() {
         return;
       }
 
-      window.location.href = "/you";
+      window.location.href = "/account";
     } catch {
       setError("Could not connect to server");
     } finally {

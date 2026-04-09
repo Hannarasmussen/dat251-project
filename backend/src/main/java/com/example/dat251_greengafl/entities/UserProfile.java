@@ -38,6 +38,11 @@ public class UserProfile {
     @Column(name = "score")
     private Map<Difficulty, Integer> difficultyScores = new EnumMap<>(Difficulty.class);
 
+    @Version
+    @Column(nullable = false)
+    private Long version = 0L;
+
+
     public UserProfile() {}
 
     public Long getUserId() {
@@ -67,6 +72,10 @@ public class UserProfile {
 
     public Map<Difficulty, Integer> getDifficultyScores() {
         return difficultyScores;
+    }
+
+    public Long getVersion() {
+        return version;
     }
 
     public void registerSelection(Integer cookingTime, Difficulty difficulty, Iterable<FoodCategory> categories) {

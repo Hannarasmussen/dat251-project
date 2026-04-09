@@ -1,6 +1,7 @@
 package com.example.dat251_greengafl.controller;
 
 import com.example.dat251_greengafl.model.Recipe;
+import com.example.dat251_greengafl.dto.RecommendationDto;
 import com.example.dat251_greengafl.service.RecommendationService;
 import java.util.List;
 import java.util.Map;
@@ -34,16 +35,11 @@ public class RecommendationController {
     }
 
     @GetMapping
-    public ResponseEntity<?> recommend(
+    public List<RecommendationDto> recommend(
             @RequestParam Long userId,
             @RequestParam(defaultValue = "10") int limit
     ) {
-        try {
-            List<Recipe> recommendations = recommendationService.recommend(userId, limit);
-            return ResponseEntity.ok(recommendations);
-        } catch (IllegalArgumentException ex) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                    .body(Map.of("error", ex.getMessage()));
-        }
+        return recommendationService.recommend(userId, limit);
     }
+
 }

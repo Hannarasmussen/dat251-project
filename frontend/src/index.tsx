@@ -4,7 +4,7 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Login from "./Login";
-import You from "./account";
+import Account from "./account";
 import RecipePage from "./RecipePage";
 import RecipeDetail from "./RecipeDetail";
 import reportWebVitals from "./reportWebVitals";
@@ -19,7 +19,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/account" element={<You />} />
+        <Route path="/account" element={<Account />} />
         <Route path="/recipes" element={<RecipePage />} />
         <Route path="/Recommend" element={<Recommend />} />
         <Route
