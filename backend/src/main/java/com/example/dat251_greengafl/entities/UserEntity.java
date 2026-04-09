@@ -2,6 +2,8 @@ package com.example.dat251_greengafl.entities;
 
 import com.example.dat251_greengafl.model.DietaryPreference;
 import com.example.dat251_greengafl.model.DietaryRestriction;
+import com.example.dat251_greengafl.model.Recipe;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -41,6 +43,15 @@ public class UserEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "restriction")
     private Set<DietaryRestriction> dietaryRestrictions = new HashSet<>();
+
+    @JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "user_favorites",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "recipe_id")
+    )
+    private Set<Recipe> favoriteRecipes = new HashSet<>();
 
     public UserEntity() {}
 
@@ -96,5 +107,13 @@ public class UserEntity {
 
     public void setDietaryRestrictions(Set<DietaryRestriction> dietaryRestrictions) {
         this.dietaryRestrictions = dietaryRestrictions;
+    }
+
+    public Set<Recipe> getFavoriteRecipes() {
+        return favoriteRecipes;
+    }
+
+    public void setFavoriteRecipes(Set<Recipe> favoriteRecipes) {
+        this.favoriteRecipes = favoriteRecipes;
     }
 }

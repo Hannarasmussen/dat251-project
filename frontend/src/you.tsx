@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuthStatus, logout } from "./auth";
+import { getFavorites, RecipeSummary } from "./favorites";
 import logo from "./assets/greengaflLogo.png";
 import "./you.css";
 import "./App.css";
@@ -8,6 +9,7 @@ import "./App.css";
 export default function You() {
   const navigate = useNavigate();
   const [authData, setAuthData] = useState<any>(null);
+  const [favorites, setFavorites] = useState<RecipeSummary[]>([]);
 
   useEffect(() => {
     let cancelled = false;
@@ -18,7 +20,7 @@ export default function You() {
 
         if (!data?.authenticated) {
           if (!cancelled) navigate("/login", { replace: true });
-          return; // stop here, do not set state after redirect
+          return;
         }
 
         if (!cancelled) {
@@ -35,6 +37,33 @@ export default function You() {
       cancelled = true;
     };
   }, [navigate]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    if (!authData) return () => {
+      cancelled = true;
+    };
+
+    async function loadFavorites() {
+      try {
+        const data = await getFavorites();
+        if (!cancelled) {
+          setFavorites(data);
+        }
+      } catch {
+        if (!cancelled) {
+          setFavorites([]);
+        }
+      }
+    }
+
+    loadFavorites();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [authData]);
 
   async function handleLogout() {
     try {
@@ -61,13 +90,27 @@ export default function You() {
       <main className="you-content">
         <h1>hello, world!</h1>
         <p>Logged in as {authData?.username}</p>
-        <button
-          type="button"
-          className="primary-button"
-          onClick={() => navigate("/recipes")}
-        >
-          Preview recipe page
-        </button>
+
+        <section className="favorites-section">
+          <h2>Favourite Recipes</h2>
+          {favorites.length === 0 ? (
+            <p className="favorites-empty">No favourite recipes yet. Browse recipes and click ♡ to save them here.</p>
+          ) : (
+            <div className="favorites-grid">
+              {favorites.map((recipe) => (
+                <button
+                  key={recipe.id}
+                  type="button"
+                  className="favorite-card"
+                  onClick={() => navigate(`/recipes/${recipe.id}`)}
+                >
+                  <h3>{recipe.name}</h3>
+                  <p>{recipe.cookingTime} min · {recipe.difficulty}</p>
+                </button>
+              ))}
+            </div>
+          )}
+        </section>
       </main>
     </div>
   );

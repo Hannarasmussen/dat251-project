@@ -92,3 +92,53 @@ body,
     margin: 2rem auto;
     padding: 0 2rem;
 }
+
+.favorites-section {
+    margin-top: 2.5rem;
+}
+
+.favorites-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.favorites-empty {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.favorite-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    transition: box-shadow 0.15s, transform 0.15s;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.favorite-card:hover {
+    box-shadow: 0 6px 20px var(--shadow);
+    transform: translateY(-2px);
+}
+
+.favorite-card h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.favorite-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
