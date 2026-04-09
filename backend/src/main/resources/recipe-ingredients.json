@@ -53,6 +53,2309 @@
   { "recipeName": "Grønnsakswok", "ingredientName": "Gulrot, norsk, rå", "quantity": "2", "unit": "stk" },
   { "recipeName": "Grønnsakswok", "ingredientName": "Paprika", "quantity": "1", "unit": "stk" },
   { "recipeName": "Grønnsakswok", "ingredientName": "Mais, hermetisk", "quantity": "100", "unit": "g" },
-  { "recipeName": "Grønnsakswok", "ingredientName": "Ris", "quantity": "150", "unit": "g" }
-
+  { "recipeName": "Grønnsakswok", "ingredientName": "Ris", "quantity": "150", "unit": "g" },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli",
+    "ingredientName": "Hvitløk, rå",
+    "quantity": "2",
+    "unit": "fedd"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli enkel",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli enkel",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli enkel",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli enkel",
+    "ingredientName": "Hvitløk, rå",
+    "quantity": "2",
+    "unit": "fedd"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli rask",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli rask",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli rask",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli rask",
+    "ingredientName": "Hvitløk, rå",
+    "quantity": "2",
+    "unit": "fedd"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Hvitløk, rå",
+    "quantity": "2",
+    "unit": "fedd"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli til middag",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli til middag",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli til middag",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli til middag",
+    "ingredientName": "Hvitløk, rå",
+    "quantity": "2",
+    "unit": "fedd"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli til lunsj",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli til lunsj",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli til lunsj",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli til lunsj",
+    "ingredientName": "Hvitløk, rå",
+    "quantity": "2",
+    "unit": "fedd"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli hverdagsvariant",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli hverdagsvariant",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli hverdagsvariant",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli hverdagsvariant",
+    "ingredientName": "Hvitløk, rå",
+    "quantity": "2",
+    "unit": "fedd"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli med mild smak",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli med mild smak",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli med mild smak",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med bulgur og brokkoli med mild smak",
+    "ingredientName": "Hvitløk, rå",
+    "quantity": "2",
+    "unit": "fedd"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot enkel",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot enkel",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot enkel",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot rask",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot rask",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot rask",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot med ekstra grønnsaker",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot med ekstra grønnsaker",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot med ekstra grønnsaker",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot til middag",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot til middag",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot til middag",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot til lunsj",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot til lunsj",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot til lunsj",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot hverdagsvariant",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot hverdagsvariant",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot hverdagsvariant",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot med mild smak",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot med mild smak",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med couscous og gulrot med mild smak",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli enkel",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli enkel",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli enkel",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli rask",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli rask",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli rask",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli til middag",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli til middag",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli til middag",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli til lunsj",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli til lunsj",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli til lunsj",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli hverdagsvariant",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli hverdagsvariant",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli hverdagsvariant",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli med mild smak",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli med mild smak",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med bulgur og brokkoli med mild smak",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli",
+    "ingredientName": "Eggnudler, tørr",
+    "quantity": "180",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "250",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli enkel",
+    "ingredientName": "Eggnudler, tørr",
+    "quantity": "180",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli enkel",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "250",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli enkel",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli rask",
+    "ingredientName": "Eggnudler, tørr",
+    "quantity": "180",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli rask",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "250",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli rask",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Eggnudler, tørr",
+    "quantity": "180",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "250",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli til middag",
+    "ingredientName": "Eggnudler, tørr",
+    "quantity": "180",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli til middag",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "250",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli til middag",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli til lunsj",
+    "ingredientName": "Eggnudler, tørr",
+    "quantity": "180",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli til lunsj",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "250",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli til lunsj",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli hverdagsvariant",
+    "ingredientName": "Eggnudler, tørr",
+    "quantity": "180",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli hverdagsvariant",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "250",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli hverdagsvariant",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli med mild smak",
+    "ingredientName": "Eggnudler, tørr",
+    "quantity": "180",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli med mild smak",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "250",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Eggnudler med kylling og brokkoli med mild smak",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk enkel",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk enkel",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk enkel",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk rask",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk rask",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk rask",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk med ekstra grønnsaker",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk med ekstra grønnsaker",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk med ekstra grønnsaker",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk til middag",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk til middag",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk til middag",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk til lunsj",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk til lunsj",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk til lunsj",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk hverdagsvariant",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk hverdagsvariant",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk hverdagsvariant",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk med mild smak",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk med mild smak",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Couscous med kikerter og agurk med mild smak",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl enkel",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl enkel",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl enkel",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl rask",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl rask",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl rask",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl med ekstra grønnsaker",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl med ekstra grønnsaker",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl med ekstra grønnsaker",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl til middag",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl til middag",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl til middag",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl til lunsj",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl til lunsj",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl til lunsj",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl hverdagsvariant",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl hverdagsvariant",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl hverdagsvariant",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl med mild smak",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl med mild smak",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg og byggryn bowl med mild smak",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Havregrøt med banan",
+    "ingredientName": "Havregryn",
+    "quantity": "100",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Havregrøt med banan",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Havregrøt med banan enkel",
+    "ingredientName": "Havregryn",
+    "quantity": "100",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Havregrøt med banan enkel",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Havregrøt med banan rask",
+    "ingredientName": "Havregryn",
+    "quantity": "100",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Havregrøt med banan rask",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Havregrøt med banan med ekstra grønnsaker",
+    "ingredientName": "Havregryn",
+    "quantity": "100",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Havregrøt med banan med ekstra grønnsaker",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Havregrøt med banan til middag",
+    "ingredientName": "Havregryn",
+    "quantity": "100",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Havregrøt med banan til middag",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Havregrøt med banan til lunsj",
+    "ingredientName": "Havregryn",
+    "quantity": "100",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Havregrøt med banan til lunsj",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Havregrøt med banan hverdagsvariant",
+    "ingredientName": "Havregryn",
+    "quantity": "100",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Havregrøt med banan hverdagsvariant",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Havregrøt med banan med mild smak",
+    "ingredientName": "Havregryn",
+    "quantity": "100",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Havregrøt med banan med mild smak",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan enkel",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan enkel",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan rask",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan rask",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan med ekstra grønnsaker",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan med ekstra grønnsaker",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan til middag",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan til middag",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan til lunsj",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan til lunsj",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan hverdagsvariant",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan hverdagsvariant",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan med mild smak",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og banan med mild smak",
+    "ingredientName": "Banan, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot enkel",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot enkel",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot enkel",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot rask",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot rask",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot rask",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot med ekstra grønnsaker",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot med ekstra grønnsaker",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot med ekstra grønnsaker",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot til middag",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot til middag",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot til middag",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot til lunsj",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot til lunsj",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot til lunsj",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot hverdagsvariant",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot hverdagsvariant",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot hverdagsvariant",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot med mild smak",
+    "ingredientName": "Kylling, filet, uten skinn, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot med mild smak",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kylling med byggryn og gulrot med mild smak",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot enkel",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot enkel",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot enkel",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot rask",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot rask",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot rask",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot med ekstra grønnsaker",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot med ekstra grønnsaker",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot med ekstra grønnsaker",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot til middag",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot til middag",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot til middag",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot til lunsj",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot til lunsj",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot til lunsj",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot hverdagsvariant",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot hverdagsvariant",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot hverdagsvariant",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot med mild smak",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot med mild smak",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med couscous og gulrot med mild smak",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk enkel",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk enkel",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk enkel",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk rask",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk rask",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk rask",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk med ekstra grønnsaker",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk med ekstra grønnsaker",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk med ekstra grønnsaker",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk til middag",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk til middag",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk til middag",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk til lunsj",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk til lunsj",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk til lunsj",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk hverdagsvariant",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk hverdagsvariant",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk hverdagsvariant",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk med mild smak",
+    "ingredientName": "Laks, oppdrett, rå",
+    "quantity": "300",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk med mild smak",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Laks med byggryn og agurk med mild smak",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli enkel",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli enkel",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli enkel",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli rask",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli rask",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli rask",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli til middag",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli til middag",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli til middag",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli til lunsj",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli til lunsj",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli til lunsj",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli hverdagsvariant",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli hverdagsvariant",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli hverdagsvariant",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli med mild smak",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli med mild smak",
+    "ingredientName": "Couscous, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med couscous og brokkoli med mild smak",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot enkel",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot enkel",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot enkel",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot rask",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot rask",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot rask",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot med ekstra grønnsaker",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot med ekstra grønnsaker",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot med ekstra grønnsaker",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot til middag",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot til middag",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot til middag",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot til lunsj",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot til lunsj",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot til lunsj",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot hverdagsvariant",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot hverdagsvariant",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot hverdagsvariant",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot med mild smak",
+    "ingredientName": "Egg, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot med mild smak",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Egg med bulgur og gulrot med mild smak",
+    "ingredientName": "Gulrot, norsk, rå",
+    "quantity": "2",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli enkel",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli enkel",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli enkel",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli rask",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli rask",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli rask",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli med ekstra grønnsaker",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli til middag",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli til middag",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli til middag",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli til lunsj",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli til lunsj",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli til lunsj",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli hverdagsvariant",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli hverdagsvariant",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli hverdagsvariant",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli med mild smak",
+    "ingredientName": "Kikerter, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli med mild smak",
+    "ingredientName": "Byggryn",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kikerter med byggryn og brokkoli med mild smak",
+    "ingredientName": "Brokkoli, norsk, rå",
+    "quantity": "200",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk",
+    "ingredientName": "Kidneybønner, røde, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk enkel",
+    "ingredientName": "Kidneybønner, røde, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk enkel",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk enkel",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk rask",
+    "ingredientName": "Kidneybønner, røde, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk rask",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk rask",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk med ekstra grønnsaker",
+    "ingredientName": "Kidneybønner, røde, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk med ekstra grønnsaker",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk med ekstra grønnsaker",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk til middag",
+    "ingredientName": "Kidneybønner, røde, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk til middag",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk til middag",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk til lunsj",
+    "ingredientName": "Kidneybønner, røde, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk til lunsj",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk til lunsj",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk hverdagsvariant",
+    "ingredientName": "Kidneybønner, røde, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk hverdagsvariant",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk hverdagsvariant",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk med mild smak",
+    "ingredientName": "Kidneybønner, røde, hermetisk",
+    "quantity": "1",
+    "unit": "boks"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk med mild smak",
+    "ingredientName": "Bulgurgryn, tørr",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Kidneybønner med bulgur og agurk med mild smak",
+    "ingredientName": "Agurk, norsk, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple",
+    "ingredientName": "Blåbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple enkel",
+    "ingredientName": "Blåbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple enkel",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple rask",
+    "ingredientName": "Blåbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple rask",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple med ekstra grønnsaker",
+    "ingredientName": "Blåbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple med ekstra grønnsaker",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple til middag",
+    "ingredientName": "Blåbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple til middag",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple til lunsj",
+    "ingredientName": "Blåbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple til lunsj",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple hverdagsvariant",
+    "ingredientName": "Blåbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple hverdagsvariant",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple med mild smak",
+    "ingredientName": "Blåbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med blåbær og eple med mild smak",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple enkel",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple enkel",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple rask",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple rask",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple med ekstra grønnsaker",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple med ekstra grønnsaker",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple til middag",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple til middag",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple til lunsj",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple til lunsj",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple hverdagsvariant",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple hverdagsvariant",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple med mild smak",
+    "ingredientName": "Jordbær, rå",
+    "quantity": "150",
+    "unit": "g"
+  },
+  {
+    "recipeName": "Smoothie med jordbær og eple med mild smak",
+    "ingredientName": "Eple, norsk, uspesifisert, rå",
+    "quantity": "1",
+    "unit": "stk"
+  }
 ]
