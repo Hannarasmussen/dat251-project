@@ -4,8 +4,16 @@
   overflow: hidden;
   padding: 28px 24px 56px;
   background:
-    radial-gradient(circle at top left, rgba(255, 204, 128, 0.34), transparent 24%),
-    radial-gradient(circle at 85% 18%, rgba(128, 168, 105, 0.26), transparent 20%),
+    radial-gradient(
+      circle at top left,
+      rgba(255, 204, 128, 0.34),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 85% 18%,
+      rgba(128, 168, 105, 0.26),
+      transparent 20%
+    ),
     linear-gradient(180deg, #f8f2e8 0%, #eef5ea 100%);
   color: #223127;
 }
@@ -89,7 +97,10 @@
   border-radius: 999px;
   cursor: pointer;
   font: inherit;
-  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
 }
 
 .primary-button,
@@ -150,7 +161,7 @@
 .section-heading h2,
 .visual-card h2,
 .feature-card h3 {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .hero-copy h1 {
@@ -267,7 +278,11 @@
 .feature-card {
   padding: 24px;
   border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(245, 241, 232, 0.86));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(245, 241, 232, 0.86)
+  );
   border: 1px solid rgba(34, 49, 39, 0.08);
 }
 
@@ -285,8 +300,16 @@
   min-height: 100vh;
   padding: 32px 24px 56px;
   background:
-    radial-gradient(circle at top left, rgba(255, 204, 128, 0.2), transparent 24%),
-    radial-gradient(circle at 85% 18%, rgba(128, 168, 105, 0.18), transparent 20%),
+    radial-gradient(
+      circle at top left,
+      rgba(255, 204, 128, 0.2),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 85% 18%,
+      rgba(128, 168, 105, 0.18),
+      transparent 20%
+    ),
     linear-gradient(180deg, #f7f1e7 0%, #edf4e9 100%);
   color: #223127;
 }
@@ -303,7 +326,7 @@
 
 .recipe-page-header h1 {
   margin: 10px 0 0;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.4rem, 5vw, 4rem);
 }
 
@@ -337,7 +360,7 @@
 .preferences-panel h2,
 .results-panel h2,
 .recipe-result-card h3 {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .panel-copy {
@@ -368,7 +391,7 @@
   background: #fffdf8;
 }
 
-.filter-group input[type='range'] {
+.filter-group input[type="range"] {
   accent-color: #2f5b3d;
 }
 
@@ -410,7 +433,46 @@
   padding: 20px;
   border: 1px solid rgba(34, 49, 39, 0.08);
   border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(244, 240, 230, 0.88));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(244, 240, 230, 0.88)
+  );
+}
+
+.recipe-result-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(231, 240, 223, 0.7);
+}
+
+.recipe-result-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe-media-image {
+  display: block;
+  object-fit: cover;
+  background: rgba(231, 240, 223, 0.7);
+}
+
+.recipe-media-image--hero {
+  width: 250px;
+  height: 250px;
+  border-radius: 20%;
+  margin-top: 12px;
+}
+
+.recipe-media-image--detail {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4 / 3;
+  border-radius: 24px;
 }
 
 .recipe-result-card h3 {

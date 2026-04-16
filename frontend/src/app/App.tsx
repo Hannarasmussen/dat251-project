@@ -1,8 +1,9 @@
-import "./App.css";
+import "../styles/App.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import { Configuration } from "./api/configuration";
+import { Recipe } from "../api/api";
+import { getAllRecipes } from "../services/recipes";
 
 const featureCards = [
   {
@@ -25,19 +26,12 @@ const featureCards = [
 function App() {
   const navigate = useNavigate();
 
-  const [recipes, setRecipes] = useState<RecipeCatalogItem[]>([]);
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
 
   useEffect(() => {
-    const conf = new Configuration({
-      basePath: "http://localhost:8080",
-      baseOptions: {
-        withCredentials: true,
-      },
-    });
-    const recipeController = new PublicRecipeControllerApi(conf);
     async function load() {
       try {
-        const { data } = await recipeController.findAll2();
+        const data = await getAllRecipes();
         setRecipes(data);
         console.log("Fetched recipes:", data);
       } catch {
@@ -104,16 +98,24 @@ function App() {
           {recipes.length > 0 ? (
             recipes.slice(0, 1).map((recipe) => (
               <div
-                key={recipe.name}
+                key={recipe.idMeal ?? recipe.strMeal ?? "recipe-preview"}
                 className="visual-card visual-card-main"
-                onClick={() => navigate(`/recipes/${recipe.name}`)}
+                onClick={() => {
+                  if (recipe.idMeal) {
+                    navigate(`/recipes/${recipe.idMeal}`);
+                  }
+                }}
                 style={{ cursor: "pointer" }}
               >
-                <h2>{recipe.name}</h2>
-                <p>{recipe.cookingTime} minutes</p>
+                <h2>{recipe.strMeal ?? "Untitled recipe"}</h2>
+                <p>Recipe ID: {recipe.idMeal ?? "N/A"}</p>
                 <img
-                  src="https://images.pexels.com/photos/36275016/pexels-photo-36275016.jpeg?"
-                  alt={"Preview of " + recipe.name}
+                  className="recipe-media-image recipe-media-image--hero"
+                  src={
+                    recipe.strThumb ||
+                    "https://images.pexels.com/photos/36275016/pexels-photo-36275016.jpeg?"
+                  }
+                  alt={"Preview of " + (recipe.strMeal ?? "recipe")}
                   height="250px"
                   width="250px"
                   style={{ borderRadius: "20%" }}
