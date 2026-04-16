@@ -64,138 +64,6 @@
         }
       }
     },
-    "/api/recipe": {
-      "get": {
-        "tags": ["recipe-controller"],
-        "operationId": "findAll_1",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "type": "array",
-                  "items": { "$ref": "#/components/schemas/Recipe" }
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": ["recipe-controller"],
-        "operationId": "update_1",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/components/schemas/Recipe" }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "*/*": { "schema": { "$ref": "#/components/schemas/Recipe" } }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": ["recipe-controller"],
-        "operationId": "create_1",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/components/schemas/RecipeEntity" }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "*/*": { "schema": { "$ref": "#/components/schemas/Recipe" } }
-            }
-          }
-        }
-      }
-    },
-    "/api/recipe/{recipeId}/ingredients": {
-      "post": {
-        "tags": ["recipe-controller"],
-        "operationId": "addIngredient",
-        "parameters": [
-          {
-            "name": "recipeId",
-            "in": "path",
-            "required": true,
-            "schema": { "type": "string", "format": "uuid" }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RecipeIngredientEntity"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "*/*": {
-                "schema": { "$ref": "#/components/schemas/RecipeIngredient" }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/ingredient": {
-      "get": {
-        "tags": ["ingredient-controller"],
-        "operationId": "findAll_2",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "type": "array",
-                  "items": { "$ref": "#/components/schemas/Ingredient" }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": ["ingredient-controller"],
-        "operationId": "create_2",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/components/schemas/IngredientEntity" }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "*/*": { "schema": { "$ref": "#/components/schemas/Ingredient" } }
-            }
-          }
-        }
-      }
-    },
     "/api/auth/logout": {
       "post": {
         "tags": ["auth-controller"],
@@ -277,39 +145,47 @@
         "responses": { "204": { "description": "No Content" } }
       }
     },
+    "/api/recipe": {
+      "get": {
+        "tags": ["recipe-controller"],
+        "operationId": "getAllRecipes",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Recipe" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/recipe/{id}": {
       "get": {
         "tags": ["recipe-controller"],
-        "operationId": "findById_1",
+        "operationId": "getRecipeById",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "schema": { "type": "string", "format": "uuid" }
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
           "200": {
             "description": "OK",
             "content": {
-              "*/*": { "schema": { "$ref": "#/components/schemas/Recipe" } }
+              "*/*": {
+                "schema": { "$ref": "#/components/schemas/DetailedRecipe" }
+              }
             }
           }
         }
-      },
-      "delete": {
-        "tags": ["recipe-controller"],
-        "operationId": "deleteById_1",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": { "type": "string", "format": "uuid" }
-          }
-        ],
-        "responses": { "204": { "description": "No Content" } }
       }
     },
     "/api/protected": {
@@ -329,41 +205,6 @@
             }
           }
         }
-      }
-    },
-    "/api/ingredient/{id}": {
-      "get": {
-        "tags": ["ingredient-controller"],
-        "operationId": "findById_2",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": { "type": "string", "format": "uuid" }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "*/*": { "schema": { "$ref": "#/components/schemas/Ingredient" } }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": ["ingredient-controller"],
-        "operationId": "deleteById_2",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": { "type": "string", "format": "uuid" }
-          }
-        ],
-        "responses": { "204": { "description": "No Content" } }
       }
     },
     "/api/auth/status": {
@@ -403,27 +244,6 @@
           }
         }
       }
-    },
-    "/api/recipe/{recipeId}/ingredients/{recipeIngredientId}": {
-      "delete": {
-        "tags": ["recipe-controller"],
-        "operationId": "removeIngredient",
-        "parameters": [
-          {
-            "name": "recipeId",
-            "in": "path",
-            "required": true,
-            "schema": { "type": "string", "format": "uuid" }
-          },
-          {
-            "name": "recipeIngredientId",
-            "in": "path",
-            "required": true,
-            "schema": { "type": "string", "format": "uuid" }
-          }
-        ],
-        "responses": { "204": { "description": "No Content" } }
-      }
     }
   },
   "components": {
@@ -434,84 +254,7 @@
           "id": { "type": "integer", "format": "int64" },
           "username": { "type": "string" },
           "email": { "type": "string" },
-          "password": { "type": "string" },
-          "dietaryPreferences": {
-            "uniqueItems": true,
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "VEGAN",
-                "VEGETARIAN",
-                "PESCETARIAN",
-                "HIGH_PROTEIN",
-                "LOW_CARB",
-                "KETO",
-                "HALAL"
-              ]
-            }
-          }
-        }
-      },
-      "Ingredient": {
-        "type": "object",
-        "properties": {
-          "id": { "type": "string", "format": "uuid" },
-          "name": { "type": "string" },
-          "tag": {
-            "type": "string",
-            "enum": ["DAIRY", "MEAT", "FISH", "VEGAN", "OTHER"]
-          }
-        }
-      },
-      "Recipe": {
-        "type": "object",
-        "properties": {
-          "id": { "type": "string", "format": "uuid" },
-          "name": { "type": "string" },
-          "instructions": { "type": "string" },
-          "cookingTime": { "type": "integer", "format": "int32" },
-          "difficulty": {
-            "type": "string",
-            "enum": ["EASY", "MEDIUM", "HARD"]
-          },
-          "categories": {
-            "uniqueItems": true,
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": ["DAIRY", "MEAT", "FISH", "VEGAN", "OTHER"]
-            }
-          },
-          "ingredients": {
-            "type": "array",
-            "items": { "$ref": "#/components/schemas/RecipeIngredient" }
-          },
-          "directCategories": {
-            "uniqueItems": true,
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": ["DAIRY", "MEAT", "FISH", "VEGAN", "OTHER"]
-            }
-          }
-        }
-      },
-      "RecipeIngredient": {
-        "type": "object",
-        "properties": {
-          "id": { "type": "string", "format": "uuid" },
-          "ingredient": { "$ref": "#/components/schemas/Ingredient" },
-          "quantity": { "type": "string" },
-          "unit": { "type": "string" },
-          "categories": {
-            "uniqueItems": true,
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": ["DAIRY", "MEAT", "FISH", "VEGAN", "OTHER"]
-            }
-          }
+          "password": { "type": "string" }
         }
       },
       "UserEntity": {
@@ -520,50 +263,7 @@
           "id": { "type": "integer", "format": "int64" },
           "username": { "type": "string" },
           "email": { "type": "string" },
-          "password": { "type": "string" },
-          "dietaryPreferences": {
-            "uniqueItems": true,
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "VEGAN",
-                "VEGETARIAN",
-                "PESCETARIAN",
-                "HIGH_PROTEIN",
-                "LOW_CARB",
-                "KETO",
-                "HALAL"
-              ]
-            }
-          }
-        }
-      },
-      "RecipeEntity": {
-        "type": "object",
-        "properties": {
-          "name": { "type": "string" },
-          "instructions": { "type": "string" },
-          "cookingTime": { "type": "integer", "format": "int32" },
-          "difficulty": { "type": "string", "enum": ["EASY", "MEDIUM", "HARD"] }
-        }
-      },
-      "RecipeIngredientEntity": {
-        "type": "object",
-        "properties": {
-          "ingredientId": { "type": "string", "format": "uuid" },
-          "quantity": { "type": "string" },
-          "unit": { "type": "string" }
-        }
-      },
-      "IngredientEntity": {
-        "type": "object",
-        "properties": {
-          "name": { "type": "string" },
-          "tag": {
-            "type": "string",
-            "enum": ["DAIRY", "MEAT", "FISH", "VEGAN", "OTHER"]
-          }
+          "password": { "type": "string" }
         }
       },
       "LoginRequest": {
@@ -571,6 +271,36 @@
         "properties": {
           "username": { "type": "string" },
           "password": { "type": "string" }
+        }
+      },
+      "Recipe": {
+        "type": "object",
+        "properties": {
+          "strMeal": { "type": "string" },
+          "strThumb": { "type": "string" },
+          "idMeal": { "type": "string" }
+        }
+      },
+      "DetailedRecipe": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "category": { "type": "string" },
+          "area": { "type": "string" },
+          "instructions": { "type": "string" },
+          "thumbnail": { "type": "string" },
+          "ingredients": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Ingredient" }
+          }
+        }
+      },
+      "Ingredient": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "measure": { "type": "string" }
         }
       }
     }

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import { Configuration } from "./api/configuration";
-import { Recipe, RecipeControllerApi } from "./api";
 
 const featureCards = [
   {
@@ -26,7 +25,7 @@ const featureCards = [
 function App() {
   const navigate = useNavigate();
 
-  const [recipes, setRecipes] = useState<Recipe[]>([]);
+  const [recipes, setRecipes] = useState<RecipeCatalogItem[]>([]);
 
   useEffect(() => {
     const conf = new Configuration({
@@ -35,11 +34,12 @@ function App() {
         withCredentials: true,
       },
     });
-    const recipeController = new RecipeControllerApi(conf);
+    const recipeController = new PublicRecipeControllerApi(conf);
     async function load() {
       try {
-        const { data } = await recipeController.findAll1();
+        const { data } = await recipeController.findAll2();
         setRecipes(data);
+        console.log("Fetched recipes:", data);
       } catch {
         console.log("Could not fetch recipes");
       }
@@ -102,15 +102,22 @@ function App() {
 
         <section className="visual-panel" aria-label="App preview">
           {recipes.length > 0 ? (
-            recipes.map((recipe) => (
+            recipes.slice(0, 1).map((recipe) => (
               <div
-                key={recipe.id}
+                key={recipe.name}
                 className="visual-card visual-card-main"
-                onClick={() => navigate(`/recipes/${recipe.id}`)}
+                onClick={() => navigate(`/recipes/${recipe.name}`)}
                 style={{ cursor: "pointer" }}
               >
                 <h2>{recipe.name}</h2>
                 <p>{recipe.cookingTime} minutes</p>
+                <img
+                  src="https://images.pexels.com/photos/36275016/pexels-photo-36275016.jpeg?"
+                  alt={"Preview of " + recipe.name}
+                  height="250px"
+                  width="250px"
+                  style={{ borderRadius: "20%" }}
+                />
               </div>
             ))
           ) : (

@@ -41,9 +41,10 @@ export default function You() {
   useEffect(() => {
     let cancelled = false;
 
-    if (!authData) return () => {
-      cancelled = true;
-    };
+    if (!authData)
+      return () => {
+        cancelled = true;
+      };
 
     async function loadFavorites() {
       try {
@@ -94,7 +95,10 @@ export default function You() {
         <section className="favorites-section">
           <h2>Favourite Recipes</h2>
           {favorites.length === 0 ? (
-            <p className="favorites-empty">No favourite recipes yet. Browse recipes and click ♡ to save them here.</p>
+            <p className="favorites-empty">
+              No favourite recipes yet. Browse recipes and click ♡ to save them
+              here.
+            </p>
           ) : (
             <div className="favorites-grid">
               {favorites.map((recipe) => (
@@ -105,11 +109,20 @@ export default function You() {
                   onClick={() => navigate(`/recipes/${recipe.id}`)}
                 >
                   <h3>{recipe.name}</h3>
-                  <p>{recipe.cookingTime} min · {recipe.difficulty}</p>
+                  <p>
+                    {recipe.cookingTime} min · {recipe.difficulty}
+                  </p>
                 </button>
               ))}
             </div>
           )}
+          <button
+            type="button"
+            className="ghost-button"
+            onClick={() => navigate("/recipes-preview")}
+          >
+            Preview recipe page
+          </button>
         </section>
       </main>
     </div>
