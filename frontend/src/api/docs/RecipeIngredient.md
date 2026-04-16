@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | [optional] [default to undefined]
+**recipe** | [**Recipe**](Recipe.md) |  | [optional] [default to undefined]
 **ingredient** | [**Ingredient**](Ingredient.md) |  | [optional] [default to undefined]
 **quantity** | **string** |  | [optional] [default to undefined]
 **unit** | **string** |  | [optional] [default to undefined]
@@ -18,6 +19,7 @@ import { RecipeIngredient } from './api';
 
 const instance: RecipeIngredient = {
     id,
+    recipe,
     ingredient,
     quantity,
     unit,

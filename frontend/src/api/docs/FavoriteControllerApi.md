@@ -1,84 +1,33 @@
-# IngredientControllerApi
+# FavoriteControllerApi
 
 All URIs are relative to *http://localhost:8080*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**create2**](#create2) | **POST** /api/ingredient | |
-|[**deleteById2**](#deletebyid2) | **DELETE** /api/ingredient/{id} | |
-|[**findAll3**](#findall3) | **GET** /api/ingredient | |
-|[**findById2**](#findbyid2) | **GET** /api/ingredient/{id} | |
+|[**addFavorite**](#addfavorite) | **POST** /api/favorites/{recipeId} | |
+|[**getFavorites**](#getfavorites) | **GET** /api/favorites | |
+|[**isFavorited**](#isfavorited) | **GET** /api/favorites/{recipeId} | |
+|[**removeFavorite**](#removefavorite) | **DELETE** /api/favorites/{recipeId} | |
 
-# **create2**
-> Ingredient create2(ingredientEntity)
-
-
-### Example
-
-```typescript
-import {
-    IngredientControllerApi,
-    Configuration,
-    IngredientEntity
-} from './api';
-
-const configuration = new Configuration();
-const apiInstance = new IngredientControllerApi(configuration);
-
-let ingredientEntity: IngredientEntity; //
-
-const { status, data } = await apiInstance.create2(
-    ingredientEntity
-);
-```
-
-### Parameters
-
-|Name | Type | Description  | Notes|
-|------------- | ------------- | ------------- | -------------|
-| **ingredientEntity** | **IngredientEntity**|  | |
-
-
-### Return type
-
-**Ingredient**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-|**201** | Created |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **deleteById2**
-> deleteById2()
+# **addFavorite**
+> addFavorite()
 
 
 ### Example
 
 ```typescript
 import {
-    IngredientControllerApi,
+    FavoriteControllerApi,
     Configuration
 } from './api';
 
 const configuration = new Configuration();
-const apiInstance = new IngredientControllerApi(configuration);
+const apiInstance = new FavoriteControllerApi(configuration);
 
-let id: string; // (default to undefined)
+let recipeId: string; // (default to undefined)
 
-const { status, data } = await apiInstance.deleteById2(
-    id
+const { status, data } = await apiInstance.addFavorite(
+    recipeId
 );
 ```
 
@@ -86,7 +35,7 @@ const { status, data } = await apiInstance.deleteById2(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **id** | [**string**] |  | defaults to undefined|
+| **recipeId** | [**string**] |  | defaults to undefined|
 
 
 ### Return type
@@ -106,26 +55,26 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-|**204** | No Content |  -  |
+|**200** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **findAll3**
-> Array<Ingredient> findAll3()
+# **getFavorites**
+> Array<RecipeSummaryDto> getFavorites()
 
 
 ### Example
 
 ```typescript
 import {
-    IngredientControllerApi,
+    FavoriteControllerApi,
     Configuration
 } from './api';
 
 const configuration = new Configuration();
-const apiInstance = new IngredientControllerApi(configuration);
+const apiInstance = new FavoriteControllerApi(configuration);
 
-const { status, data } = await apiInstance.findAll3();
+const { status, data } = await apiInstance.getFavorites();
 ```
 
 ### Parameters
@@ -134,7 +83,7 @@ This endpoint does not have any parameters.
 
 ### Return type
 
-**Array<Ingredient>**
+**Array<RecipeSummaryDto>**
 
 ### Authorization
 
@@ -153,25 +102,25 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **findById2**
-> Ingredient findById2()
+# **isFavorited**
+> boolean isFavorited()
 
 
 ### Example
 
 ```typescript
 import {
-    IngredientControllerApi,
+    FavoriteControllerApi,
     Configuration
 } from './api';
 
 const configuration = new Configuration();
-const apiInstance = new IngredientControllerApi(configuration);
+const apiInstance = new FavoriteControllerApi(configuration);
 
-let id: string; // (default to undefined)
+let recipeId: string; // (default to undefined)
 
-const { status, data } = await apiInstance.findById2(
-    id
+const { status, data } = await apiInstance.isFavorited(
+    recipeId
 );
 ```
 
@@ -179,12 +128,12 @@ const { status, data } = await apiInstance.findById2(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **id** | [**string**] |  | defaults to undefined|
+| **recipeId** | [**string**] |  | defaults to undefined|
 
 
 ### Return type
 
-**Ingredient**
+**boolean**
 
 ### Authorization
 
@@ -194,6 +143,56 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: */*
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **removeFavorite**
+> removeFavorite()
+
+
+### Example
+
+```typescript
+import {
+    FavoriteControllerApi,
+    Configuration
+} from './api';
+
+const configuration = new Configuration();
+const apiInstance = new FavoriteControllerApi(configuration);
+
+let recipeId: string; // (default to undefined)
+
+const { status, data } = await apiInstance.removeFavorite(
+    recipeId
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **recipeId** | [**string**] |  | defaults to undefined|
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
 ### HTTP response details

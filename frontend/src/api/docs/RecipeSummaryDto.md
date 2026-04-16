@@ -1,21 +1,25 @@
-# Ingredient
+# RecipeSummaryDto
 
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **string** |  | [optional] [default to undefined]
 **name** | **string** |  | [optional] [default to undefined]
-**measure** | **string** |  | [optional] [default to undefined]
+**cookingTime** | **number** |  | [optional] [default to undefined]
+**difficulty** | **string** |  | [optional] [default to undefined]
 
 ## Example
 
 ```typescript
-import { Ingredient } from './api';
+import { RecipeSummaryDto } from './api';
 
-const instance: Ingredient = {
+const instance: RecipeSummaryDto = {
+    id,
     name,
-    measure,
+    cookingTime,
+    difficulty,
 };
 ```
 

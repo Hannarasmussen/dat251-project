@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **username** | **string** |  | [optional] [default to undefined]
 **email** | **string** |  | [optional] [default to undefined]
 **password** | **string** |  | [optional] [default to undefined]
-**dietaryPreferences** | **Set&lt;string&gt;** |  | [optional] [default to undefined]
 
 ## Example
 
@@ -21,7 +20,6 @@ const instance: User = {
     username,
     email,
     password,
-    dietaryPreferences,
 };
 ```
 
