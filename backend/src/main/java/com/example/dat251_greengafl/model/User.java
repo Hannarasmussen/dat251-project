@@ -1,14 +1,11 @@
 package com.example.dat251_greengafl.model;
 
-import java.util.Set;
-
 public class User {
 
     private Long id; // match med UserEntity
     private String username;
     private String email;
     private String password;
-    private Set<DietaryPreference> dietaryPreferences;
 
     public User() {}
 
@@ -42,13 +39,5 @@ public class User {
 
     public String getPassword(){
         return password;
-    }
-
-    public Set<DietaryPreference> getDietaryPreferences() {
-        return dietaryPreferences;
-    }
-
-    public void setDietaryPreferences(Set<DietaryPreference> dietaryPreferences) {
-        this.dietaryPreferences = dietaryPreferences;
     }
 }
