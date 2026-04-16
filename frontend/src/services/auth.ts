@@ -1,4 +1,4 @@
-import { AuthControllerApi, Configuration } from "./api";
+import { AuthControllerApi, Configuration } from "../api";
 
 const API_BASE = "http://localhost:8080";
 
