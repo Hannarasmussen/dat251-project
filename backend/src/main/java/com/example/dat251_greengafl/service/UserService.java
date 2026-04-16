@@ -69,7 +69,6 @@ public class UserService {
         user.setId(entity.getId());
         user.setUsername(entity.getUsername());
         user.setEmail(entity.getEmail());
-        user.setDietaryPreferences(entity.getDietaryPreferences());
         return user;
     }
 
@@ -79,7 +78,6 @@ public class UserService {
         entity.setUsername(user.getUsername());
         entity.setEmail(user.getEmail());
         entity.setPassword(user.getPassword());
-        entity.setDietaryPreferences(user.getDietaryPreferences());
         return entity;
     }
 }

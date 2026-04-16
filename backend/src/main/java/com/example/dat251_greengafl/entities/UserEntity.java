@@ -1,12 +1,7 @@
 package com.example.dat251_greengafl.entities;
 
-import com.example.dat251_greengafl.model.DietaryPreference;
-import com.example.dat251_greengafl.model.Recipe;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
 
-import java.util.HashSet;
-import java.util.Set;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users")
@@ -25,25 +20,23 @@ public class UserEntity {
     @Column(nullable = false)
     private String password;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(
-            name = "user_dietary_preferences",
-            joinColumns = @JoinColumn(name = "user_id")
-    )
-    @Enumerated(EnumType.STRING)
-    @Column(name = "preference")
-    private Set<DietaryPreference> dietaryPreferences = new HashSet<>();
+    // @ElementCollection(fetch = FetchType.EAGER)
+    // @CollectionTable(
+    // name = "user_dietary_preferences",
+    // joinColumns = @JoinColumn(name = "user_id")
+    // )
 
-    @JsonIgnore
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-            name = "user_favorites",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "recipe_id")
-    )
-    private Set<Recipe> favoriteRecipes = new HashSet<>();
+    // @JsonIgnore
+    // @ManyToMany(fetch = FetchType.LAZY)
+    // @JoinTable(
+    // name = "user_favorites",
+    // joinColumns = @JoinColumn(name = "user_id"),
+    // inverseJoinColumns = @JoinColumn(name = "recipe_id")
+    // )
+    // private Set<Recipe> favoriteRecipes = new HashSet<>();
 
-    public UserEntity() {}
+    public UserEntity() {
+    }
 
     public UserEntity(String username, String email, String password) {
         this.username = username;
@@ -83,19 +76,11 @@ public class UserEntity {
         this.password = password;
     }
 
-    public Set<DietaryPreference> getDietaryPreferences() {
-        return dietaryPreferences;
-    }
+    // public Set<Recipe> getFavoriteRecipes() {
+    // return favoriteRecipes;
+    // }
 
-    public void setDietaryPreferences(Set<DietaryPreference> dietaryPreferences) {
-        this.dietaryPreferences = dietaryPreferences;
-    }
-
-    public Set<Recipe> getFavoriteRecipes() {
-        return favoriteRecipes;
-    }
-
-    public void setFavoriteRecipes(Set<Recipe> favoriteRecipes) {
-        this.favoriteRecipes = favoriteRecipes;
-    }
+    // public void setFavoriteRecipes(Set<Recipe> favoriteRecipes) {
+    // this.favoriteRecipes = favoriteRecipes;
+    // }
 }

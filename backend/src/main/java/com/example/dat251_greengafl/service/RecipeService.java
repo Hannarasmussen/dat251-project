@@ -1,104 +1,43 @@
 package com.example.dat251_greengafl.service;
 
-import com.example.dat251_greengafl.model.Ingredient;
-import com.example.dat251_greengafl.model.Recipe;
-import com.example.dat251_greengafl.model.RecipeIngredient;
-import com.example.dat251_greengafl.repo.IngredientRepo;
-import com.example.dat251_greengafl.repo.RecipeIngredientRepo;
-import com.example.dat251_greengafl.repo.RecipeRepo;
+import com.example.dat251_greengafl.the_meal_db_client.Client;
+import com.example.dat251_greengafl.the_meal_db_client.Client.DetailedRecipe;
+import com.example.dat251_greengafl.the_meal_db_client.Client.Recipe;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class RecipeService {
 
     @Autowired
-    private RecipeRepo recipeRepo;
+    private Client client;
 
-    @Autowired
-    private IngredientRepo ingredientRepo;
-
-    @Autowired
-    private RecipeIngredientRepo recipeIngredientRepo;
-
-    public List<Recipe> findAll() {
-        return recipeRepo.findAll();
+    public List<String> getAllCategories() {
+        return client.getAllCategories();
     }
 
-    public Optional<Recipe> findById(UUID id) {
-        return recipeRepo.findById(id);
+    public List<Recipe> getRecipesByCategory(String category) {
+        return client.getRecipesByCategory(category);
     }
 
-    public Optional<Recipe> findByName(String name) {
-        return recipeRepo.findByName(name);
+    public List<Recipe> getAllRecipes() {
+        return client.getAllRecipes();
     }
 
-    public Recipe register(Recipe recipe) {
-        return recipeRepo.save(recipe);
+    public DetailedRecipe getRecipeDetails(String id) {
+        return client.getRecipeDetails(id);
     }
 
-    public void deleteById(UUID id) {
-        recipeRepo.deleteById(id);
+    public List<DetailedRecipe> searchRecipesByName(String name) {
+        return client.searchRecipesByName(name);
     }
 
-    /**
-     * Adds an ingredient to a recipe.
-     *
-     * @return the saved RecipeIngredient, or empty if recipe or ingredient not
-     *         found
-     */
-    public Optional<RecipeIngredient> addIngredient(UUID recipeId,
-            UUID ingredientId,
-            String quantity,
-            String unit) {
-
-        Optional<Recipe> recipe = recipeRepo.findById(recipeId);
-        Optional<Ingredient> ingredient = ingredientRepo.findById(ingredientId);
-
-        if (!entitiesExist(recipe, ingredient)) {
-            return Optional.empty();
-        }
-
-        RecipeIngredient recipeIngredient = createRecipeIngredient(recipe.get(), ingredient.get(), quantity, unit);
-
-        return Optional.of(recipeIngredientRepo.save(recipeIngredient));
+    public DetailedRecipe getRandomRecipe() {
+        return client.getRandomRecipe();
     }
 
-    private boolean entitiesExist(Optional<?>... optionals) {
-        for (Optional<?> optional : optionals) {
-            if (optional.isEmpty()) {
-                return false;
-            }
-        }
-        return true;
-    }
 
-    private RecipeIngredient createRecipeIngredient(Recipe recipe,
-            Ingredient ingredient,
-            String quantity,
-            String unit) {
-        RecipeIngredient recipeIngredient = new RecipeIngredient();
-        recipeIngredient.setRecipe(recipe);
-        recipeIngredient.setIngredient(ingredient);
-        recipeIngredient.setQuantity(quantity);
-        recipeIngredient.setUnit(unit);
-        return recipeIngredient;
-    }
-
-    /**
-     * Removes a specific RecipeIngredient entry by its own ID.
-     *
-     * @return true if it existed and was deleted, false otherwise
-     */
-    public boolean removeIngredient(UUID recipeIngredientId) {
-        if (!recipeIngredientRepo.existsById(recipeIngredientId)) {
-            return false;
-        }
-        recipeIngredientRepo.deleteById(recipeIngredientId);
-        return true;
-    }
 }
