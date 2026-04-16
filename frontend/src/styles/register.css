@@ -1,0 +1,105 @@
+.register-page {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 1.25rem;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at top left, #ffcc8057, transparent 24%),
+        radial-gradient(circle at 85% 18%, #80a86942, transparent 20%),
+        linear-gradient(180deg, #f8f2e8 0%, #eef5ea 100%);
+    font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.register-modal {
+    width: min(460px, 92vw);
+    background: linear-gradient(180deg, #f6ecdf 0%, #f3e7d6 100%);
+    border: 1px solid #e7d3b8;
+    border-radius: 22px;
+    padding: 1.5rem 1.25rem;
+    box-shadow: 0 20px 50px #3d2c1824;
+}
+
+.register-brand {
+    margin: 0 0 0.25rem;
+    color: #6a5a46;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.register-modal h1 {
+    margin: 0 0 1rem;
+    color: #2d241a;
+    font-size: 1.7rem;
+}
+
+.register-form {
+    display: grid;
+    gap: 0.55rem;
+}
+
+.register-form label {
+    margin-top: 0.3rem;
+    color: #2d241a;
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+.register-form input {
+    border: 1px solid #d8c7ae;
+    border-radius: 12px;
+    padding: 0.7rem 0.8rem;
+    font-size: 0.98rem;
+    background: #fffdf9;
+    color: #2b241b;
+    outline: none;
+}
+
+.register-form input:focus {
+    border-color: #bca487;
+    box-shadow: 0 0 0 3px #bca48733;
+}
+
+.register-button {
+    margin-top: 0.8rem;
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 0.9rem;
+    font-size: 0.98rem;
+    font-weight: 700;
+    background: #4e7a4c;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 8px 20px #4e7a4c47;
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+.register-button:hover {
+    background: #3f653e;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px #3f653e4d;
+}
+
+.register-button:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 0 6px 12px #3d2c181f;
+}
+
+.register-error {
+    margin-top: 0.8rem;
+    color: #b63b3b;
+    font-weight: 600;
+}
+
+.register-success {
+    margin-top: 0.8rem;
+    color: #2f7a43;
+    font-weight: 600;
+}
