@@ -139,7 +139,7 @@ public class Client {
     private record RecipeCategoryResponse(List<Recipe> meals) {
     }
 
-    public record Recipe(String strMeal, String strThumb, String idMeal) {
+    public record Recipe(String strMeal, String strMealThumb, String idMeal) {
     }
 
     public record DetailedRecipe(

@@ -116,7 +116,7 @@ function App() {
                 <img
                   className="recipe-media-image recipe-media-image--hero"
                   src={
-                    recipe.strThumb ||
+                    recipe.strMealThumb ||
                     "https://images.pexels.com/photos/36275016/pexels-photo-36275016.jpeg?"
                   }
                   alt={"Preview of " + (recipe.strMeal ?? "recipe")}

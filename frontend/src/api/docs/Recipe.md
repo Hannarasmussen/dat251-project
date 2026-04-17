@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **strMeal** | **string** |  | [optional] [default to undefined]
-**strThumb** | **string** |  | [optional] [default to undefined]
+**strMealThumb** | **string** |  | [optional] [default to undefined]
 **idMeal** | **string** |  | [optional] [default to undefined]
 
 ## Example
@@ -16,7 +16,7 @@ import { Recipe } from './api';
 
 const instance: Recipe = {
     strMeal,
-    strThumb,
+    strMealThumb,
     idMeal,
 };
 ```
