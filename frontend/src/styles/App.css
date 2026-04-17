@@ -49,6 +49,62 @@
   margin: 0 auto;
 }
 
+.app-header {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-header-logo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.app-header-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 26px rgba(47, 64, 44, 0.14);
+  transition: transform 160ms ease;
+}
+
+.app-header-logo-button:hover .app-header-logo,
+.app-header-logo-button:focus-visible .app-header-logo {
+  transform: translateY(-1px);
+}
+
+.app-header-logout-button {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font: inherit;
+  cursor: pointer;
+  color: #f7f7f0;
+  background: #2f8f4e;
+  box-shadow: 0 12px 24px rgba(47, 143, 78, 0.25);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.app-header-logout-button:hover,
+.app-header-logout-button:focus-visible {
+  transform: translateY(-1px);
+  background: #287a41;
+}
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -517,6 +573,10 @@
   .topbar {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .app-header {
+    margin-bottom: 16px;
   }
 }
 

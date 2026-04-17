@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getAuthStatus, logout } from "../services/auth";
+import { getAuthStatus } from "../services/auth";
 import { getFavorites, RecipeSummary } from "../services/favorites";
-import logo from "../assets/greengaflLogo.png";
+import { AppHeader } from "../components/AppHeader";
 import "../styles/you.css";
 import "../styles/App.css";
 
@@ -66,27 +66,9 @@ export default function You() {
     };
   }, [authData]);
 
-  async function handleLogout() {
-    try {
-      await logout();
-    } finally {
-      navigate("/", { replace: true });
-    }
-  }
-
   return (
     <div className="you-page">
-      <header className="you-topbar">
-        <div className="you-brand-block">
-          <img src={logo} alt="Greengafl logo" className="you-brand-logo" />
-        </div>
-
-        <nav className="you-auth-actions" aria-label="Authentication">
-          <button type="button" className="ghost-button" onClick={handleLogout}>
-            Log out
-          </button>
-        </nav>
-      </header>
+      <AppHeader />
 
       <main className="you-content">
         <h1>hello, world!</h1>
