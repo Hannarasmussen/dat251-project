@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import { Recipe } from "../api/api";
-import { getAllRecipes } from "../services/recipes";
+import { getAllRecipes, getRandomRecipe } from "../services/recipeService";
 
 const featureCards = [
   {
@@ -31,9 +31,13 @@ function App() {
   useEffect(() => {
     async function load() {
       try {
-        const data = await getAllRecipes();
-        setRecipes(data);
-        console.log("Fetched recipes:", data);
+        const data = await getRandomRecipe();
+        const mapped = {
+          strMeal: data.name,
+          strThumb: data.thumbnail,
+          idMeal: data.id,
+        };
+        setRecipes([mapped]);
       } catch {
         console.log("Could not fetch recipes");
       }
