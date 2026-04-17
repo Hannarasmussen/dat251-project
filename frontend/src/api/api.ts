@@ -42,7 +42,7 @@ export interface LoginRequest {
 }
 export interface Recipe {
     'strMeal'?: string;
-    'strThumb'?: string;
+    'strMealThumb'?: string;
     'idMeal'?: string;
 }
 export interface User {

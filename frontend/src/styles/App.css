@@ -562,11 +562,117 @@
   font-size: 0.88rem;
 }
 
+.recipe-workspace {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.recipe-filters-panel,
+.recipe-results-panel {
+  border: 1px solid rgba(34, 49, 39, 0.08);
+  border-radius: 28px;
+  background: rgba(255, 252, 246, 0.84);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 24px 60px rgba(47, 64, 44, 0.08);
+}
+
+.recipe-filters-panel {
+  position: sticky;
+  top: 16px;
+  padding: 28px;
+}
+
+.recipe-filters-panel h2,
+.recipe-results-panel h2,
+.recipe-result-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.recipe-filters-panel .filter-group input,
+.recipe-filters-panel .filter-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid rgba(34, 49, 39, 0.12);
+  border-radius: 14px;
+  background: #fffdf8;
+  font: inherit;
+}
+
+.recipe-suggest-button {
+  background: #2f8f4e;
+  box-shadow: 0 14px 30px rgba(47, 143, 78, 0.22);
+}
+
+.recipe-suggest-button:hover,
+.recipe-suggest-button:focus-visible {
+  background: #287a41;
+}
+
+.recipe-random-button {
+  background: #ffffff;
+  color: #223127;
+  border-color: rgba(34, 49, 39, 0.18);
+}
+
+.recipe-random-button:hover,
+.recipe-random-button:focus-visible {
+  background: #f7f5f0;
+}
+
+.recipe-results-panel {
+  min-height: 620px;
+  padding: 28px;
+}
+
+.recipe-loading-state {
+  min-height: 400px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border: 1px dashed rgba(34, 49, 39, 0.16);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.45);
+  color: #55675a;
+}
+
+.recipe-loading-logo {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  animation: recipe-logo-spin 1.1s linear infinite;
+}
+
+.recipe-grid-results {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.recipe-card-action {
+  width: 100%;
+  margin-top: 10px;
+}
+
+@keyframes recipe-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 940px) {
   .hero-layout,
   .feature-grid,
   .recipe-page-layout,
-  .recipe-grid {
+  .recipe-grid,
+  .recipe-workspace,
+  .recipe-grid-results {
     grid-template-columns: 1fr;
   }
 
@@ -577,6 +683,10 @@
 
   .app-header {
     margin-bottom: 16px;
+  }
+
+  .recipe-filters-panel {
+    position: static;
   }
 }
 

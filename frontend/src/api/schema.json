@@ -363,7 +363,7 @@
         "type": "object",
         "properties": {
           "strMeal": { "type": "string" },
-          "strThumb": { "type": "string" },
+          "strMealThumb": { "type": "string" },
           "idMeal": { "type": "string" }
         }
       },

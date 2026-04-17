@@ -1,141 +1,178 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import logo from "../assets/greengaflLogo.png";
+import { RecipeResultCard } from "../components/RecipeResultCard";
+import { AppHeader } from "../components/AppHeader";
+import type { Recipe } from "../api/api";
+import {
+  getAllCategories,
+  getAllRecipes,
+  getRandomRecipe,
+  getRecipeById,
+  getRecipesByCategory,
+} from "../services/recipeService";
 import "../styles/App.css";
-import { getAuthStatus } from "../services/auth";
-import { Recipe } from "../api/api";
-import { getAllRecipes } from "../services/recipes";
 
-type RecipePageProps = {
-  requireAuth?: boolean;
-};
-
-export default function RecipePage({ requireAuth = true }: RecipePageProps) {
-  const initialResultLimit = 6;
-  const navigate = useNavigate();
-  const [recipes, setRecipes] = useState<Recipe[]>([]);
-  const [query, setQuery] = useState("");
-  const [resultLimit, setResultLimit] = useState(initialResultLimit);
+export default function RecipePage({ requireAuth = true }) {
   const [results, setResults] = useState<Recipe[]>([]);
-  const [authorized, setAuthorized] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [query, setQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedArea, setSelectedArea] = useState("");
+
+  const areaOptions = [
+    "American",
+    "British",
+    "Canadian",
+    "Chinese",
+    "Croatian",
+    "Dutch",
+    "Egyptian",
+    "Filipino",
+    "French",
+    "Greek",
+    "Indian",
+    "Irish",
+    "Italian",
+    "Jamaican",
+    "Japanese",
+    "Kenyan",
+    "Malaysian",
+    "Mexican",
+    "Moroccan",
+    "Polish",
+    "Portuguese",
+    "Russian",
+    "Spanish",
+    "Thai",
+    "Tunisian",
+    "Turkish",
+    "Vietnamese",
+  ];
 
   useEffect(() => {
-    let cancelled = false;
-
-    async function loadRecipes() {
+    async function loadPageData() {
       try {
-        if (requireAuth) {
-          const authData = await getAuthStatus();
-          if (!authData?.authenticated) {
-            if (!cancelled) {
-              navigate("/login", { replace: true });
-            }
-            return;
-          }
-        }
-
-        if (!cancelled) {
-          setAuthorized(true);
-        }
-
-        setLoading(true);
-        setError("");
-
-        const data = await getAllRecipes();
-
-        if (!cancelled) {
-          setRecipes(data);
-          setResults(data.slice(0, initialResultLimit));
-        }
-      } catch (err) {
-        if (!cancelled) {
-          if (requireAuth) {
-            navigate("/login", { replace: true });
-          } else {
-            setError("Could not load recipes from the backend.");
-          }
-          console.error(err);
-        }
-      } finally {
-        if (!cancelled) {
-          setLoading(false);
-        }
+        const data = await getAllCategories();
+        setCategories(data);
+      } catch {
+        setError("Could not load categories.");
       }
     }
 
-    loadRecipes();
+    loadPageData();
+  }, []);
 
-    return () => {
-      cancelled = true;
-    };
-  }, [navigate, requireAuth]);
-
-  if (requireAuth && !authorized && loading) {
-    return (
-      <main className="recipe-page">
-        <section className="recipe-page-header">
-          <h1>Checking your session...</h1>
-        </section>
-      </main>
-    );
+  function shuffleRecipes(list: Recipe[]) {
+    const copy = [...list];
+    for (let i = copy.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = copy[i];
+      copy[i] = copy[j];
+      copy[j] = temp;
+    }
+    return copy;
   }
 
-  function filterRecipes() {
-    if (!query.trim()) {
-      return recipes;
-    }
+  async function handleGetSuggestions() {
+    setLoading(true);
+    setError("");
+    setResults([]);
 
-    const normalizedQuery = query.trim().toLowerCase();
-    return recipes.filter((recipe) =>
-      (recipe.strMeal ?? "").toLowerCase().includes(normalizedQuery),
-    );
+    try {
+      const baseRecipes = selectedCategory
+        ? await getRecipesByCategory(selectedCategory)
+        : await getAllRecipes();
+
+      const byName = query.trim()
+        ? baseRecipes.filter((recipe) =>
+            (recipe.strMeal ?? "")
+              .toLowerCase()
+              .includes(query.trim().toLowerCase()),
+          )
+        : baseRecipes;
+
+      if (byName.length === 0) {
+        setError("No recipes matched your search and filters.");
+        return;
+      }
+
+      if (!selectedArea) {
+        setResults(shuffleRecipes(byName).slice(0, 3));
+        return;
+      }
+
+      const shuffledCandidates = shuffleRecipes(byName);
+      const areaMatches: Recipe[] = [];
+
+      for (const candidate of shuffledCandidates) {
+        if (!candidate.idMeal || areaMatches.length >= 3) {
+          continue;
+        }
+
+        try {
+          const details = await getRecipeById(candidate.idMeal);
+          if (
+            (details.area ?? "").toLowerCase() === selectedArea.toLowerCase()
+          ) {
+            areaMatches.push(candidate);
+          }
+        } catch {
+          // Skip recipes that fail details lookup and keep scanning for matches.
+        }
+      }
+
+      if (areaMatches.length === 0) {
+        setError("No recipes matched the selected area.");
+        return;
+      }
+
+      setResults(areaMatches);
+    } catch {
+      setError("Could not load suggestions. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
-  function getSuggestions() {
-    const filteredRecipes = filterRecipes();
-    setResults(filteredRecipes.slice(0, resultLimit));
-  }
+  async function handleFeelingLucky() {
+    setLoading(true);
+    setError("");
+    setResults([]);
 
-  function getRandomRecipe() {
-    if (recipes.length === 0) {
-      setResults([]);
-      return;
+    try {
+      const randomRecipe = await getRandomRecipe();
+      setResults([
+        {
+          strMeal: randomRecipe.name,
+          strMealThumb: randomRecipe.thumbnail,
+          idMeal: randomRecipe.id,
+        },
+      ]);
+    } catch {
+      setError("Could not fetch a random recipe.");
+    } finally {
+      setLoading(false);
     }
-
-    const filteredRecipes = filterRecipes();
-
-    if (filteredRecipes.length === 0) {
-      setResults([]);
-      return;
-    }
-
-    const randomIndex = Math.floor(Math.random() * filteredRecipes.length);
-    setResults([filteredRecipes[randomIndex]]);
   }
 
   return (
-    <main className="recipe-page">
-      <section className="recipe-page-header">
-        <p className="eyebrow">Greengafl suggestions</p>
-        <h1>Your dinner suggestions</h1>
-        <p className="recipe-page-intro">
-          Adjust your preferences, then generate dinner ideas tailored to your
-          evening.
-        </p>
-      </section>
+    <div className="recipe-page">
+      <AppHeader showLogout={requireAuth} />
 
-      <section className="recipe-page-layout">
-        <aside className="preferences-panel">
-          <h2>Personalize suggestions</h2>
+      <main className="recipe-workspace">
+        <section className="preferences-panel recipe-filters-panel">
+          <h2>Find your dinner</h2>
           <p className="panel-copy">
-            Search by recipe name and choose how many suggestions to display.
+            Search, filter by cuisine and category, then get curated
+            suggestions.
           </p>
 
           <div className="filter-group">
-            <label htmlFor="recipe-query">Recipe name</label>
+            <label htmlFor="recipe-search">Search</label>
             <input
-              id="recipe-query"
+              id="recipe-search"
               type="text"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
@@ -144,99 +181,96 @@ export default function RecipePage({ requireAuth = true }: RecipePageProps) {
           </div>
 
           <div className="filter-group">
-            <label htmlFor="limit">Suggestions to show: {resultLimit}</label>
-            <input
-              id="limit"
-              type="range"
-              min="1"
-              max="12"
-              step="1"
-              value={resultLimit}
-              onChange={(event) => setResultLimit(Number(event.target.value))}
-            />
+            <label htmlFor="recipe-cuisine">Area (Cuisine)</label>
+            <select
+              id="recipe-cuisine"
+              value={selectedArea}
+              onChange={(event) => setSelectedArea(event.target.value)}
+            >
+              <option value="">Any area</option>
+              {areaOptions.map((area) => (
+                <option key={area} value={area}>
+                  {area}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="filter-group">
+            <label htmlFor="recipe-category">Category</label>
+            <select
+              id="recipe-category"
+              value={selectedCategory}
+              onChange={(event) => setSelectedCategory(event.target.value)}
+            >
+              <option value="">Any category</option>
+              {categories.map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
           </div>
 
           <div className="recipe-actions">
             <button
               type="button"
-              className="primary-button"
-              onClick={getSuggestions}
-              disabled={loading || recipes.length === 0}
+              className="primary-button recipe-suggest-button"
+              onClick={handleGetSuggestions}
+              disabled={loading}
             >
               Get suggestions
             </button>
             <button
               type="button"
-              className="ghost-button"
-              onClick={getRandomRecipe}
-              disabled={loading || recipes.length === 0}
+              className="ghost-button recipe-random-button"
+              onClick={handleFeelingLucky}
+              disabled={loading}
             >
               I&apos;m feeling lucky
             </button>
           </div>
-        </aside>
+        </section>
 
-        <section className="results-panel">
+        <section className="results-panel recipe-results-panel">
           <div className="results-heading">
-            <h2>Recipe results</h2>
-            <p>
-              {loading
-                ? "Loading recipes from the backend..."
-                : results.length === 0
-                  ? "No recipes generated yet."
-                  : `Showing ${results.length} recipe${results.length > 1 ? "s" : ""}.`}
-            </p>
+            <h2>Recipe suggestions</h2>
+            {!loading && !error && results.length === 0 && (
+              <p>Use the filters and click a button to load recipes.</p>
+            )}
+            {!loading && !error && results.length > 0 && (
+              <p>
+                Showing {results.length} recipe{results.length > 1 ? "s" : ""}.
+              </p>
+            )}
+            {!loading && error && <p>{error}</p>}
           </div>
 
-          {error ? (
-            <div className="empty-results">
-              <p>{error}</p>
+          {loading ? (
+            <div className="recipe-loading-state" aria-live="polite">
+              <img
+                src={logo}
+                alt="Loading recipes"
+                className="recipe-loading-logo"
+              />
+              <p>Fetching recipes...</p>
             </div>
-          ) : loading ? (
-            <div className="empty-results">
-              <p>Loading recipes from the backend meal service.</p>
-            </div>
-          ) : results.length === 0 ? (
-            <div className="empty-results">
-              <p>Try a different query and generate suggestions again.</p>
+          ) : results.length > 0 ? (
+            <div className="recipe-grid recipe-grid-results">
+              {results.map((recipe) => (
+                <RecipeResultCard
+                  key={recipe.idMeal ?? recipe.strMeal ?? "recipe-result"}
+                  recipe={recipe}
+                />
+              ))}
             </div>
           ) : (
-            <div className="recipe-grid">
-              {results.map((recipe) => (
-                <article
-                  className="recipe-result-card"
-                  key={recipe.idMeal ?? recipe.strMeal ?? "recipe-result"}
-                >
-                  <div className="recipe-result-image-wrap">
-                    <img
-                      className="recipe-result-image"
-                      src={
-                        recipe.strThumb ||
-                        "https://via.placeholder.com/640x360?text=No+Image"
-                      }
-                      alt={recipe.strMeal ?? "Recipe preview"}
-                    />
-                  </div>
-                  <h3>{recipe.strMeal ?? "Untitled recipe"}</h3>
-                  <button
-                    type="button"
-                    className="ghost-button"
-                    style={{ marginTop: "12px" }}
-                    onClick={() => {
-                      if (recipe.idMeal) {
-                        navigate(`/recipes/${recipe.idMeal}`);
-                      }
-                    }}
-                    disabled={!recipe.idMeal}
-                  >
-                    Open details
-                  </button>
-                </article>
-              ))}
+            <div className="empty-results">
+              <p>No recipes to show yet.</p>
             </div>
           )}
         </section>
-      </section>
-    </main>
+      </main>
+    </div>
   );
 }
