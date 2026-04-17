@@ -188,6 +188,92 @@
         }
       }
     },
+    "/api/recipe/search": {
+      "get": {
+        "tags": ["recipe-controller"],
+        "operationId": "searchRecipesByName",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/DetailedRecipe" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/recipe/random": {
+      "get": {
+        "tags": ["recipe-controller"],
+        "operationId": "getRandomRecipe",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": { "$ref": "#/components/schemas/DetailedRecipe" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/recipe/categories": {
+      "get": {
+        "tags": ["recipe-controller"],
+        "operationId": "getAllCategories",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/recipe/by-category": {
+      "get": {
+        "tags": ["recipe-controller"],
+        "operationId": "getRecipesByCategory",
+        "parameters": [
+          {
+            "name": "category",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Recipe" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/protected": {
       "get": {
         "tags": ["protected-controller"],
