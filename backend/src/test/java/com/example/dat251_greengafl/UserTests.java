@@ -10,7 +10,6 @@ import org.springframework.dao.DataIntegrityViolationException;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-
 @SpringBootTest
 class UserTests {
 
@@ -31,7 +30,7 @@ class UserTests {
     }
 
     @Test
-    void testDeleteUser(){
+    void testDeleteUser() {
         User user = new User();
         user.setUsername("delete");
         user.setEmail("delete@del.no");
@@ -44,7 +43,7 @@ class UserTests {
     }
 
     @Test
-    void testNoDuplicateUsername(){
+    void testNoDuplicateUsername() {
         User user1 = new User();
         user1.setUsername("1");
         user1.setEmail("1@1.no");
@@ -60,7 +59,7 @@ class UserTests {
     }
 
     @Test
-    void testNoDuplicateEmail(){
+    void testNoDuplicateEmail() {
         User user1 = new User();
         user1.setUsername("1");
         user1.setEmail("1@1.no");
@@ -72,11 +71,11 @@ class UserTests {
         User saved1 = userService.register(user1);
         assertThatThrownBy(() -> userService.register(user2)).isInstanceOf(DataIntegrityViolationException.class);
         userService.deleteById(saved1.getId());
-        
+
     }
 
     @Test
-    void testDummyUserCreate(){
+    void testDummyUserCreate() {
         User u = new User();
         u.setUsername("Hara");
         u.setEmail("1@2.no");
@@ -84,4 +83,3 @@ class UserTests {
         userService.register(u);
     }
 }
-
