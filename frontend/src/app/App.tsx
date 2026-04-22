@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import { Recipe } from "../api/api";
-import { getAllRecipes, getRandomRecipe } from "../services/recipeService";
+import {getRandomRecipe } from "../services/recipeService";
 
 const featureCards = [
   {
