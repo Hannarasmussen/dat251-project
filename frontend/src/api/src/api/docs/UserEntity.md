@@ -1,4 +1,4 @@
-# User
+# UserEntity
 
 
 ## Properties
@@ -9,19 +9,17 @@ Name | Type | Description | Notes
 **username** | **string** |  | [optional] [default to undefined]
 **email** | **string** |  | [optional] [default to undefined]
 **password** | **string** |  | [optional] [default to undefined]
-**_new** | **boolean** |  | [optional] [default to undefined]
 
 ## Example
 
 ```typescript
-import { User } from './api';
+import { UserEntity } from './api';
 
-const instance: User = {
+const instance: UserEntity = {
     id,
     username,
     email,
     password,
-    _new,
 };
 ```
 
