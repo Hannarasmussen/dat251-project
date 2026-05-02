@@ -42,7 +42,11 @@ public class RecommendationService {
     }
 
     @Transactional(readOnly = true)
-    public List<RecommendationDto> recommend(Long userId, int limit) {
+    public List<RecommendationDto> recommend(
+        Long userId,
+        String targetCategory,
+        int limit
+    ) {
         UserProfile profile = userProfileRepo.findById(userId).orElse(null);
         if (profile == null) return List.of();
 
@@ -52,6 +56,14 @@ public class RecommendationService {
         List<RecommendationDto> out = new ArrayList<>();
 
         for (String category : recipeService.getAllCategories()) {
+            if (
+                targetCategory != null &&
+                !targetCategory.isBlank() &&
+                !category.equalsIgnoreCase(targetCategory)
+            ) {
+                continue;
+            }
+
             int categoryScore = categoryScores.getOrDefault(category, 0);
 
             for (Recipe r : recipeService.getRecipesByCategory(category)) {

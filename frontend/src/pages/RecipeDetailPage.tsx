@@ -3,11 +3,7 @@ import { useParams } from "react-router-dom";
 import { DetailedRecipe } from "../api/api";
 import { AppHeader } from "../components/AppHeader";
 import { getAuthStatus } from "../services/auth";
-import {
-  isFavorited,
-  addFavorite,
-  removeFavorite,
-} from "../services/favorites";
+import { recordSelection } from "../services/recommendation";
 import { getRecipeById } from "../services/recipeService";
 import "../styles/App.css";
 import "../styles/recipeDetail.css";
@@ -16,8 +12,9 @@ export default function RecipeDetail() {
   const { id } = useParams();
   const [recipe, setRecipe] = useState<DetailedRecipe | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [favorited, setFavorited] = useState(false);
-  const [favoriteLoading, setFavoriteLoading] = useState(false);
+  const [userId, setUserId] = useState<number | null>(null);
+  const [isLiking, setIsLiking] = useState(false);
+  const [hasLiked, setHasLiked] = useState(false);
 
   useEffect(() => {
     async function loadRecipe() {
@@ -40,6 +37,11 @@ export default function RecipeDetail() {
       try {
         const data = await getAuthStatus();
         setIsLoggedIn(!!data?.authenticated);
+
+        const parsedId = Number(data?.id);
+        if (data?.authenticated && !isNaN(parsedId) && parsedId > 0) {
+          setUserId(parsedId);
+        }
       } catch {
         setIsLoggedIn(false);
       }
@@ -47,42 +49,28 @@ export default function RecipeDetail() {
     checkAuth();
   }, []);
 
-  useEffect(() => {
-    if (!isLoggedIn || !id) return;
-    async function checkFavorite() {
-      const result = await isFavorited(id!);
-      setFavorited(result);
-    }
-    checkFavorite();
-  }, [isLoggedIn, id]);
-
-  async function handleFavoriteToggle() {
-    if (!id || favoriteLoading) return;
-    setFavoriteLoading(true);
+  async function handleLike() {
+    if (!id || !userId || isLiking || hasLiked) return;
+    setIsLiking(true);
     try {
-      if (favorited) {
-        const success = await removeFavorite(id);
-        if (success) {
-          setFavorited(false);
-        }
-      } else {
-        const success = await addFavorite(id);
-        if (success) {
-          setFavorited(true);
-        }
-      }
+      console.log("at try clause");
+      await recordSelection(userId, id);
+      setHasLiked(true);
+    } catch (err) {
+      console.log("Failed to record recommendation selection", err);
     } finally {
-      setFavoriteLoading(false);
+      setIsLiking(false);
     }
   }
 
-  if (!recipe)
+  if (!recipe) {
     return (
       <div className="recipe-page">
         <AppHeader showLogout={isLoggedIn} />
         <p className="recipe-page-header">Loading...</p>
       </div>
     );
+  }
 
   return (
     <div className="recipe-page">
@@ -90,7 +78,6 @@ export default function RecipeDetail() {
 
       <div className="recipe-detail">
         <div className="recipe-header">
-          {/* Display picture if available, otherwise placeholder */}
           <img
             className="recipe-media-image recipe-media-image--detail"
             src={
@@ -101,16 +88,14 @@ export default function RecipeDetail() {
           />
           <div className="recipe-title-row">
             <h1>{recipe.name ?? "Recipe details"}</h1>
-            {isLoggedIn && (
+            {isLoggedIn && userId && (
               <button
-                className={`favorite-button${favorited ? " favorite-button--active" : ""}`}
-                onClick={handleFavoriteToggle}
-                disabled={favoriteLoading}
-                aria-label={
-                  favorited ? "Remove from favourites" : "Add to favourites"
-                }
+                className="ghost-button"
+                onClick={() => void handleLike()}
+                disabled={isLiking || hasLiked}
+                style={{ marginLeft: "auto" }}
               >
-                {favorited ? "♥" : "♡"}
+                {hasLiked ? "Liked!" : isLiking ? "Saving..." : "I like this"}
               </button>
             )}
           </div>

@@ -1,24 +1,35 @@
-const API_BASE = "http://localhost:8080";
+import { RecommendationControllerApi, RecommendationDto } from "../api/api";
+import { Configuration } from "../api/configuration";
+import axios from "axios";
 
-export type RecommendationDto = {
-  id: string;
-  name: string;
-  imageUrl: string;
-  category: string;
-  score: number;
-};
+const BASE_URL = "http://localhost:8080";
+const axiosInstance = axios.create({
+  baseURL: BASE_URL,
+  withCredentials: true,
+});
+const config = new Configuration({ basePath: BASE_URL });
+
+const recommendationApi = new RecommendationControllerApi(
+  config,
+  BASE_URL,
+  axiosInstance,
+);
 
 export async function getRecommendations(
   userId: number,
   limit = 10,
+  category?: string,
 ): Promise<RecommendationDto[]> {
   const params = new URLSearchParams({
     userId: String(userId),
     limit: String(limit),
   });
+  if (category) {
+    params.append("category", category);
+  }
 
   const res = await fetch(
-    `${API_BASE}/api/recommendations?${params.toString()}`,
+    `${BASE_URL}/api/recommendations?${params.toString()}`,
     {
       method: "GET",
       credentials: "include",
@@ -30,19 +41,7 @@ export async function getRecommendations(
   return (await res.json()) as RecommendationDto[];
 }
 
-export async function recordSelection(
-  userId: number,
-  recipeId: string,
-): Promise<void> {
-  const params = new URLSearchParams({ userId: String(userId), recipeId });
-
-  const res = await fetch(
-    `${API_BASE}/api/recommendations/select?${params.toString()}`,
-    {
-      method: "POST",
-      credentials: "include",
-    },
-  );
-
-  if (!res.ok) throw new Error(`Failed to record selection (${res.status})`);
+export async function recordSelection(userId: number, recipeId: string) {
+  const response = await recommendationApi.recordSelection(userId, recipeId);
+  return response.data;
 }

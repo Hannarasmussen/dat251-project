@@ -269,3 +269,23 @@ body,
 .you-header {
     margin-top: 10px;
 }
+
+.recommendations-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.recommendations-select {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: var(--card);
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.recommendations-footer {
+    margin-top: 2rem;
+}

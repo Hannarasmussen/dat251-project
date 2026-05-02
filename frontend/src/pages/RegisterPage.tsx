@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import logo from "../assets/greengaflLogo.png";
 import "../styles/register.css";
 
 const API_BASE = "http://localhost:8080";
 
 export default function Register() {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -59,48 +62,66 @@ export default function Register() {
 
   return (
     <main className="register-page">
-      <section className="register-modal" aria-label="Register form">
-        <p className="register-brand">Greengafl</p>
-        <h1>Create account</h1>
+      <div className="register-wrapper">
+        <button
+          type="button"
+          className="auth-logo-button"
+          onClick={() => navigate("/")}
+          aria-label="Go to home"
+        >
+          <img src={logo} alt="Greengafl logo" className="auth-logo" />
+        </button>
 
-        <form className="register-form" onSubmit={handleSubmit}>
-          <label htmlFor="register-username">Username</label>
-          <input
-            id="register-username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            autoComplete="username"
-            required
-          />
+        <section className="register-modal" aria-label="Register form">
+          <p className="register-brand">Greengafl</p>
+          <h1>Create account</h1>
 
-          <label htmlFor="register-email">Email</label>
-          <input
-            id="register-email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            autoComplete="email"
-            required
-          />
+          <form className="register-form" onSubmit={handleSubmit}>
+            <label htmlFor="register-username">Username</label>
+            <input
+              id="register-username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              autoComplete="username"
+              required
+            />
 
-          <label htmlFor="register-password">Password</label>
-          <input
-            id="register-password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            autoComplete="new-password"
-            required
-          />
+            <label htmlFor="register-email">Email</label>
+            <input
+              id="register-email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              autoComplete="email"
+              required
+            />
 
-          <button type="submit" className="register-button" disabled={loading}>
-            {loading ? "Registering..." : "Register"}
-          </button>
-        </form>
+            <label htmlFor="register-password">Password</label>
+            <input
+              id="register-password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="new-password"
+              required
+            />
 
-        {error && <p className="register-error">{error}</p>}
-        {message && <p className="register-success">{message}</p>}
-      </section>
+            <button
+              type="submit"
+              className="register-button"
+              disabled={loading}
+            >
+              {loading ? "Registering..." : "Register"}
+            </button>
+            <p className="login-question">
+              Got an account? <a href="/login">Login here</a>
+            </p>
+          </form>
+
+          {error && <p className="register-error">{error}</p>}
+          {message && <p className="register-success">{message}</p>}
+        </section>
+      </div>
     </main>
   );
 }
