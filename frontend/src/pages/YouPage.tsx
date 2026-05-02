@@ -2,12 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuthStatus } from "../services/auth";
 import { RecommendationDto } from "../api/src/api";
-import { getFavorites, RecipeSummary } from "../services/favorites";
 import { getAllCategories } from "../services/recipeService";
-import {
-  getRecommendations,
-  recordSelection,
-} from "../services/recommendation";
+import { getRecommendations } from "../services/recommendation";
 import { AppHeader } from "../components/AppHeader";
 import "../styles/you.css";
 import "../styles/App.css";
@@ -89,26 +85,28 @@ export default function You() {
     };
   }, []);
 
-  async function fetchRecs(categoryToFetch?: string, recs: number = 12) {
-    if (userId == null) {
-      setRecommendations([]);
-      return;
-    }
-    const num = numberOfRecs ?? recs;
-    const cat = selectedCategory ?? undefined;
-    setRecLoading(true);
-    setRecError(null);
-    try {
-      const data = await getRecommendations(userId, num, cat);
-      setRecommendations(data);
-    } catch (e) {
-      setRecommendations([]);
-      setRecError("Failed to fetch recommendations.");
-    } finally {
-      setRecLoading(false);
-    }
-  }
   useEffect(() => {
+    async function fetchRecs() {
+      if (userId == null) {
+        setRecommendations([]);
+        return;
+      }
+
+      const cat = selectedCategory || undefined;
+
+      setRecLoading(true);
+      setRecError(null);
+      try {
+        const data = await getRecommendations(userId, numberOfRecs, cat);
+        setRecommendations(data);
+      } catch (e) {
+        setRecommendations([]);
+        setRecError("Failed to fetch recommendations.");
+      } finally {
+        setRecLoading(false);
+      }
+    }
+
     fetchRecs();
   }, [userId, selectedCategory, numberOfRecs]);
 
@@ -148,15 +146,6 @@ export default function You() {
               onChange={(e) => setNumberOfRecs(Number(e.target.value))}
             />
           </div>
-
-          <button
-            type="button"
-            className="ghost-button"
-            onClick={() => void fetchRecs(selectedCategory)}
-            disabled={recLoading}
-          >
-            {recLoading ? "Loading..." : "Get recommendations"}
-          </button>
         </div>
 
         {recLoading ? (
