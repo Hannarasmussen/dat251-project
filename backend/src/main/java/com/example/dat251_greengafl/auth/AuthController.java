@@ -1,5 +1,6 @@
 package com.example.dat251_greengafl.auth;
 
+import com.example.dat251_greengafl.model.User;
 import com.example.dat251_greengafl.security.JwtService;
 import com.example.dat251_greengafl.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -31,40 +32,55 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Map<String, Object>> login(@RequestBody LoginRequest request, HttpServletRequest httpRequest, HttpServletResponse response) {
-        if (request == null || request.username() == null || request.password() == null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                    .body(Map.of("error", "username and password are required"));
+    public ResponseEntity<Map<String, Object>> login(
+        @RequestBody LoginRequest request,
+        HttpServletRequest httpRequest,
+        HttpServletResponse response
+    ) {
+        if (
+            request == null ||
+            request.username() == null ||
+            request.password() == null
+        ) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
+                Map.of("error", "username and password are required")
+            );
         }
 
         if (!userService.authenticate(request.username(), request.password())) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-                    .body(Map.of("error", "invalid credentials"));
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(
+                Map.of("error", "invalid credentials")
+            );
         }
 
         String token = jwtService.generateToken(request.username());
 
         ResponseCookie cookie = ResponseCookie.from(JWT_COOKIE, token)
-                .httpOnly(true)
-                .secure(httpRequest.isSecure())
-                .path("/")
-                .sameSite("Lax")
-                .maxAge(Duration.ofHours(24))
-                .build();
+            .httpOnly(true)
+            .secure(httpRequest.isSecure())
+            .path("/")
+            .sameSite("Lax")
+            .maxAge(Duration.ofHours(24))
+            .build();
 
         response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
-        return ResponseEntity.ok(Map.of("authenticated", true, "username", request.username()));
+        return ResponseEntity.ok(
+            Map.of("authenticated", true, "username", request.username())
+        );
     }
 
     @PostMapping("/logout")
-    public ResponseEntity<Map<String, Object>> logout(HttpServletRequest httpRequest, HttpServletResponse response) {
+    public ResponseEntity<Map<String, Object>> logout(
+        HttpServletRequest httpRequest,
+        HttpServletResponse response
+    ) {
         ResponseCookie clearCookie = ResponseCookie.from(JWT_COOKIE, "")
-                .httpOnly(true)
-                .secure(httpRequest.isSecure())
-                .path("/")
-                .sameSite("Lax")
-                .maxAge(Duration.ZERO)
-                .build();
+            .httpOnly(true)
+            .secure(httpRequest.isSecure())
+            .path("/")
+            .sameSite("Lax")
+            .maxAge(Duration.ZERO)
+            .build();
 
         response.addHeader(HttpHeaders.SET_COOKIE, clearCookie.toString());
         return ResponseEntity.ok(Map.of("success", true));
@@ -72,32 +88,45 @@ public class AuthController {
 
     public record LoginRequest(String username, String password) {}
 
-
     @GetMapping("/me")
     public Map<String, Object> me(@AuthenticationPrincipal OAuth2User user) {
         if (user == null) return Map.of("authenticated", false);
 
         return Map.of(
-                "authenticated", true,
-                "sub", user.getAttribute("sub"),
-                "email", user.getAttribute("email"),
-                "name", user.getAttribute("name")
+            "authenticated",
+            true,
+            "sub",
+            user.getAttribute("sub"),
+            "email",
+            user.getAttribute("email"),
+            "name",
+            user.getAttribute("name")
         );
     }
 
-    //in case we need to see current status of login (dev)
     @GetMapping("/status")
     public Map<String, Object> status(Authentication authentication) {
-        boolean authenticated = authentication != null
-                && authentication.isAuthenticated();
-
-        if (!authenticated) {
+        if (authentication == null || !authentication.isAuthenticated()) {
             return Map.of("authenticated", false);
         }
 
+        String username = authentication.getName();
+
+        User user = userService
+            .findByUsername(username)
+            .orElseThrow(() ->
+                new RuntimeException("User not found: " + username)
+            );
+
         return Map.of(
-                "authenticated", true,
-                "username", authentication.getName()
+            "authenticated",
+            true,
+            "id",
+            user.getId(),
+            "username",
+            user.getUsername(),
+            "isNew",
+            user.isNew()
         );
     }
 }

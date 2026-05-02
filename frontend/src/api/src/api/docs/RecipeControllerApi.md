@@ -1,133 +1,32 @@
-# UserControllerApi
+# RecipeControllerApi
 
 All URIs are relative to *http://localhost:8080*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**create**](#create) | **POST** /api/user | |
-|[**deleteById**](#deletebyid) | **DELETE** /api/user/{id} | |
-|[**findAll**](#findall) | **GET** /api/user | |
-|[**findById**](#findbyid) | **GET** /api/user/{id} | |
-|[**update**](#update) | **PUT** /api/user | |
-|[**updateIsNew**](#updateisnew) | **PUT** /api/user/{id}/is-new | |
+|[**getAllCategories**](#getallcategories) | **GET** /api/recipe/categories | |
+|[**getAllRecipes**](#getallrecipes) | **GET** /api/recipe | |
+|[**getRandomRecipe**](#getrandomrecipe) | **GET** /api/recipe/random | |
+|[**getRecipeById**](#getrecipebyid) | **GET** /api/recipe/{id} | |
+|[**getRecipesByCategory**](#getrecipesbycategory) | **GET** /api/recipe/by-category | |
+|[**searchRecipesByName**](#searchrecipesbyname) | **GET** /api/recipe/search | |
 
-# **create**
-> User create(userEntity)
-
-
-### Example
-
-```typescript
-import {
-    UserControllerApi,
-    Configuration,
-    UserEntity
-} from './api';
-
-const configuration = new Configuration();
-const apiInstance = new UserControllerApi(configuration);
-
-let userEntity: UserEntity; //
-
-const { status, data } = await apiInstance.create(
-    userEntity
-);
-```
-
-### Parameters
-
-|Name | Type | Description  | Notes|
-|------------- | ------------- | ------------- | -------------|
-| **userEntity** | **UserEntity**|  | |
-
-
-### Return type
-
-**User**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-|**201** | Created |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **deleteById**
-> deleteById()
+# **getAllCategories**
+> Array<string> getAllCategories()
 
 
 ### Example
 
 ```typescript
 import {
-    UserControllerApi,
+    RecipeControllerApi,
     Configuration
 } from './api';
 
 const configuration = new Configuration();
-const apiInstance = new UserControllerApi(configuration);
+const apiInstance = new RecipeControllerApi(configuration);
 
-let id: number; // (default to undefined)
-
-const { status, data } = await apiInstance.deleteById(
-    id
-);
-```
-
-### Parameters
-
-|Name | Type | Description  | Notes|
-|------------- | ------------- | ------------- | -------------|
-| **id** | [**number**] |  | defaults to undefined|
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-|**204** | No Content |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **findAll**
-> Array<User> findAll()
-
-
-### Example
-
-```typescript
-import {
-    UserControllerApi,
-    Configuration
-} from './api';
-
-const configuration = new Configuration();
-const apiInstance = new UserControllerApi(configuration);
-
-const { status, data } = await apiInstance.findAll();
+const { status, data } = await apiInstance.getAllCategories();
 ```
 
 ### Parameters
@@ -136,7 +35,7 @@ This endpoint does not have any parameters.
 
 ### Return type
 
-**Array<User>**
+**Array<string>**
 
 ### Authorization
 
@@ -155,24 +54,110 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **findById**
-> User findById()
+# **getAllRecipes**
+> Array<Recipe> getAllRecipes()
 
 
 ### Example
 
 ```typescript
 import {
-    UserControllerApi,
+    RecipeControllerApi,
     Configuration
 } from './api';
 
 const configuration = new Configuration();
-const apiInstance = new UserControllerApi(configuration);
+const apiInstance = new RecipeControllerApi(configuration);
 
-let id: number; // (default to undefined)
+const { status, data } = await apiInstance.getAllRecipes();
+```
 
-const { status, data } = await apiInstance.findById(
+### Parameters
+This endpoint does not have any parameters.
+
+
+### Return type
+
+**Array<Recipe>**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getRandomRecipe**
+> DetailedRecipe getRandomRecipe()
+
+
+### Example
+
+```typescript
+import {
+    RecipeControllerApi,
+    Configuration
+} from './api';
+
+const configuration = new Configuration();
+const apiInstance = new RecipeControllerApi(configuration);
+
+const { status, data } = await apiInstance.getRandomRecipe();
+```
+
+### Parameters
+This endpoint does not have any parameters.
+
+
+### Return type
+
+**DetailedRecipe**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getRecipeById**
+> DetailedRecipe getRecipeById()
+
+
+### Example
+
+```typescript
+import {
+    RecipeControllerApi,
+    Configuration
+} from './api';
+
+const configuration = new Configuration();
+const apiInstance = new RecipeControllerApi(configuration);
+
+let id: string; // (default to undefined)
+
+const { status, data } = await apiInstance.getRecipeById(
     id
 );
 ```
@@ -181,12 +166,12 @@ const { status, data } = await apiInstance.findById(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **id** | [**number**] |  | defaults to undefined|
+| **id** | [**string**] |  | defaults to undefined|
 
 
 ### Return type
 
-**User**
+**DetailedRecipe**
 
 ### Authorization
 
@@ -205,26 +190,25 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update**
-> User update(user)
+# **getRecipesByCategory**
+> Array<Recipe> getRecipesByCategory()
 
 
 ### Example
 
 ```typescript
 import {
-    UserControllerApi,
-    Configuration,
-    User
+    RecipeControllerApi,
+    Configuration
 } from './api';
 
 const configuration = new Configuration();
-const apiInstance = new UserControllerApi(configuration);
+const apiInstance = new RecipeControllerApi(configuration);
 
-let user: User; //
+let category: string; // (default to undefined)
 
-const { status, data } = await apiInstance.update(
-    user
+const { status, data } = await apiInstance.getRecipesByCategory(
+    category
 );
 ```
 
@@ -232,12 +216,12 @@ const { status, data } = await apiInstance.update(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **user** | **User**|  | |
+| **category** | [**string**] |  | defaults to undefined|
 
 
 ### Return type
 
-**User**
+**Array<Recipe>**
 
 ### Authorization
 
@@ -245,7 +229,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 
@@ -256,27 +240,25 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **updateIsNew**
-> User updateIsNew()
+# **searchRecipesByName**
+> Array<DetailedRecipe> searchRecipesByName()
 
 
 ### Example
 
 ```typescript
 import {
-    UserControllerApi,
+    RecipeControllerApi,
     Configuration
 } from './api';
 
 const configuration = new Configuration();
-const apiInstance = new UserControllerApi(configuration);
+const apiInstance = new RecipeControllerApi(configuration);
 
-let id: number; // (default to undefined)
-let isNew: boolean; // (default to undefined)
+let name: string; // (default to undefined)
 
-const { status, data } = await apiInstance.updateIsNew(
-    id,
-    isNew
+const { status, data } = await apiInstance.searchRecipesByName(
+    name
 );
 ```
 
@@ -284,13 +266,12 @@ const { status, data } = await apiInstance.updateIsNew(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **id** | [**number**] |  | defaults to undefined|
-| **isNew** | [**boolean**] |  | defaults to undefined|
+| **name** | [**string**] |  | defaults to undefined|
 
 
 ### Return type
 
-**User**
+**Array<DetailedRecipe>**
 
 ### Authorization
 

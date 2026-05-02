@@ -9,6 +9,7 @@ import RecipePage from "./pages/RecipePage";
 import RecipeDetail from "./pages/RecipeDetailPage";
 import reportWebVitals from "./reportWebVitals";
 import Register from "./pages/RegisterPage";
+import SeedNewUser from "./pages/SeedNewUser";
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
@@ -25,6 +26,7 @@ root.render(
           element={<RecipePage requireAuth={false} />}
         />
         <Route path="/recipes/:id" element={<RecipeDetail />} />
+        <Route path="/onboarding" element={<SeedNewUser />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

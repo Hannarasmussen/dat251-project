@@ -1,27 +1,21 @@
-# User
+# LoginRequest
 
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **number** |  | [optional] [default to undefined]
 **username** | **string** |  | [optional] [default to undefined]
-**email** | **string** |  | [optional] [default to undefined]
 **password** | **string** |  | [optional] [default to undefined]
-**_new** | **boolean** |  | [optional] [default to undefined]
 
 ## Example
 
 ```typescript
-import { User } from './api';
+import { LoginRequest } from './api';
 
-const instance: User = {
-    id,
+const instance: LoginRequest = {
     username,
-    email,
     password,
-    _new,
 };
 ```
 

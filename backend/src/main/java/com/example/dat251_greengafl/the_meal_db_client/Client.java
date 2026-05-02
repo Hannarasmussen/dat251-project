@@ -1,12 +1,13 @@
 package com.example.dat251_greengafl.the_meal_db_client;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.web.client.RestClient;
-import com.fasterxml.jackson.databind.JsonNode;
 
 public class Client {
+
     RestClient restClient;
 
     public static void main(String[] args) {
@@ -14,20 +15,33 @@ public class Client {
     }
 
     public Client() {
-        restClient = RestClient.create("https://www.themealdb.com/api/json/v1/1/");
+        restClient = RestClient.create(
+            "https://www.themealdb.com/api/json/v1/1/"
+        );
     }
 
     public List<String> getAllCategories() {
-        CategoryResponse response = restClient.get().uri("list.php?c=list").retrieve().body(CategoryResponse.class);
+        CategoryResponse response = restClient
+            .get()
+            .uri("list.php?c=list")
+            .retrieve()
+            .body(CategoryResponse.class);
         if (response == null || response.meals() == null) {
             return List.of();
         }
-        return response.meals().stream().map(CategoryDto::strCategory).collect(Collectors.toList());
+        return response
+            .meals()
+            .stream()
+            .map(CategoryDto::strCategory)
+            .collect(Collectors.toList());
     }
 
     public List<Recipe> getRecipesByCategory(String category) {
-        RecipeCategoryResponse response = restClient.get().uri("filter.php?c=" + category).retrieve()
-                .body(RecipeCategoryResponse.class);
+        RecipeCategoryResponse response = restClient
+            .get()
+            .uri("filter.php?c=" + category)
+            .retrieve()
+            .body(RecipeCategoryResponse.class);
         if (response == null || response.meals() == null) {
             return List.of();
         }
@@ -45,13 +59,17 @@ public class Client {
     }
 
     public DetailedRecipe getRecipeDetails(String id) {
+        JsonNode root = restClient
+            .get()
+            .uri("lookup.php?i=" + id)
+            .retrieve()
+            .body(JsonNode.class);
 
-        JsonNode root = restClient.get()
-                .uri("lookup.php?i=" + id)
-                .retrieve()
-                .body(JsonNode.class);
-
-        if (root == null || root.get("meals") == null || root.get("meals").isEmpty()) {
+        if (
+            root == null ||
+            root.get("meals") == null ||
+            root.get("meals").isEmpty()
+        ) {
             return null;
         }
 
@@ -60,12 +78,17 @@ public class Client {
     }
 
     public List<DetailedRecipe> searchRecipesByName(String name) {
-        JsonNode root = restClient.get()
-                .uri("search.php?s=" + name)
-                .retrieve()
-                .body(JsonNode.class);
+        JsonNode root = restClient
+            .get()
+            .uri("search.php?s=" + name)
+            .retrieve()
+            .body(JsonNode.class);
 
-        if (root == null || root.get("meals") == null || root.get("meals").isEmpty()) {
+        if (
+            root == null ||
+            root.get("meals") == null ||
+            root.get("meals").isEmpty()
+        ) {
             return null;
         }
 
@@ -78,12 +101,17 @@ public class Client {
     }
 
     public DetailedRecipe getRandomRecipe() {
-        JsonNode root = restClient.get()
-                .uri("random.php")
-                .retrieve()
-                .body(JsonNode.class);
+        JsonNode root = restClient
+            .get()
+            .uri("random.php")
+            .retrieve()
+            .body(JsonNode.class);
 
-        if (root == null || root.get("meals") == null || root.get("meals").isEmpty()) {
+        if (
+            root == null ||
+            root.get("meals") == null ||
+            root.get("meals").isEmpty()
+        ) {
             return null;
         }
 
@@ -107,12 +135,21 @@ public class Client {
 
             if (ingredientNode != null) {
                 String ingredient = ingredientNode.asText();
-                if (ingredient == null || ingredient.isBlank() || ingredient.equals("null")) {
+                if (
+                    ingredient == null ||
+                    ingredient.isBlank() ||
+                    ingredient.equals("null")
+                ) {
                     continue;
                 }
 
-                String measure = measureNode != null ? measureNode.asText() : "";
-                if (measure == null || measure.isBlank() || measure.equals("null")) {
+                String measure =
+                    measureNode != null ? measureNode.asText() : "";
+                if (
+                    measure == null ||
+                    measure.isBlank() ||
+                    measure.equals("null")
+                ) {
                     measure = "";
                 }
 
@@ -121,37 +158,33 @@ public class Client {
         }
 
         return new DetailedRecipe(
-                idMeal,
-                name,
-                category,
-                area,
-                instructions,
-                thumb,
-                ingredients);
+            idMeal,
+            name,
+            category,
+            area,
+            instructions,
+            thumb,
+            ingredients
+        );
     }
 
-    private record CategoryDto(String strCategory) {
-    }
+    private record CategoryDto(String strCategory) {}
 
-    private record CategoryResponse(List<CategoryDto> meals) {
-    }
+    private record CategoryResponse(List<CategoryDto> meals) {}
 
-    private record RecipeCategoryResponse(List<Recipe> meals) {
-    }
+    private record RecipeCategoryResponse(List<Recipe> meals) {}
 
-    public record Recipe(String strMeal, String strMealThumb, String idMeal) {
-    }
+    public record Recipe(String strMeal, String strMealThumb, String idMeal) {}
 
     public record DetailedRecipe(
-            String id,
-            String name,
-            String category,
-            String area,
-            String instructions,
-            String thumbnail,
-            List<Ingredient> ingredients) {
-    }
+        String id,
+        String name,
+        String category,
+        String area,
+        String instructions,
+        String thumbnail,
+        List<Ingredient> ingredients
+    ) {}
 
-    public record Ingredient(String name, String measure) {
-    }
+    public record Ingredient(String name, String measure) {}
 }

@@ -1,6 +1,5 @@
 package com.example.dat251_greengafl.entities;
 
-
 import jakarta.persistence.*;
 
 @Entity
@@ -20,28 +19,16 @@ public class UserEntity {
     @Column(nullable = false)
     private String password;
 
-    // @ElementCollection(fetch = FetchType.EAGER)
-    // @CollectionTable(
-    // name = "user_dietary_preferences",
-    // joinColumns = @JoinColumn(name = "user_id")
-    // )
+    @Column(name = "is_new", nullable = false)
+    private boolean isNew = true;
 
-    // @JsonIgnore
-    // @ManyToMany(fetch = FetchType.LAZY)
-    // @JoinTable(
-    // name = "user_favorites",
-    // joinColumns = @JoinColumn(name = "user_id"),
-    // inverseJoinColumns = @JoinColumn(name = "recipe_id")
-    // )
-    // private Set<Recipe> favoriteRecipes = new HashSet<>();
-
-    public UserEntity() {
-    }
+    public UserEntity() {}
 
     public UserEntity(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.isNew = true;
     }
 
     public Long getId() {
@@ -76,11 +63,12 @@ public class UserEntity {
         this.password = password;
     }
 
-    // public Set<Recipe> getFavoriteRecipes() {
-    // return favoriteRecipes;
-    // }
+    public boolean isNew() {
+        return isNew;
+    }
 
-    // public void setFavoriteRecipes(Set<Recipe> favoriteRecipes) {
-    // this.favoriteRecipes = favoriteRecipes;
-    // }
+    public void setNew(boolean isNew) {
+        this.isNew = isNew;
+    }
+
 }

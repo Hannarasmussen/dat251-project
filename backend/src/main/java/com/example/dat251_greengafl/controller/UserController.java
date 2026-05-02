@@ -3,12 +3,11 @@ package com.example.dat251_greengafl.controller;
 import com.example.dat251_greengafl.entities.UserEntity;
 import com.example.dat251_greengafl.model.User;
 import com.example.dat251_greengafl.service.UserService;
+import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/user")
@@ -35,6 +34,14 @@ public class UserController {
         u.setEmail(user.getEmail());
         u.setPassword(user.getPassword());
         return userService.register(u);
+    }
+
+    @PutMapping("/{id}/is-new")
+    public User updateIsNew(
+        @PathVariable Long id,
+        @RequestParam boolean isNew
+    ) {
+        return userService.updateIsNew(id, isNew);
     }
 
     @PutMapping

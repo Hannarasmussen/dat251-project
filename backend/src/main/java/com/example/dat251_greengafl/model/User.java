@@ -1,11 +1,16 @@
 package com.example.dat251_greengafl.model;
 
+import jakarta.persistence.*;
+
 public class User {
 
+    @Id
     private Long id; // match med UserEntity
+
     private String username;
     private String email;
     private String password;
+    private boolean isNew = true;
 
     public User() {}
 
@@ -29,15 +34,23 @@ public class User {
         this.email = email;
     }
 
-    public void setUsername(String username){
+    public void setUsername(String username) {
         this.username = username;
     }
 
-    public void setPassword(String password){
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    public String getPassword(){
+    public boolean isNew() {
+        return isNew;
+    }
+
+    public void setNew(boolean isNew) {
+        this.isNew = isNew;
+    }
+
+    public String getPassword() {
         return password;
     }
 }

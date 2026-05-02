@@ -103,3 +103,39 @@
     color: #2f7a43;
     font-weight: 600;
 }
+
+.login-question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.register-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+}
+
+.auth-logo-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.auth-logo-button:hover {
+    transform: translateY(-2px);
+}
+
+.auth-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
