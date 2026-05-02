@@ -22,21 +22,6 @@ public class UserEntity {
     @Column(name = "is_new", nullable = false)
     private boolean isNew = true;
 
-    // @ElementCollection(fetch = FetchType.EAGER)
-    // @CollectionTable(
-    // name = "user_dietary_preferences",
-    // joinColumns = @JoinColumn(name = "user_id")
-    // )
-
-    // @JsonIgnore
-    // @ManyToMany(fetch = FetchType.LAZY)
-    // @JoinTable(
-    // name = "user_favorites",
-    // joinColumns = @JoinColumn(name = "user_id"),
-    // inverseJoinColumns = @JoinColumn(name = "recipe_id")
-    // )
-    // private Set<Recipe> favoriteRecipes = new HashSet<>();
-
     public UserEntity() {}
 
     public UserEntity(String username, String email, String password) {
@@ -85,11 +70,5 @@ public class UserEntity {
     public void setNew(boolean isNew) {
         this.isNew = isNew;
     }
-    // public Set<Recipe> getFavoriteRecipes() {
-    // return favoriteRecipes;
-    // }
 
-    // public void setFavoriteRecipes(Set<Recipe> favoriteRecipes) {
-    // this.favoriteRecipes = favoriteRecipes;
-    // }
 }

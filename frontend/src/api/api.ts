@@ -796,7 +796,6 @@ export class RecipeControllerApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
