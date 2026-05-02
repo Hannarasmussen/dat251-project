@@ -7,10 +7,9 @@ import com.example.dat251_greengafl.repo.UserProfileRepo;
 import com.example.dat251_greengafl.repo.UserRepo;
 import com.example.dat251_greengafl.the_meal_db_client.Client.DetailedRecipe;
 import com.example.dat251_greengafl.the_meal_db_client.Client.Recipe;
+import java.util.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.*;
 
 @Service
 public class RecommendationService {
@@ -19,7 +18,11 @@ public class RecommendationService {
     private final UserRepo userRepo;
     private final RecipeService recipeService;
 
-    public RecommendationService(UserProfileRepo userProfileRepo, UserRepo userRepo, RecipeService recipeService) {
+    public RecommendationService(
+        UserProfileRepo userProfileRepo,
+        UserRepo userRepo,
+        RecipeService recipeService
+    ) {
         this.userProfileRepo = userProfileRepo;
         this.userRepo = userRepo;
         this.recipeService = recipeService;
@@ -32,8 +35,8 @@ public class RecommendationService {
         DetailedRecipe selected = recipeService.getRecipeDetails(recipeId);
         if (selected == null) return;
 
-        profile.bumpRecipe(recipeId);
-        profile.bumpCategory(selected.category());
+        profile.choseRecipe(recipeId);
+        profile.choseCategory(selected.category());
 
         userProfileRepo.save(profile);
     }
@@ -55,30 +58,42 @@ public class RecommendationService {
                 int seenRecipeBoost = recipeScores.getOrDefault(r.idMeal(), 0);
                 double score = (categoryScore * 1.0) + (seenRecipeBoost * 0.5);
 
-                out.add(new RecommendationDto(
+                out.add(
+                    new RecommendationDto(
                         r.idMeal(),
                         r.strMeal(),
                         r.strMealThumb(),
                         category,
                         score
-                ));
+                    )
+                );
             }
         }
 
-        return out.stream()
-                .sorted(Comparator.comparingDouble(RecommendationDto::score).reversed())
-                .limit(Math.max(limit, 1))
-                .toList();
+        return out
+            .stream()
+            .sorted(
+                Comparator.comparingDouble(RecommendationDto::score).reversed()
+            )
+            .limit(Math.max(limit, 1))
+            .toList();
     }
 
     private UserProfile getOrCreateProfile(Long userId) {
-        return userProfileRepo.findById(userId).orElseGet(() -> {
-            UserEntity user = userRepo.findById(userId)
-                    .orElseThrow(() -> new IllegalArgumentException("User not found: " + userId));
+        return userProfileRepo
+            .findById(userId)
+            .orElseGet(() -> {
+                UserEntity user = userRepo
+                    .findById(userId)
+                    .orElseThrow(() ->
+                        new IllegalArgumentException(
+                            "User not found: " + userId
+                        )
+                    );
 
-            UserProfile p = new UserProfile();
-            p.setUser(user); // MapsId sets userId
-            return p;
-        });
+                UserProfile p = new UserProfile();
+                p.setUser(user); // MapsId sets userId
+                return p;
+            });
     }
 }

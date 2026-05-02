@@ -3,12 +3,11 @@ package com.example.dat251_greengafl.service;
 import com.example.dat251_greengafl.entities.UserEntity;
 import com.example.dat251_greengafl.model.User;
 import com.example.dat251_greengafl.repo.UserRepo;
+import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserService {
@@ -24,19 +23,15 @@ public class UserService {
     }
 
     public List<User> findAll() {
-        return userRepo.findAll().stream()
-                .map(this::mapToUser)
-                .toList();
+        return userRepo.findAll().stream().map(this::mapToUser).toList();
     }
 
     public Optional<User> findById(Long id) {
-        return userRepo.findById(id)
-                .map(this::mapToUser);
+        return userRepo.findById(id).map(this::mapToUser);
     }
 
     public Optional<User> findByUsername(String username) {
-        return userRepo.findByUsername(username)
-                .map(this::mapToUser);
+        return userRepo.findByUsername(username).map(this::mapToUser);
     }
 
     public boolean authenticate(String username, String raw) {
@@ -44,9 +39,12 @@ public class UserService {
             return false;
         }
 
-        return userRepo.findByUsername(username)
-                .map(userEntity -> passwordEncoder.matches(raw, userEntity.getPassword()))
-                .orElse(false);
+        return userRepo
+            .findByUsername(username)
+            .map(userEntity ->
+                passwordEncoder.matches(raw, userEntity.getPassword())
+            )
+            .orElse(false);
     }
 
     public User register(User user) {
@@ -69,6 +67,7 @@ public class UserService {
         user.setId(entity.getId());
         user.setUsername(entity.getUsername());
         user.setEmail(entity.getEmail());
+        user.setNew(entity.isNew());
         return user;
     }
 
@@ -78,6 +77,26 @@ public class UserService {
         entity.setUsername(user.getUsername());
         entity.setEmail(user.getEmail());
         entity.setPassword(user.getPassword());
+        entity.setNew(user.isNew());
         return entity;
+    }
+
+    public User updateIsNew(Long id, boolean isNew) {
+        UserEntity entity = userRepo
+            .findById(id)
+            .orElseThrow(() -> new RuntimeException("User not found: " + id));
+
+        entity.setNew(isNew);
+
+        UserEntity saved = userRepo.save(entity);
+
+        User user = new User();
+        user.setId(saved.getId());
+        user.setUsername(saved.getUsername());
+        user.setEmail(saved.getEmail());
+        user.setPassword(saved.getPassword());
+        user.setNew(saved.isNew());
+
+        return user;
     }
 }

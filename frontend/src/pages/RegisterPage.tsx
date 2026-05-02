@@ -48,7 +48,7 @@ export default function Register() {
       setPassword("");
 
       setTimeout(() => {
-        window.location.href = "/login";
+        window.location.href = "/you";
       }, 600);
     } catch {
       setError("Could not connect to server");
