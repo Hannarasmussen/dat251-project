@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import { useState } from "react";
 import { login } from "../services/auth";
 import "../styles/login.css";
 import logo from "../assets/greengaflLogo.png";

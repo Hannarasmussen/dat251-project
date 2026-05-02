@@ -289,3 +289,18 @@ body,
 .recommendations-footer {
     margin-top: 2rem;
 }
+
+.recommendations-slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.recommendations-slider-label {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.recommendations-slider-input {
+    cursor: pointer;
+}

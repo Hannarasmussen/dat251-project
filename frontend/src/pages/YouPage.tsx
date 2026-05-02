@@ -29,16 +29,14 @@ function resolveUserId(authData: any): number | null {
 export default function You() {
   const navigate = useNavigate();
   const [authData, setAuthData] = useState<any>(null);
-  const [favorites, setFavorites] = useState<RecipeSummary[]>([]);
   const [recommendations, setRecommendations] = useState<RecommendationDto[]>(
     [],
   );
   const [recLoading, setRecLoading] = useState(false);
   const [recError, setRecError] = useState<string | null>(null);
-
-  // Category dropdown states
   const [categories, setCategories] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [numberOfRecs, setNumberOfRecs] = useState<number>(12);
 
   const userId = useMemo(() => resolveUserId(authData), [authData]);
 
@@ -91,16 +89,17 @@ export default function You() {
     };
   }, []);
 
-  async function fetchRecs(categoryToFetch?: string) {
+  async function fetchRecs(categoryToFetch?: string, recs: number = 12) {
     if (userId == null) {
       setRecommendations([]);
       return;
     }
-
+    const num = numberOfRecs ?? recs;
+    const cat = selectedCategory ?? undefined;
     setRecLoading(true);
     setRecError(null);
     try {
-      const data = await getRecommendations(userId, 12, categoryToFetch);
+      const data = await getRecommendations(userId, num, cat);
       setRecommendations(data);
     } catch (e) {
       setRecommendations([]);
@@ -109,24 +108,9 @@ export default function You() {
       setRecLoading(false);
     }
   }
-
-  // Load initial recommendations when userId is available
   useEffect(() => {
-    if (userId != null) {
-      fetchRecs(""); // Load all categories by default on mount
-    }
-  }, [userId]);
-
-  async function onRecommendationClick(recipeId?: string) {
-    if (!recipeId) return;
-
-    if (userId) {
-      try {
-        await recordSelection(userId, recipeId);
-      } catch {}
-    }
-    navigate(`/recipes/${recipeId}`);
-  }
+    fetchRecs();
+  }, [userId, selectedCategory, numberOfRecs]);
 
   return (
     <div className="you-page">
@@ -146,6 +130,25 @@ export default function You() {
               </option>
             ))}
           </select>
+          <div className="recommendations-slider-container">
+            <label
+              htmlFor="limit-slider"
+              className="recommendations-slider-label"
+            >
+              Number of recipes: {numberOfRecs}
+            </label>
+            <input
+              id="limit-slider"
+              className="recommendations-slider-input"
+              type="range"
+              min="4"
+              max="50"
+              step="4"
+              value={numberOfRecs}
+              onChange={(e) => setNumberOfRecs(Number(e.target.value))}
+            />
+          </div>
+
           <button
             type="button"
             className="ghost-button"
@@ -172,7 +175,7 @@ export default function You() {
                 key={recipe.id}
                 type="button"
                 className="recommendation-card"
-                onClick={() => void onRecommendationClick(recipe.id)}
+                onClick={() => navigate(`/recipes/${recipe.id}`)}
               >
                 {recipe.imageUrl ? (
                   <img
